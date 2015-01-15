@@ -1,0 +1,349 @@
+// -----------------------------
+// Facet Theme: CSS > Widgets > Profile
+// -----------------------------
+
+
+// Typography
+// ----------------
+.widget__profile {
+	// Standard Text
+	&, p, h2, h3, .social-icons__social-name {
+		color: contrast(@theme-color, #000, #fff);
+		font-size: 16px;
+		line-height: 1.2;
+		padding-bottom: 0;
+		
+		// In the Smaller Footer Bar
+		.footer-secondary-widgets & {
+			font-size: 14px;
+			color: contrast(@theme-color, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
+		}
+	}
+
+	// Headlines
+	.company-strapline, .company-description__description, .company-business__business {
+		font-family: @font-swatch1-font-family;
+		font-size: 18px;
+		line-height: 1.5;
+		// In the Smaller Footer Bar
+		.footer-secondary-widgets & {
+			font-family: @font-swatch5-font-family;
+		}
+	}
+}
+
+
+// Address
+// ----------------
+.company-address__vcard {
+	p {
+		margin-bottom: 1em;
+
+		// In the Smaller Footer Bar
+		.footer-secondary-widgets & {
+			display: inline-block;
+			margin: 0;
+			&:after {
+				content: ", ";
+				margin-left: -0.1em;
+			}
+			&:last-child:after {
+				display: none;
+			}
+		}
+	}
+}
+
+
+// Email
+// ----------------
+.email-address__email {
+	// Icon Envelope
+	&:before {
+		content: '\f003';
+		font-family: 'FontAwesome', sans-serif;
+		color: contrast(@theme-color, #000, #fff);
+		margin-right: 0.5em;
+		font-size: 1.4em;
+		display: inline-block;
+		vertical-align: middle;
+
+		@media @mobile {
+			font-size: 1.2em;
+		}
+
+		// In the Smaller Footer Bar
+		.footer-secondary-widgets & {
+			font-size: 1em;
+		}
+	}
+}
+
+// Headline
+// ----------------
+
+// Strapline
+// ----------------
+
+// Company Description
+// ----------------
+
+// Phone
+// ----------------
+.widget__profile {
+	.phone-number-link {
+		&:before {
+			content: '\f095';
+			font-family: 'FontAwesome', sans-serif;
+			color: contrast(@theme-color, #000, #fff);
+			margin-right: 0.5em;
+			font-size: 1.4em;
+			display: inline-block;
+			vertical-align: middle;
+
+			@media @mobile {
+				font-size: 1.2em;
+			}
+
+			// In the Smaller Footer Bar
+			.footer-secondary-widgets & {
+				font-size: 1em;
+			}
+		}
+
+		@media @mobile {
+			background-color: transparent;
+			letter-spacing: 0;
+			font-size: inherit;
+			line-height: inherit;
+			padding: 0;
+			color: @link-color;
+		}
+	}
+}
+
+
+// Business
+// ----------------
+
+// Copyright
+// ----------------
+
+// Latest Tweet
+// ----------------
+
+// Modifications to suit the footer design
+// Original styles: css/widgets/twitter-feed.less
+
+.widget__profile {
+	.tweet-content {
+		padding-bottom: 15px;
+		border-bottom-color: contrast(@theme-color, darken(@theme-color, 20%), lighten(@theme-color, 20%));
+
+		// Bottom Arrow Fill
+	    &:after {
+			.footer-primary-widgets & {
+				border-top-color: contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
+			}
+
+			.footer-secondary-widgets & {
+				border-top-color: @theme-color;
+			}
+	    }
+
+	    // Bottom Arrow Border
+	    &:before {
+			border-top-color: contrast(@theme-color, darken(@theme-color, 20%), lighten(@theme-color, 20%));
+		}
+	}
+
+	.account-name {
+		color: contrast(@theme-color, #000, #fff);
+	}
+
+	.twitter-feed__timestamp, .via, .tweet-metadata a {
+		color: contrast(@theme-color, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
+		font-size: 12px;
+	}
+
+	.tweet-metadata {
+		border-left-color: contrast(@theme-color, darken(@theme-color, 20%), lighten(@theme-color, 20%));
+
+	}
+}
+
+// In the Smaller Footer Bar
+.footer-secondary-widgets .widget__profile {
+	.twitter-feed__via, .tweet-source {
+		display: none;
+	}
+	.tweet-metadata {
+		display: none;
+	}
+	.twitter-feed__avatar {
+		left: 1px;
+		bottom: -7px;
+	}
+	.twitter-feed__avatar {
+		bottom: 6px;
+	}
+	.twitter-feed__avatar-image {
+		width: 25px;
+		height: 25px;
+		min-height: 25px;
+	}
+	.twitter-feed__account-link {
+		margin-left: 35px;
+		width: auto;
+		min-height: 25px;
+	}
+
+	.account-name {
+		font-size: 12px;
+	}
+
+	.tweet-content {
+		padding: 0;
+		border-bottom: none;
+		margin-bottom: 0;
+		&:after, &:before {
+			display: none;
+		}
+	}
+}
+
+
+
+// Single Email Form
+// ----------------
+
+.widget__profile {
+	.signup-form__legend {
+		margin-bottom: 1em;
+	}
+
+	.signup-form__form-body {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-box-pack: start;
+		-moz-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: stretch;
+		-ms-flex-line-pack: stretch;
+		align-content: stretch;
+
+		.form-group:first-child {
+			margin-right: 4px;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+		}
+
+		.button {
+			font-size: 18px;
+		}
+
+		.input--email {
+			color: contrast(@theme-color, #000, #fff);
+		}
+	}
+
+	.signup-form__label {
+		display: none;
+	}
+}
+
+// In the Smaller Footer Bar
+.footer-secondary-widgets {
+	.widget__profile .signup-form__legend {
+		margin-bottom: 0.4em;
+	}
+
+	.signup-form__form-body {
+		.input--email {
+			font-size: 14px;
+			height: 40px;
+			line-height: 1;
+		}
+		.button {
+			font-size: 14px;
+			line-height: 40px;
+		}
+	}
+}
+
+
+
+// Social Icons
+// ----------------
+
+// Modifications to suit the footer design
+// Original styles: css/widgets/social-list.less
+
+
+.widget__profile {
+	.social-item {
+		width: 50%;
+		float: left;
+		margin-bottom: 10px;
+	}
+
+	.social-icons__social-name {
+		display: inline-block;
+	}
+	.social-link {
+		text-align: left;
+		&:before {
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			margin-right: 0.4em;
+			background: contrast(@theme-color, darken(@theme-color, 30%), lighten(@theme-color, 30%));
+		}
+	}
+}
+
+// In the Smaller Footer Bar
+.footer-secondary-widgets {
+	.social-list {
+		text-align: left;
+	}
+	.social-item {
+		width: auto;
+		display: inline-block;
+		float: none;
+	}
+	.social-link {
+		min-width: 0;
+		&:before {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 16px;
+		}
+	}
+	.social-name {
+		display: none;
+	}
+}
+
+// Map
+// ----------------
+// #ToDo

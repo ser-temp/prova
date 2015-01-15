@@ -1,0 +1,277 @@
+// -----------------------------
+// Facet Theme: CSS > Widgets > Twitter Feed
+// -----------------------------
+
+// Breakpoints for layout variations
+// ----------------
+
+@twitter-feed-large: ~"only screen and (min-width : 1000px)";
+@twitter-medium: ~"only screen and (max-width : 1000px)";
+@twitter-small: ~"only screen and (max-width : 500px)";
+
+
+// 2 Columns Layout on a Large Screen
+// ----------------
+
+@media @twitter-feed-large {
+	.widget__twitter .tweet-item {
+		width: 49%;
+		margin-right: 2%;
+		margin-bottom: 2%;
+		float: left;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+}
+
+
+// Tweet Item
+// ----------------
+
+.tweet-item {
+	position: relative;
+}
+
+// Avatar
+.twitter-feed__avatar {
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+}
+
+.twitter-feed__avatar-image {
+	width: 40px;
+	height: 40px;
+	display: block;
+
+	@media @twitter-medium {
+		width: 30px;
+		height: 30px;
+	}
+
+	@media @twitter-small {
+		width: 26px;
+		height: 26px;
+	}
+}
+
+// Tweet Wrap
+// Using Flexbox only to swop order of elements
+.tweet-wrap {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+// Tweet Content
+.tweet-content {
+	-webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    font-family: @font-swatch1-font-family;
+	font-size: @font-swatch3-font-size;
+	line-height: @font-swatch3-line-height;
+    border-bottom: 2px solid contrast(@bw-bg, @bw-front-light, @bw-front-dark);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+    padding-bottom: 15px;
+
+    @media @twitter-medium {
+		font-size: bkscale(@font-swatch3-font-size, 0.8);
+		line-height: bkscale(@font-swatch3-line-height, 0.8);
+		border-bottom-width: 1px;
+		padding-bottom: 5px;
+		margin-bottom: 16px;
+    }
+
+    @media @twitter-small {
+    	margin-bottom: 8px;
+		font-size: bkscale(@font-swatch3-font-size, 0.68);
+		line-height: bkscale(@font-swatch3-line-height, 0.68);
+    }
+
+
+
+    // Bottom Arrow
+	&:after, &:before {
+		top: 100%;
+		left: 30px;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		@media @twitter-medium {
+			left: 25px;
+		}
+		@media @twitter-small {
+			left: 23px;
+		}
+	} 
+
+	// Bottom Arrow Fill
+    &:after {
+		border-color: rgba(255, 0, 0, 0);
+		border-top-color: @bg-color;
+		border-width: 10px;
+		margin-left: -10px;
+		@media @twitter-medium {
+			border-width: 6px;
+			margin-left: -6px;
+		}
+		@media @twitter-small {
+			border-width: 4px;
+			margin-left: -4px;
+		}
+    }
+
+	// Bottom Arrow Border
+    &:before {
+    	// 2 pixel arrow border
+		border-color: rgba(0, 0, 0, 0);
+		border-top-color: contrast(@bw-bg, @bw-front-light, @bw-front-dark);
+		border-width: 13px;
+		margin-left: -13px;
+
+		@media @twitter-medium {
+			// 1 pixel arrow border
+			border-width: 7px;
+			margin-left: -7px;
+		}
+
+		@media @twitter-small {
+			border-width: 5px;
+			margin-left: -5px;
+		}
+
+    }
+}
+
+// Account Link
+.twitter-feed__account-link {
+	-webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    font-size: 16px;
+    font-family: @font-swatch1-font-family;
+    line-height: 40px;
+    min-height: 40px;
+    margin-left: 55px;
+
+	@media @twitter-medium {
+		min-height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+		margin-left: 50px;
+	}
+
+	@media @twitter-small {
+		min-height: 26px;
+		line-height: 26px;
+		font-size: 13px;
+		margin-left: 42px;
+	}
+
+}
+
+// Tweet Metadata
+.tweet-metadata {
+	-webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+	position: absolute;
+	min-height: 40px;
+	right: 10px;
+	bottom: 0;
+	border-left: 1px solid contrast(@bw-bg, @bw-front-light, @bw-front-dark);
+	padding-left: 1em;
+	font-size: 12px;
+	line-height: 1;
+	color: fade(@font-swatch5-color, 50%);
+	@media @twitter-medium {
+		min-height: 30px;
+		line-height: 30px;
+	}
+	@media @twitter-small {
+		min-height: 26px;
+		line-height: 1.2;
+		right: 0;
+		font-size: 11px;
+	}
+
+}
+
+// Tweet Source
+.tweet-source {
+	color: fade(@font-swatch5-color, 50%);
+}
+
+// Timestamp
+.twitter-feed__timestamp {
+	display: block;
+	font-size: 14px;
+	color: @font-swatch5-color;
+	padding: 0.4em 0 0.2em 0;
+
+	@media @twitter-medium {
+		font-size: inherit;
+		display: inline;
+		color: fade(@font-swatch5-color, 50%);
+	}
+
+	@media @twitter-small {
+		display: block;
+		padding: 0;
+		font-size: 11px;
+	}
+}
+
+// Retweeted By
+.retweeted-by {
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	padding-top: 5px;
+	font-size: 10px;
+	right: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	left: -100px;
+	text-align: right;
+	line-height: 1;
+}

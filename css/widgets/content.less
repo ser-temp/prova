@@ -1,0 +1,212 @@
+// -----------------------------
+// Facet Theme: CSS > Widgets > Content Widget
+// -----------------------------
+
+.content-widget {
+	// Limits text width for optimal readability
+	max-width: 850px;
+	margin: 0 auto;
+
+	// H1
+	h1 {
+		@media @tablet {
+			font-size: bkscale(@font-swatch1-font-size, 0.9);
+			line-height: bkscale(@font-swatch1-line-height, 0.9);
+		}
+
+		@media @mobile {
+			font-size: bkscale(@font-swatch1-font-size, 0.8);
+			line-height: bkscale(@font-swatch1-line-height, 0.8);
+		}
+	}
+
+	// H2
+	h2 {
+		@media @tablet {
+			font-size: bkscale(@font-swatch2-font-size, 0.9);
+			line-height: bkscale(@font-swatch2-line-height, 0.9);
+		}
+
+		@media @mobile {
+			font-size: bkscale(@font-swatch2-font-size, 0.8);
+			line-height: bkscale(@font-swatch2-line-height, 0.8);
+		}
+	}
+
+	// H3
+	h3 {
+		@media @tablet {
+			font-size: bkscale(@font-swatch3-font-size, 0.9);
+			line-height: bkscale(@font-swatch3-line-height, 0.9);
+		}
+
+		@media @mobile {
+			font-size: bkscale(@font-swatch3-font-size, 0.8);
+			line-height: bkscale(@font-swatch3-line-height, 0.8);
+		}
+	}
+
+	// H4
+	h4 {
+		@media @tablet {
+			font-size: bkscale(@font-swatch4-font-size, 0.9);
+			line-height: bkscale(@font-swatch4-line-height, 0.9);
+		}
+
+		@media @mobile {
+			font-size: bkscale(@font-swatch4-font-size, 0.8);
+			line-height: bkscale(@font-swatch4-line-height, 0.8);
+		}
+	}
+
+	// Paragraph and Strings
+	p, &  {
+		@media @tablet {
+			font-size: bkscale(@font-swatch5-font-size, 0.9);
+			line-height: bkscale(@font-swatch5-line-height, 0.9);
+		}
+
+		@media @mobile {
+			font-size: bkscale(@font-swatch5-font-size, 0.8);
+			line-height: bkscale(@font-swatch5-line-height, 0.8);
+		}	
+	}
+
+	// Link
+	a {
+		box-shadow: inset 0px -1px 0px 0px @link-color;
+		&:hover {
+			text-decoration: none;
+			box-shadow: inset 0px -2px 0px 0px @link-color;
+		}
+	}
+
+	// Unordered List
+	ul {
+		margin: 0 0 0 1.2em;
+		padding: 0;
+
+		li {
+			padding: 0 0 0 2em;
+			margin: 0 0 1em 0;
+
+			@media @tablet {
+				font-size: bkscale(@font-swatch5-font-size, 0.9);
+				line-height: bkscale(@font-swatch5-line-height, 0.9);
+			}
+
+			@media @mobile {
+				font-size: bkscale(@font-swatch5-font-size, 0.8);
+				line-height: bkscale(@font-swatch5-line-height, 0.8);
+				padding-left: 0;
+			}
+		}
+	}
+
+	// Ordered List
+	ol {
+		counter-reset: ordered-counter;
+		padding-left: 0;
+		margin: 1em 0;
+		li {
+			list-style-type: none;
+			position: relative;
+			padding-left: 3em;
+			margin-bottom: 1em;
+
+			@media @tablet {
+				font-size: bkscale(@font-swatch5-font-size, 0.9);
+				line-height: bkscale(@font-swatch5-line-height, 0.9);
+			}
+
+			@media @mobile {
+				font-size: bkscale(@font-swatch5-font-size, 0.8);
+				line-height: bkscale(@font-swatch5-line-height, 0.8);
+				padding-left: 2.5em;
+			}	
+
+			// Custom Numbers
+			&:before {
+				content: counter(ordered-counter);
+				counter-increment: ordered-counter;				
+				min-width: 26px;
+				padding: 0 0.4em 0 0;
+				display: inline-block;
+				text-align: left;
+				left: 0;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				border-right: 1px solid contrast(@bw-bg, @bw-front-light, @bw-front-dark);
+				font-family: @font-swatch1-font-family;
+			}
+		}
+	}
+
+	// Block Quote
+	blockquote {
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: contrast(@bw-bg, @bw-front-light, @bw-front-dark);
+		font-family: @font-swatch1-font-family;
+		font-size: @font-swatch4-font-size;
+		line-height: @font-swatch4-line-height;
+		width: 80%;
+		margin: 2em auto;
+		padding: 1em 0;
+		position: relative;
+		display: block;
+
+		@media @tablet {
+			font-size: bkscale(@font-swatch4-font-size, 0.9);
+			line-height: bkscale(@font-swatch4-line-height, 0.9);
+		}
+
+		@media @mobile {
+			font-size: bkscale(@font-swatch4-font-size, 0.8);
+			line-height: bkscale(@font-swatch4-line-height, 0.8);
+			width: auto;
+			padding: 0.8em 0;
+		}
+
+		// Custom Opening Quotation Mark
+		&:before {
+			background-color: @theme-color;
+			content: "\f10d";
+			font-family: 'FontAwesome', sans-serif;
+			color: contrast(@theme-color, rgba(0,0,0), rgba(255, 255, 255));
+			width: 3em;
+			height: 3em;
+			line-height: 3em;
+			text-align: center;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 1em;
+			@media @mobile {
+				width: 2em;
+				height: 2em;
+				line-height: 2em;
+				font-size: 12px;
+			}
+		}
+	}
+
+	// Pre
+	pre {
+		background-color: fade(@theme-color, 80%);
+		color: contrast(@theme-color, rgba(0,0,0), rgba(255, 255, 255));
+		display: block;
+		margin: 1em 0;
+		border: none;
+		border-radius: 0;
+		padding: 1em;
+	}
+
+	// Code
+	code {
+		font-size: 0.9em;
+	}
+}

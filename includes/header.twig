@@ -1,0 +1,24 @@
+<!-- Header -->
+<header class="template-header">
+
+	<div class="container">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		
+		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+
+		<div class="drop-down-nav">
+			<div class="page-title">{{ page.title }}Page Title</div>
+			<button class="custom-navigation-toggle">
+				<div class='bar one'></div>
+				<div class='bar two'></div>
+				<div class='bar three'></div>
+			</button>
+		</div>
+
+		<div class="navigation">
+			{{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+		</div>
+	</div>
+
+</header>
+<!-- End Header -->

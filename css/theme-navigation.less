@@ -1,0 +1,470 @@
+// -----------------------------
+// Facet Theme: CSS > Navigation
+// -----------------------------
+
+
+// -----------------------------
+// Custom Breakpoints from theme.less
+// -----------------------------
+
+// @bp-global-large			Large Screen Variation - Navigation items displayed instantly
+// @bp-global-medium		Medium Screen Variation - Items visibility toggled by button. Button is in line with the logo and the company name
+// @bp-global-small		Small Screen Variation - Toggle button is displayed below the company logo and name
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   Reset and Editor Alignment
+//  2.   Top Level Navigation Item
+//	3.   Folder Item
+//  4.   Pull Down Version
+
+
+// -----------------------------
+//  1.   Reset and Editor Alignment
+// -----------------------------
+
+// Navigation List
+// --------------------
+.navigation-list {
+	margin: 0; // Reset
+}
+
+// Navigation Alignment
+// --------------------
+@media @bp-global-large {
+	.navigation-list {
+		&.align-left {
+			text-align: left;
+		}
+		&.align-right {
+			text-align: right;
+		}
+		&.align-center {
+			text-align: center;
+		}
+	}
+}
+
+
+
+// -----------------------------
+//  2.   Top Level Navigation Item
+// -----------------------------
+.bk-navigation {
+	.item-name {
+		padding: 1em 13px;
+	}	
+}
+
+
+// :hover effect
+// ---------------------------------------
+@media @bp-global-large {
+	.navigation-body > .navigation-list > .navigation-item:not(.selected) {
+		.animation; // Enabling HW acceleration
+		vertical-align: middle;
+		position: relative;
+
+		& > .item-name {
+			position: relative;
+			top: 0;
+			-webkit-transition: all 0.15s ease-in-out;
+			-moz-transition: all 0.15s ease-in-out;
+			-o-transition: all 0.15s ease-in-out;
+			transition: all 0.15s ease-in-out;
+		}
+
+		// Text underline animating from left to right
+		// on hover
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 5px;
+			left: 13px;
+			right: 100px;
+			height: 1px;
+			background-color: @link-color;
+			-webkit-transition: all 0.15s ease-in-out;
+			-moz-transition: all 0.15s ease-in-out;
+			-o-transition: all 0.15s ease-in-out;
+			transition: all 0.15s ease-in-out;
+		}
+
+		&:hover {
+			// Underline
+			&:after {
+				right: 13px;
+			}
+			& > .item-name {
+				position: relative;
+				top: -5px;
+			}
+		}
+	}
+}
+
+
+// selected navigation item
+// ---------------------------------------
+
+@media @bp-global-large {
+	.navigation-body > .navigation-list > .navigation-item.selected {
+		:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0px;
+			left: 13px;
+			right: 13px;
+			height: 5px;
+			background-color: @link-color;
+			-webkit-transition: all 0.15s ease-in-out;
+			-moz-transition: all 0.15s ease-in-out;
+			-o-transition: all 0.15s ease-in-out;
+			transition: all 0.15s ease-in-out;
+		}
+	}
+}
+
+
+// -----------------------------
+//	3.   Folder Item
+// -----------------------------
+
+.navigation-item.folder > .item-name {
+	// Folder Icon
+	&:after {
+		content: "\f107";
+		font-family: 'FontAwesome', sans-serif;
+		margin-left: 0.4em;
+		@media @bp-global-medium {
+			display: inline-block;
+			width: 0.8em;
+			height: 0.8em;
+			line-height: 0.8em;
+			text-align: center;
+			// Folder icon animation
+			-webkit-transform: rotate(-90deg);
+			-moz-transform: rotate(-90deg);
+			-o-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+			-webkit-transition: all 0.15s ease-in-out;
+			-moz-transition: all 0.15s ease-in-out;
+			-o-transition: all 0.15s ease-in-out;
+			transition: all 0.15s ease-in-out;
+		}
+	}
+}
+
+// Folder item icon rotates on drop down
+// ---------------------------------------
+@media @bp-global-medium {
+	.navigation-item.folder.open > .item-name:after {
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		-o-transform: rotate(0);
+		-ms-transform: rotate(0);
+		transform: rotate(0);
+	}
+}
+
+// Folder list design
+// ---------------------------------------
+.navigation-list--children {	
+	white-space: inherit;
+	@media @bp-global-large {
+		background: mix(@bg-color, @theme-color, 30%);
+		text-align: left;
+		left: 13px;
+		
+		.navigation-item {
+			box-shadow: inset 0px -1px 0px 0px @theme-color;
+			&:last-child {
+				box-shadow: none;
+			}
+			&:hover {
+				background-color: @theme-color;
+			}
+		}
+
+		.item-name {
+			padding: 0.7em 13px;
+
+		}
+	}
+
+	@media @bp-global-medium {
+		.navigation-item.folder.open & {
+			display: block;
+			background-color: transparent;
+		}
+		position: relative;
+	}
+}
+
+// LESS Framework reset
+// ---------------------------------------
+.navigation-item:hover .navigation-list--children {
+	@media @bp-global-medium {
+		display: none; 
+	}
+}
+
+// Selected folder item
+// ---------------------------------------
+.navigation-list--children .navigation-item.selected .item-name {
+	color: @link-color;
+}
+
+
+
+
+// -----------------------------
+//  4.   Pull Down Version
+// -----------------------------
+
+// Hiding default navigation toggle button, custom button is used (.custom-navigation-toggle)
+// --------------------
+.navigation-toggle {
+	display: none;
+}
+
+// Container for custom toggle button and page title
+// --------------------
+.drop-down-nav {
+	display: none;
+	
+	@media @bp-global-medium {
+		display: block;
+		position: relative;
+		margin-left: auto;
+	}
+
+	@media @bp-global-small {
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+// Active page title
+// --------------------
+.drop-down-nav .page-title {
+	display: none;
+	@media @bp-global-medium {
+		display: block;
+		text-align: right;
+		font-weight: 200;
+		line-height: 38px;
+		min-height: 40px;
+		padding-right: 13px;
+		padding-left: 7px;
+		margin: 0 50px 0 0;
+		border-right: 1px solid contrast(@theme-color, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.25));
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 16px;
+		color: contrast(@theme-color, #000, #fff);
+	}
+
+	@media @bp-global-small {
+		background-color: contrast(@bg-color, lighten(@bg-color, 16%), darken(@bg-color, 16%));
+		color: contrast(@bg-color, fade(#000, 70%), fade(#fff, 70%));
+		border-right: 1px solid contrast(@theme-color, rgba(255, 255, 255, 0.10) , rgba(0, 0, 0, 0.10));
+		display: block;
+	}
+}
+
+// when navigation is open
+.drop-down-nav.open .page-title {
+	@media @bp-global-small {
+		color: contrast(@theme-color, #000, #fff);
+		background: contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
+		border-right-color: contrast(@theme-color, rgba(0, 0, 0, 0.15) ,  rgba(255, 255, 255, 0.15));
+	}
+}
+
+// Navigation Toggle Button
+// -----------------
+.custom-navigation-toggle {
+	@media @bp-global-medium {
+		display: block;
+		width: 50px;
+		height: 40px;
+		text-indent: 100%;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: transparent;
+		outline: none;
+
+		&:hover {
+			background-color: transparent; // LESS Framework Reset
+		}
+
+		// Animated Navigation Icon
+		// -----------------
+		.bar {
+			width: 24px;
+			height: 3px;
+			background-color: @link-color;
+			position: absolute;
+			left: 13px;
+			-webkit-transition: .25s ease-in-out;
+			-moz-transition: .25s ease-in-out;
+			-o-transition: .25s ease-in-out;
+			transition: .25s ease-in-out;
+			opacity: 1;
+
+			&.one {
+				top: 11px;
+			}
+			&.two {
+				top: 18px;
+			}
+			&.three {
+				top: 25px;
+			}
+
+			// When navigation is open
+			.open & {
+				&.one {
+					top: 18px;
+					-webkit-transform: rotate(135deg);
+					-moz-transform: rotate(135deg);
+					-o-transform: rotate(135deg);
+					transform: rotate(135deg);
+				}
+				&.two {
+					opacity: 0;
+					width: 0;
+					left: 25px;
+				}
+				&.three {
+					top: 18px;
+					-webkit-transform: rotate(-135deg);
+					-moz-transform: rotate(-135deg);
+					-o-transform: rotate(-135deg);
+					transform: rotate(-135deg);
+				}
+			}
+		}
+	}
+	@media @bp-global-small {
+		// Toggle background colour different on small screens
+		&, &:hover {
+			background-color: contrast(@bg-color, lighten(@bg-color, 16%), darken(@bg-color, 16%));
+		}
+		// Toggle button background changed when navigaiton is open
+		.drop-down-nav.open &, .drop-down-nav.open &:hover {
+			color: contrast(@theme-color, #000, #fff);
+			background: contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
+		}
+	}
+}
+
+
+// Pull Down Navigation
+// -----------------
+@media @bp-global-medium {
+	.navigation {
+		margin-right: 0;
+		position: relative;
+
+		.widget {
+			position: static; // LESS Framework reset
+		}
+	}
+	.navigation-body {
+		display: none;
+	}
+
+// 2 Columns List
+// -----------------
+	.navigation-body > .navigation-list {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: flex-start;
+		-ms-flex-line-pack: start;
+		align-content: flex-start;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+
+		padding: 2em 0;
+	}
+
+	.navigation-body > .navigation-list > .navigation-item {
+		border-top-width: 5px;
+		border-style: solid;
+		border-color: contrast(@theme-color, rgba(0, 0, 0, 0.12), rgba(255, 255, 255, 0.12));
+		width: 49%;
+		margin-right: 2%;
+
+
+		&.selected {
+			border-color: @link-color;
+		}
+		
+		// Resets margin for items in the second column
+		&:nth-of-type(even) {
+			margin-right: 0;
+		}
+
+		& > .item-name {
+			padding: 0.8em 0;
+			font-size: (@font-swatch6-font-size * 1.1);
+			line-height: (@font-swatch6-line-height * 1.1);
+		}
+	}
+
+	// Open Navigation
+	// -----------------
+	.bk-extendednavigation.open {
+		.navigation-body {
+			display: block;
+			padding: 13px;
+			background: contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
+		}
+	}
+
+	.navigation-list--children {
+		margin-bottom: 1.4em;
+
+		.item-name {
+			padding: 0.7em 0;
+		}
+	}
+}
+
+// 1 Column List
+// -----------------
+@media @bp-global-small {
+	.navigation-body > .navigation-list {
+		display: block;
+		padding: 1em 0;
+	}
+	.navigation-body > .navigation-list > .navigation-item {
+		width: auto;
+		display: block;
+		margin-right: 0;
+		border-top-width: 3px;
+	}
+}

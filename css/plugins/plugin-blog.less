@@ -1,0 +1,284 @@
+// -------------------------------
+// Facet Theme: CSS > Plugin: Blog
+// -------------------------------
+
+@blog-large: ~"only screen and (min-width : 890)";
+@blog-medium: ~"only screen and (max-width : 890px)";
+@blog-small: ~"only screen and (max-width : 400px)";
+
+// -----------------------------
+// 1.  #Blog Search Form in the Title Bar
+// -----------------------------
+
+.title-widget {
+	// Hide Legends and Labels
+	.blog-search__legend, .blog-search__label {
+		display: none;
+	}
+
+	// Form Body
+	// ----------------
+	.blog-search__form-body {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-box-pack: start;
+		-moz-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: stretch;
+		-ms-flex-line-pack: stretch;
+		align-content: stretch;
+		-webkit-box-align: stretch;
+		-moz-box-align: stretch;
+		-webkit-align-items: stretch;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+	}
+
+	// Form Group
+	// ----------------
+	.form-group {
+		margin-bottom: 0;
+		&:first-child {
+			margin-right: 5px;
+			@media @bp-global-small {
+				-webkit-box-flex: 1;
+				-moz-box-flex: 1;
+				-webkit-flex: 1 1 auto;
+				-ms-flex: 1 1 auto;
+				flex: 1 1 auto;
+		    }
+		}
+
+		// Makes a pseudo button, placed below the actual button
+		&:last-child {
+			background-color: @button-color;
+			position: relative;
+
+			&:hover {
+				@media @bp-global-small {
+					background: @button-hover-color;
+				}
+			}
+
+			// Search Icon
+			&:before {
+				@media @bp-global-small {
+					content: '\f002';
+					font-family: 'FontAwesome', sans-serif;
+					position: absolute;
+					width: 40px;
+					text-align: center;
+					line-height: 38px;
+					color: contrast(@button-color, #000, #fff);
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	// Blog Search Input
+	// ----------------
+	.button.blog-search__input {
+		line-height: 50px;
+		font-size: 18px;
+		@media @bp-global-medium {
+			line-height: 40px;
+		}
+		// Transparent button, uses .form-group to give it an icon
+		@media @bp-global-small {
+			background-color: transparent;
+			width: 40px;
+			color: transparent;
+			padding: 0;
+			position: relative;
+		}
+	}
+
+	// Blog Search Input
+	// ----------------
+	.input--single-line.blog-search__input {
+		height: 50px;
+		font-size: 18px;
+		@media @bp-global-medium {
+			height: 40px;
+			font-size: 16px;
+		}
+		@media @bp-global-small {
+			font-size: 14px;
+		}
+	}
+}
+
+// -----------------------------
+// 2.  Blog Post
+// -----------------------------
+
+// Blog Article
+// ----------------
+.post-article {
+	position: relative;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    margin-bottom: 2em;
+}
+
+
+
+// Post Image
+// ----------------
+.post-image {
+	background-color: contrast(@bg-color, lighten(@bg-color, 2%), darken(@bg-color, 2%));
+	position: relative;
+}
+
+.blog-post-list__image-link {
+	display: block;
+
+	.image {
+		width: auto;
+		display: block;
+		margin: 0 auto;
+		max-height: 470px;
+		height: auto;
+	}
+}
+
+// Post Content
+// ----------------
+.post-content {
+	background-color: contrast(@bg-color, lighten(@bg-color, 16%), darken(@bg-color, 16%));
+	margin: 0;
+	
+}
+
+.post-header, .post-excerpt {
+	max-width: 850px;
+	margin: 0 auto;
+	padding-left: 18px;
+	padding-right: 18px;
+
+	@media @blog-small {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+}
+
+// Post Header
+// ----------------
+.post-header {
+	.title-link {
+		color: @font-swatch1-color;
+	}
+}
+
+// Post Title
+// ----------------
+.post-title {
+	margin: 2em 0 0.6em 0; 
+	padding: 0;
+
+	@media @blog-medium {
+		margin: 0.5em 0 0.2em 0;
+		font-size: (@font-swatch2-font-size * 0.84);
+		line-height: (@font-swatch2-line-height * 0.84);
+	}
+	
+}
+
+// Post Excerpt
+// ----------------
+.post-excerpt {
+	padding-bottom: 2.5em;
+
+	@media @blog-medium {
+		padding-bottom: 0.6em;
+	}
+	@media @blog-small {
+		padding-bottom: 0;
+	}
+
+	
+
+	// Read More
+	.read-more {
+		background: @button-color;
+		color: contrast(@button-color, #000, #fff);
+		font-size: @font-swatch5-font-size;
+		padding:  0.7em 1.4em;
+		display: inline-block;
+		margin:  1em 0 1.2em;
+
+		@media @blog-small {
+			display: block;
+			margin: 0.5em -10px 0;
+			padding-left: 10px;
+		}
+
+		&:hover {
+			background: @button-hover-color;
+		}
+	}
+}
+
+// Post Footer
+// ----------------
+.post-footer {
+	-webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+    margin-bottom: 1em;
+
+	// Timestamp
+    .timestamp {
+		font-size: (@font-swatch5-font-size * 0.8);
+		border-left: 1px solid fade(@color-swatch5, 20%);
+		padding: 1em 1.5em;
+		color: fade(@font-swatch5-color, 80%);
+		@media @blog-medium {
+			padding: 0.8em 1em;
+			font-size: (@font-swatch5-font-size * 0.7);
+		}
+    }
+}

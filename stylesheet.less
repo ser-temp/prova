@@ -1,0 +1,120 @@
+// --------------------------------------
+// BaseKit Standard Theme: Facet
+// --------------------------------------
+
+#tdk-toolbar {
+	display: none;
+}
+
+
+// .in-tdk #page-zones__main-widgets__ContentWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__ContactFormWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__TwitterWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__buttonWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__socialiconsWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__youtubeWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__LineWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__MapWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__ProfileWidget1 {display: none;}
+// .in-tdk #page-zones__main-widgets__ProfileWidget2 {display: none;}
+// .in-tdk #page-zones__main-widgets__ProfileWidget3 {display: none;}
+// .in-tdk #page-zones__main-widgets__ProfileWidget4 {display: none;}
+// .in-tdk #page-zones__main-widgets__ProfileWidget5 {display: none;}
+// .in-tdk #page-zones__main-widgets__ProfileWidget6 {display: none;}
+// .in-tdk #page-zones__main-widgets__ProfileWidget7 {display: none;}
+// .in-tdk #page-zones__main-widgets__ProfileWidget8 {display: none;}
+// .in-tdk #page-zones__main-widgets__ProfileWidget9 {display: none;}
+// .in-tdk #page-zones__main-widgets__ProfileWidget10 {display: none;}
+// .in-tdk #page-zones__main-widgets__ImageWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__paypalbuynowWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__tweetWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__dropboxWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__clicktocallWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__galleryWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__responsiveslideshowWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__signupformWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__blogpostlistWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__blogpostWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__blogsearchWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__menusectionsWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__menuWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__ecomproductslistWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__ecomproductWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__ecombasketWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__ecombasketsummaryWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__ecomcategorieslistWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__ecomfeaturedproductsWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__soundcloudWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__facebookCommentsWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__donationWidget {display: none;}
+// .in-tdk #page-zones__main-widgets__YelpreviewWidget {display: none;}
+
+// Font Swatches
+// -------------
+
+// font1:  Heading 1
+// font2:  Heading 2
+// font3:  Heading 3
+// font4:  Heading 4
+// font5:  Paragraph
+// font6:  Navigation Link
+// font7:  Buttons
+// font8:  Feature Headline
+// font9:  Feature Strapline
+// font10: Company Name (Logo)
+
+// -----------------------------
+// Colour Variables
+// -----------------------------
+
+// @color-swatch1: Background 
+// @color-swatch2: Contrast
+// @color-swatch3: Buttons
+// @color-swatch4: Headings
+// @color-swatch5: Paragraph
+// @color-swatch6: Navigation Links
+// @color-swatch7: Spare
+
+// Background
+@bg-color: @color-swatch1; // Main BG
+
+// Contrast Colour
+@contrast-color: @color-swatch2;
+
+// Button BG Colour 
+@button-color: @color-swatch3; 
+@button-hover-color: contrast(@button-color, darken(@button-color, 10%), lighten(@button-color, 10%)); 
+
+@link-color: @color-swatch3; 
+
+// Heading Text Colour (H1 - H4)
+@heading-color: @color-swatch4;
+
+// Paragraph Text Colour
+@paragraph-color: @color-swatch5;
+
+// Nav Link Colour
+@nav-color: @color-swatch6;
+
+// Spare Colour
+@theme-color: @color-swatch7;
+
+
+
+// -----------------------------
+// Includes
+// -----------------------------
+
+@import "@{templateCommon}/bk-less-framework.less"; // BaseKit LESS Framework 
+
+@import "@{templateLocal}/css/mixins.less"; // Mixins
+
+@import "@{templateLocal}/css/theme.less"; // Theme
+@import "@{templateLocal}/css/theme-navigation.less"; // Navigation
+
+@import "@{templateLocal}/css/widgets.less"; // Widgets
+
+// Plugin Includes
+@import "@{templateLocal}/css/plugins/plugin-blog.less"; // Plugin: Blog
+@import "@{templateLocal}/css/plugins/plugin-menu.less"; // Plugin: Menu
+@import "@{templateLocal}/css/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce

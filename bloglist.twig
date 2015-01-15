@@ -1,0 +1,29 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="bloglist-page">
+
+	<div class="title-bar">
+		<div class="title-container">
+			<h1>xxxBlog{{ page.title }}</h1>
+			<div class="title-widget">
+				{{widget('blogsearch', 'thisuniquewidgetname', {})|raw}}
+			</div>
+		</div>
+	</div>
+
+	<!-- Zone Content -->
+	<div class="zone-content">
+
+		<div class="container">
+			<!-- Main Widet Zone -->
+	   		{{zone('main')|raw}}	
+		</div>
+
+	</div>
+	<!-- End Zone Content -->
+
+</section>
+
+{% endblock %}
