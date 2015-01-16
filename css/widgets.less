@@ -45,6 +45,7 @@ input[type="search"],
 input[type="email"], 
 input[type="password"], 
 .input--single-line,
+.input--search
 textarea {
 	background-color: transparent;
 	border: 1px solid contrast(@bw-bg, @bw-front-light, @bw-front-dark);
@@ -71,7 +72,8 @@ textarea {
 input[type="search"], 
 input[type="email"], 
 input[type="password"], 
-.input--single-line {
+.input--single-line,
+.input--search {
 	height: (@font-swatch7-font-size * 2.5);
 	@media @mobile {
 		height: (@font-swatch7-font-size * 0.88 * 2.5);
@@ -109,6 +111,103 @@ textarea {
 		margin-right: 0.8em;
 	}
 }
+
+
+.select-wrap {
+	position: relative;
+	
+	box-shadow: inset 0px -1px 0px 0px @link-color;
+
+	&:hover {
+		box-shadow: inset 0px -2px 0px 0px @link-color;
+	}
+
+	&:after {
+		content: '\f107';
+		font-family: 'FontAwesome', sans-serif;
+		display: inline-block;
+		height: 1em;
+		line-height: 1em;
+		text-align: center;
+		font-size: 20px;
+		color: @link-color;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -0.5em;
+		z-index: 900;
+	}
+}
+
+.select {
+	border: none;
+	color: @link-color;
+	font-size: @font-swatch5-font-size;
+	border-radius: 0;
+	background-color: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 0 1.5em 0 0;
+	display: block;
+	width: 100%;
+	position: relative;
+	z-index: 1000;
+	&:hover, &:focus {
+		background-color: transparent;
+	}
+}
+
+
+// -----------------------------
+// X.  Pagination
+// -----------------------------
+
+.pagination-list {
+	clear: both;
+	margin-bottom: 2em;
+	.button--pagination {
+		background: transparent;
+		color: @link-color;
+		font-family: @font-swatch1-font-family;
+		font-size: @font-swatch5-font-size;
+		padding: 0;
+		line-height: 1;
+
+		@media @mobile {
+			font-size: (@font-swatch5-font-size * 0.88);
+		}
+
+		&:before {
+			background-color: @button-color;
+			width: 1.5em;
+			height: 1.5em;
+			line-height: 1.5em;
+			display: inline-block;
+			color: @button-text-color;
+			text-align: center;
+			margin-right: 0.3em;
+			font-size: 1.5em;
+			vertical-align: middle;
+			@media @mobile {
+				font-size: 1em;
+			}
+		}
+		&:hover:before {
+			background-color: @button-hover-color;
+		}
+	}
+	.icon--previous:before {
+		content: '\f104';
+	}
+	.icon--next:before {
+		content: '\f105';
+	}
+	.control-text {
+		vertical-align: middle;
+	}
+}
+
+
 
 // -----------------------------
 // X.  #Content widget

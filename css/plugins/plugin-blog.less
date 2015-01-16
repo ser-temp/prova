@@ -2,6 +2,17 @@
 // Facet Theme: CSS > Plugin: Blog
 // -------------------------------
 
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #Widget Layout Breakpoints
+// #ToDo
+
+// -----------------------------
+// 1.  #Widget Layout Breakpoints
+// -----------------------------
+
 @blog-large: ~"only screen and (min-width : 890)";
 @blog-medium: ~"only screen and (max-width : 890px)";
 @blog-small: ~"only screen and (max-width : 400px)";
@@ -132,34 +143,6 @@
 // ----------------
 .post-article {
 	position: relative;
-	display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    -moz-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-    -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
     margin-bottom: 2em;
 }
 
@@ -170,6 +153,7 @@
 .post-image {
 	background-color: contrast(@bg-color, lighten(@bg-color, 2%), darken(@bg-color, 2%));
 	position: relative;
+	text-align: center;
 }
 
 .blog-post-list__image-link {
@@ -189,10 +173,10 @@
 .post-content {
 	background-color: contrast(@bg-color, lighten(@bg-color, 16%), darken(@bg-color, 16%));
 	margin: 0;
-	
+	position: relative;
 }
 
-.post-header, .post-excerpt {
+.post-header, .post-excerpt, .post-body {
 	max-width: 850px;
 	margin: 0 auto;
 	padding-left: 18px;
@@ -216,7 +200,7 @@
 // Post Title
 // ----------------
 .post-title {
-	margin: 2em 0 0.6em 0; 
+	margin: 2em 0 0.6em 0;
 	padding: 0;
 
 	@media @blog-medium {
@@ -224,12 +208,16 @@
 		font-size: (@font-swatch2-font-size * 0.84);
 		line-height: (@font-swatch2-line-height * 0.84);
 	}
-	
+	@media @blog-small {
+		margin: 0.5em 0 0.2em 0;
+		font-size: (@font-swatch2-font-size * 0.70);
+		line-height: (@font-swatch2-line-height * 0.70);
+	}
 }
 
-// Post Excerpt
+// Post Excerpt / Post Body
 // ----------------
-.post-excerpt {
+.post-excerpt, .post-body {
 	padding-bottom: 2.5em;
 
 	@media @blog-medium {
@@ -237,10 +225,16 @@
 	}
 	@media @blog-small {
 		padding-bottom: 0;
+		p {
+			font-size: (@font-swatch5-font-size * 0.88);
+			line-height: (@font-swatch5-line-height * 0.88);
+		}
 	}
+}
 
-	
-
+// Post Excerpt
+// ----------------
+.post-excerpt {
 	// Read More
 	.read-more {
 		background: @button-color;
@@ -253,7 +247,9 @@
 		@media @blog-small {
 			display: block;
 			margin: 0.5em -10px 0;
-			padding-left: 10px;
+			padding:  0.5em 10px;
+			font-size: (@font-swatch5-font-size * 0.88);
+			line-height: (@font-swatch5-line-height * 0.88);
 		}
 
 		&:hover {
@@ -262,12 +258,11 @@
 	}
 }
 
+
+
 // Post Footer
 // ----------------
 .post-footer {
-	-webkit-order: -1;
-    -ms-flex-order: -1;
-    order: -1;
     margin-bottom: 1em;
 
 	// Timestamp
@@ -276,9 +271,261 @@
 		border-left: 1px solid fade(@color-swatch5, 20%);
 		padding: 1em 1.5em;
 		color: fade(@font-swatch5-color, 80%);
+		display: block;
 		@media @blog-medium {
 			padding: 0.8em 1em;
 			font-size: (@font-swatch5-font-size * 0.7);
 		}
+		@media @blog-small {
+			padding: 0.5em 10px;
+		}
     }
+}
+
+
+// -----------------------------
+// 2.  #Blog List Page
+// -----------------------------
+.bloglist-page  {
+
+	.post-footer {
+		-webkit-order: -1;
+	    -ms-flex-order: -1;
+	    order: -1;
+	}
+
+    .post-article {
+    	display: -webkit-box;
+	    display: -moz-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-box-direction: normal;
+	    -moz-box-direction: normal;
+	    -webkit-box-orient: vertical;
+	    -moz-box-orient: vertical;
+	    -webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	    flex-direction: column;
+	    -webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	    -webkit-box-pack: start;
+	    -moz-box-pack: start;
+	    -webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	    justify-content: flex-start;
+	    -webkit-align-content: flex-start;
+	    -ms-flex-line-pack: start;
+	    align-content: flex-start;
+	    -webkit-box-align: stretch;
+	    -moz-box-align: stretch;
+	    -webkit-align-items: stretch;
+	    -ms-flex-align: stretch;
+	    align-items: stretch;
+    }
+}
+
+// -----------------------------
+// 3.  #Single Blog Post
+// -----------------------------
+
+.blogpost-page {
+	.zone-content {
+		// Reset Main Zone width restriciton to allow fullsreen blog image
+		padding: 0;
+		max-width: 100%;
+	}
+
+	// Post Content
+	// ----------------
+	.post-content {
+		padding: 1px 13px;
+		max-width: 1500px;
+		margin: 0 auto;
+		background-color: contrast(@bg-color, lighten(@bg-color, 16%), darken(@bg-color, 16%));
+
+
+	}
+	.post-article--has-image .post-content {
+		margin-top: -26px;
+	}
+}
+
+// Blog Post
+// ----------------
+.widget__blogpost {
+	// Post Body
+	// ----------------
+	.post-body {
+		padding-bottom: 4em;
+		@media @blog-medium {
+			padding-bottom: 2em;
+		}
+	}
+
+	// Post Title
+	// ----------------
+	.post-title {
+		margin: 2em 0 1em 0;
+	}
+
+	// Post Footer
+	// ----------------
+	.post-footer {
+		.clearfix;
+		padding-right: 13px;
+		padding-left: 13px;
+		max-width: 1526px;
+		margin: 1em auto 0;
+	}
+
+	// Timestamp
+	// ----------------
+	.blog-post__timestamp {
+		float: left;
+		@media @blog-medium {
+			float: none;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+// Post Attributes
+// ----------------
+.post-attributes {
+	float: right;
+	margin: 0;
+	@media @blog-medium {
+		float: none;
+	}
+}
+
+// Post Category / Post Tags
+// ----------------
+.post-category, .post-tags {
+	display: inline-block;
+	vertical-align: top;
+	border-left: 1px solid fade(@color-swatch5, 20%);
+	padding: 0.2em 0 0.2em 1.3em;
+	@media @blog-medium {
+		padding: 0 0 0 13px;
+		&, * {
+			font-size: 14px;
+		}
+	}
+}
+
+// Post Category
+// ----------------
+.post-category {
+	margin-right: 3em;
+}
+
+// Category Title / Tags Title
+// ----------------
+.blog-post__category-title,
+.blog-post__tags-title {
+	font-size: 13px;
+	line-height: 1;
+	color: fade(@color-swatch5, 80%);
+	display: block;
+	padding-bottom: 0;
+}
+
+// Tags List
+// ----------------
+.blog-post__tag-list {
+	display: block;
+}
+
+// Tags List
+// ----------------
+.blog-post__tag-item {
+	&:after {
+		content: '/';
+		display: inline-block;
+		vertical-align: middle;
+		color: fade(@color-swatch5, 30%);
+		padding: 0 0.3em;
+		position: relative;
+		top: -0.1em;
+	}
+	&:last-child:after {
+		display: none;
+	}
+}
+
+// Sharing Links
+// ----------------
+.blog-post__sharing-links {
+	display: none;
+}
+
+
+// -----------------------------
+// 4.  #Blog Post List in Page Footer
+// -----------------------------
+
+// Embed Blog Post List Widget in blogpost.twig
+
+@blog-footer-small: ~"only screen and (max-width : 720px)";
+
+// Page Footer Blog Post List
+// ----------------
+.page-footer {
+	.widget__blogpostlist {
+		.clearfix;
+		max-width: 1526px;
+		margin: 0 auto;
+		padding: 0 13px;
+	}
+
+	// Post Article
+	// ----------------
+	.post-article {
+		width: 32%;
+		float: left;
+		margin: 0 2% 2% 0;
+		&:nth-child(3) {
+			margin-right: 0;
+		}
+		&:nth-child(4) {
+			clear: both;
+		}
+
+		@media @blog-footer-small {
+			width: auto;
+			float: none;
+			margin: 0 0 2em 0;
+		}
+	}
+
+	// Post Title
+	// ----------------
+	.post-title {
+		font-size: @font-swatch3-font-size;
+		line-height: @font-swatch3-line-height;
+		margin: 1em 0 0 0;
+		@media @blog-medium {
+			font-size: (@font-swatch3-font-size * 0.8);
+			line-height: (@font-swatch3-line-height * 0.8);
+		}
+	}
+
+	// Post Excerpt
+	// ----------------
+	.post-excerpt {
+		padding-bottom: 0.5em;
+		p {
+			display: none;
+		}
+	}
+
+	// Blog Timestamp
+	// ----------------
+	.blog-post-list__timestamp {
+		margin-top: 1em;
+		padding: 0.6em 1em;
+	}
 }

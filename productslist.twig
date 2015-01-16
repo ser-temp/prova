@@ -1,0 +1,46 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="productslist-page">
+
+	<div class="title-bar">
+		<div class="title-container">
+			<h1>xxxECOM List{{ page.title }}</h1>
+			<div class="title-widget">
+
+				<form class="product-search" method="GET" action="/store">
+					<fieldset class="fieldset  product-listing__fieldset">
+						<div class="form-body">
+							<div class="input-wrapper">
+								<input class="input  input--search  product-listing__input js-display-control" id="page-zones__main-widgets__ecomproductslistWidget__product-listing__search" name="page-zones__main-widgets__ecomproductslistWidget__product-listing__search" placeholder="Search term" type="search" value="">
+							</div>
+							<div class="button-wrapper">
+								<input class="button  button--submit  product-listing__input" type="submit" value="Search">
+							</div>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Zone Content -->
+	<div class="zone-content">
+
+		<div class="container">
+			<!-- Main Widet Zone -->
+	   		{{zone('main')|raw}}
+		</div>
+
+	</div>
+	<!-- End Zone Content -->
+
+	<div class="page-footer">
+		{{widget('ecomproductlist', 'additionalProductList')|raw}}
+	</div>
+
+</section>
+
+{% endblock %}

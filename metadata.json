@@ -3,7 +3,7 @@
     "thumbnail":"facet.png",
     "screenshot":"facet.png",
     "templateType":"standard",
-    "pageTypes": ["home", "bloglist"],
+    "pageTypes": ["home", "bloglist", "blogpost", "productslist"],
     "widgetVersion": 2,
     "tags": {
     "en": ["minimal", "clean", "floral", "modern", "creative", "typography", "simple", "contemporary", "flexible", "florist", "studio", "portfolio", "designer", "sans-serif"],

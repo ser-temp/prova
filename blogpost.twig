@@ -1,0 +1,26 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="blogpost-page">
+
+	
+
+	<!-- Zone Content -->
+	<div class="zone-content">
+
+		<div class="container">
+			<!-- Main Widet Zone -->
+	   		{{zone('main')|raw}}	
+		</div>
+
+	</div>
+	<!-- End Zone Content -->
+
+	<div class="page-footer">
+		{{widget('blogpostlist', 'thisuniquewidgetname', {postDisplayType: "summary"})|raw}}
+	</div>
+
+</section>
+
+{% endblock %}
