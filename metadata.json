@@ -3,7 +3,7 @@
     "widgetVersion": 2,
     "thumbnail":"facet.png",
     "templateType":"standard",
-    "pageTypes": ["home", "bloglist", "blogpost", "productslist", "ecomproduct"],
+    "pageTypes": ["home"],
     "tags": {
     "en": ["minimal", "clean", "floral", "modern", "creative", "typography", "simple", "contemporary", "flexible", "florist", "studio", "portfolio", "designer", "sans-serif"],
     "es": ["minimalista", "limpio", "decorativo", "moderno", "creativo", "tipográfico", "simple", "contemporaneo", "flexible", "florista", "estudio", "portafolio", "diseñador", "sans-serif"],
