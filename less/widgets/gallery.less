@@ -1,10 +1,12 @@
-// -----------------------------
+// ------------------------------------
 // Facet Theme: CSS > Widgets > Gallery
-// -----------------------------
+// ------------------------------------
+
+
 
 
 // Breakpoints for gallery layouts
-// ----------------
+// -------------------------------
 
 @gallery-4col: ~"only screen and (min-width : 1300px)";
 @gallery-3col: ~"only screen and (min-width : 850px) and (max-width : 1300px)";
@@ -12,16 +14,21 @@
 @gallery-1col: ~"only screen and (min-width : 1px) and (max-width : 500px)";
 
 
-// Gallery Tile
-// ----------------
 
-.gallery-item {
+
+// Gallery Item
+// ------------------------------
+
+
+.gallery__gallery-item {
 	float: left;
 	height: 0; // Height is achieved using padding-bottom
 	overflow: hidden;
 	position: relative;
-	
+
+
 	// 4 Columns Layout
+
 	@media @gallery-4col {
 		width: 24%;
 		padding-bottom: 24%;
@@ -31,63 +38,84 @@
 		}
 	}
 
+
 	// 3 Columns Layout
+
 	@media @gallery-3col {
 		width: 32.5%;
 		padding-bottom: 32%;
-		margin: 0 1.25% 1.25% 0; 
+		margin: 0 1.25% 1.25% 0;
 		&:nth-child(3n) {
 			margin-right: 0;
 		}
 	}
 
+
 	// 2 Columns Layout
+
 	@media @gallery-2col {
 		width: 49%;
 		padding-bottom: 49%;
-		margin: 0 2% 2% 0; 
+		margin: 0 2% 2% 0;
 		&:nth-child(2n) {
 			margin-right: 0;
 		}
 	}
 
+
 	// 1 Column Layout
+
 	@media @gallery-1col {
 		width: 100%;
 		height: auto;
 		padding-bottom: 0;
-		margin: 0 0 8% 0;	
+		margin: 0 0 8% 0;
 	}
 }
 
 
-// Gallery Captions
-// ----------------
 
-.image-gallery__caption {
+
+// Gallery Captions
+// ------------------------------
+
+
+.gallery__caption {
+	margin: 0; // LESS Framework reset
+}
+
+
+
+
+// Gallery Captions
+// ------------------------------
+
+
+.caption-link {
 	background-color: fade(@contrast-color, 80%);
 }
 
+
 // Gallery Image Title
-.image-gallery__image-title {
-	background-color: @theme-color;
+
+.gallery__image-title {
 	display: block;
+	position: relative;
 	padding: 1em 2em 1em 6%;
 	color: contrast(@theme-color, #000, #fff);
-	position: relative;
+	background-color: @theme-color;
 
 	@media @gallery-2col {
 		font-size: (@font-swatch5-font-size * 0.88);
 		line-height: (@font-swatch5-line-height * 0.88);
 	}
+
 	@media @gallery-1col {
 		font-size: (@font-swatch5-font-size * 0.77);
 		line-height: (@font-swatch5-line-height * 0.77);
-		padding-left: 4%;
-		padding-top: 0.7em;
-		padding-bottom: 0.7em;
+		padding: 0.7em 2em 0.7em 4%;
 	}
-	
+
 	// + Icon
 	&:after {
 		content: '\f067';
@@ -112,7 +140,7 @@
 
 // Gallery Image Description
 
-.image-gallery__image-description {
+.gallery__image-description {
 	display: block;
 	width: 94%;
 	padding: 1em 4%;
@@ -131,19 +159,25 @@
 }
 
 
-// Gallery Captions Versions
-// ----------------
 
-// Captions displayed on :hover
+
+// Gallery Captions Versions
+// ------------------------------
+
+
+// A) Captions displayed on :hover
 @gallery-captions-hover: ~"only screen and (min-width : 500px)";
 
-// Captions displayed permanently
+// B) Captions displayed permanently
 @gallery-captions-permanent: ~"only screen and (max-width : 500px)";
 
 
-// Captions displayed on :hover
+
+
+// A) Captions displayed on :hover
+
 @media @gallery-captions-hover {
-	.image-gallery__image-link {
+	.gallery__image-link {
 		display: block;
 		position: absolute;
 		top: 0;
@@ -155,13 +189,14 @@
 		background-position: center center;
 	}
 
-	// Using background image
-	.image-gallery__image {
-		display: none;
+	.gallery__image {
+		display: none; // Using background image instead
 	}
 
+
 	// Captions fade in/out
-	.image-gallery__caption {
+
+	.caption-link {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -176,10 +211,12 @@
 		&:hover {
 			opacity: 1;
 		}
-	}	
+	}
+
 
 	// Image Title slides in from the left
-	.image-gallery__image-title {
+
+	.gallery__image-title {
 		left: -100%;
 		width: 94%;
 		margin-top: 6%;
@@ -188,20 +225,24 @@
 		-o-transition: left 0.3s ease-in-out;
 		transition: left 0.3s ease-in-out;
 
-		.image-gallery__caption:hover & {
+		.gallery__caption:hover & {
 			left: 0;
 		}
 	}
 }
 
-// Captions displayed permanently
+
+
+
+// B) Captions displayed permanently
+
 @media @gallery-captions-permanent {
-	.image-gallery__image, .image-gallery__image-link {
-		width: 100%;
+	.gallery__image, .gallery__image-link {
 		display: block;
+		width: 100%;
 	}
 
-	.image-gallery__image-description {
+	.gallery__image-description {
 		background: mix(@bg-color, @theme-color, 20%);
 		color: contrast(@theme-color, #000, #fff);
 	}

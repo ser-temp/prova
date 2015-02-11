@@ -3,18 +3,28 @@
 // -----------------------------
 
 
-// -----------------------------
-// Custom Breakpoints from theme.less
-// -----------------------------
-
-// @bp-global-large			Large Screen Variation - Navigation items displayed instantly
-// @bp-global-medium		Medium Screen Variation - Items visibility toggled by button. Button is in line with the logo and the company name
-// @bp-global-small		Small Screen Variation - Toggle button is displayed below the company logo and name
+// Global Breakpoints
+// ------------------------------
 
 
-// -----------------------------
+// @bp-global-large
+// Large Screen Variation - Navigation items displayed instantly
+
+// @bp-global-medium
+// Medium Screen Variation - Items visibility toggled by button.
+// Navigation toggle is in line with the logo and the company name
+
+// @bp-global-small
+// Small Screen Variation - Toggle button is displayed below the company
+// logo and name
+
+
+
+
+// ------------------------------
 // #Table of Contents
-// -----------------------------
+// ------------------------------
+
 
 //  1.   Reset and Editor Alignment
 //  2.   Top Level Navigation Item
@@ -22,51 +32,57 @@
 //  4.   Pull Down Version
 
 
-// -----------------------------
-//  1.   Reset and Editor Alignment
-// -----------------------------
+
+
+// --------------------------------
+//  1.   Reset
+// --------------------------------
+
+
+
+
 
 // Navigation List
-// --------------------
+// ------------------------------
+
+
 .navigation-list {
-	margin: 0; // Reset
+	margin: 0; // Framework Reset
 }
 
-// Navigation Alignment
-// --------------------
-@media @bp-global-large {
-	.navigation-list {
-		&.align-left {
-			text-align: left;
-		}
-		&.align-right {
-			text-align: right;
-		}
-		&.align-center {
-			text-align: center;
-		}
+
+
+
+// --------------------------------
+//  2.   Top Level Navigation Items
+// --------------------------------
+
+
+.navigation-body > .navigation-list > .navigation-item {
+	& > .item-name {
+		padding: 1em 13px;
 	}
 }
 
 
 
-// -----------------------------
-//  2.   Top Level Navigation Item
-// -----------------------------
-.bk-navigation {
-	.item-name {
-		padding: 1em 13px;
-	}	
-}
+
+// :hover Effect
+// ------------------------------
 
 
-// :hover effect
-// ---------------------------------------
+// On Large Screen
+
 @media @bp-global-large {
+
+	// Not Selected Navigation Item
+
 	.navigation-body > .navigation-list > .navigation-item:not(.selected) {
 		.animation; // Enabling HW acceleration
-		vertical-align: middle;
 		position: relative;
+		vertical-align: middle;
+
+		// Top Level Item Name
 
 		& > .item-name {
 			position: relative;
@@ -77,15 +93,15 @@
 			transition: all 0.15s ease-in-out;
 		}
 
-		// Text underline animating from left to right
-		// on hover
+		// Text underline animating from left to right on hover
+
 		&:after {
 			content: "";
 			display: block;
 			position: absolute;
 			bottom: 5px;
 			left: 13px;
-			right: 100px;
+			right: 100%;
 			height: 1px;
 			background-color: @link-color;
 			-webkit-transition: all 0.15s ease-in-out;
@@ -95,10 +111,10 @@
 		}
 
 		&:hover {
-			// Underline
 			&:after {
 				right: 13px;
 			}
+			// Item "jumps up"
 			& > .item-name {
 				position: relative;
 				top: -5px;
@@ -108,11 +124,15 @@
 }
 
 
-// selected navigation item
-// ---------------------------------------
+
+
+// Selected Navigation Item
+// ------------------------------
+
 
 @media @bp-global-large {
 	.navigation-body > .navigation-list > .navigation-item.selected {
+		// Makes Top Border
 		:before {
 			content: "";
 			display: block;
@@ -122,18 +142,23 @@
 			right: 13px;
 			height: 5px;
 			background-color: @link-color;
-			-webkit-transition: all 0.15s ease-in-out;
-			-moz-transition: all 0.15s ease-in-out;
-			-o-transition: all 0.15s ease-in-out;
-			transition: all 0.15s ease-in-out;
 		}
 	}
 }
 
 
-// -----------------------------
+
+
+// ------------------------------
 //	3.   Folder Item
-// -----------------------------
+// ------------------------------
+
+
+
+
+// Top Level Item Name
+// ------------------------------
+
 
 .navigation-item.folder > .item-name {
 	// Folder Icon
@@ -161,8 +186,8 @@
 	}
 }
 
-// Folder item icon rotates on drop down
-// ---------------------------------------
+// Folder Icon Rotation When Open
+
 @media @bp-global-medium {
 	.navigation-item.folder.open > .item-name:after {
 		-webkit-transform: rotate(0);
@@ -173,15 +198,22 @@
 	}
 }
 
-// Folder list design
-// ---------------------------------------
-.navigation-list--children {	
+
+
+
+// Folder List Items
+// ------------------------------
+
+
+.navigation-list--children {
 	white-space: inherit;
 	@media @bp-global-large {
+		left: 13px;
 		background: mix(@bg-color, @theme-color, 30%);
 		text-align: left;
-		left: 13px;
-		
+
+		// Navigation Item
+
 		.navigation-item {
 			box-shadow: inset 0px -1px 0px 0px @theme-color;
 			&:last-child {
@@ -192,31 +224,39 @@
 			}
 		}
 
+		// Item Name
+
 		.item-name {
 			padding: 0.7em 13px;
-
 		}
 	}
 
+	// Open Folder on Medium Screen
+
 	@media @bp-global-medium {
+		position: relative;
 		.navigation-item.folder.open & {
 			display: block;
 			background-color: transparent;
 		}
-		position: relative;
 	}
 }
 
-// LESS Framework reset
-// ---------------------------------------
+// Less Framework Reset
+
 .navigation-item:hover .navigation-list--children {
 	@media @bp-global-medium {
-		display: none; 
+		display: none;
 	}
 }
 
-// Selected folder item
-// ---------------------------------------
+
+
+
+// Selected Folder Item
+// ------------------------------
+
+
 .navigation-list--children .navigation-item.selected .item-name {
 	color: @link-color;
 }
@@ -224,21 +264,29 @@
 
 
 
-// -----------------------------
+// ------------------------------
 //  4.   Pull Down Version
-// -----------------------------
+// ------------------------------
 
-// Hiding default navigation toggle button, custom button is used (.custom-navigation-toggle)
-// --------------------
+
+// Hiding default navigation toggle button, custom button is used
+// (.custom-navigation-toggle)
+
 .navigation-toggle {
 	display: none;
 }
 
-// Container for custom toggle button and page title
-// --------------------
+
+
+
+// Container For Custom Toggle Button And Page Title
+// ------------------------------
+
+
 .drop-down-nav {
+	// Not shown on large screens
 	display: none;
-	
+
 	@media @bp-global-medium {
 		display: block;
 		position: relative;
@@ -246,13 +294,19 @@
 	}
 
 	@media @bp-global-small {
+		// Always Wraps on Separate Line
 		margin-left: 0;
 		width: 100%;
 	}
 }
 
+
+
+
 // Active page title
-// --------------------
+// ------------------------------
+
+
 .drop-down-nav .page-title {
 	display: none;
 	@media @bp-global-medium {
@@ -281,6 +335,7 @@
 }
 
 // when navigation is open
+
 .drop-down-nav.open .page-title {
 	@media @bp-global-small {
 		color: contrast(@theme-color, #000, #fff);
@@ -289,8 +344,13 @@
 	}
 }
 
+
+
+
 // Navigation Toggle Button
-// -----------------
+// ------------------------------
+
+
 .custom-navigation-toggle {
 	@media @bp-global-medium {
 		display: block;
@@ -309,8 +369,13 @@
 			background-color: transparent; // LESS Framework Reset
 		}
 
+
+
+
 		// Animated Navigation Icon
-		// -----------------
+		// ------------------------------
+
+
 		.bar {
 			width: 24px;
 			height: 3px;
@@ -357,6 +422,7 @@
 			}
 		}
 	}
+
 	@media @bp-global-small {
 		// Toggle background colour different on small screens
 		&, &:hover {
@@ -371,10 +437,17 @@
 }
 
 
+
+
 // Pull Down Navigation
-// -----------------
+// ------------------------------
+
+
 @media @bp-global-medium {
-	.navigation {
+
+	// Theme Navigation
+
+	.theme-navigation {
 		margin-right: 0;
 		position: relative;
 
@@ -382,12 +455,20 @@
 			position: static; // LESS Framework reset
 		}
 	}
+
+	// Navigation Body
+
 	.navigation-body {
 		display: none;
 	}
 
+
+
+
 // 2 Columns List
-// -----------------
+// ------------------------------
+
+
 	.navigation-body > .navigation-list {
 		display: -ms-flexbox;
 		display: -webkit-flex;
@@ -422,8 +503,9 @@
 		&.selected {
 			border-color: @link-color;
 		}
-		
+
 		// Resets margin for items in the second column
+
 		&:nth-of-type(even) {
 			margin-right: 0;
 		}
@@ -435,8 +517,13 @@
 		}
 	}
 
+
+
+
 	// Open Navigation
-	// -----------------
+	// ------------------------------
+
+
 	.bk-extendednavigation.open {
 		.navigation-body {
 			display: block;
@@ -454,8 +541,13 @@
 	}
 }
 
+
+
+
 // 1 Column List
-// -----------------
+// ------------------------------
+
+
 @media @bp-global-small {
 	.navigation-body > .navigation-list {
 		display: block;

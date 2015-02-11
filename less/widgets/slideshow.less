@@ -1,26 +1,50 @@
-// -----------------------------
+// --------------------------------------
 // Facet Theme: CSS > Widgets > Slideshow
-// -----------------------------
+// --------------------------------------
 
 
 
+// ---------------------------------
 // Breakpoints for slideshow layouts
-// ----------------
+// ---------------------------------
+
 
 @slideshow-large: ~"only screen and (min-width : 1300px)";
 @slideshow-medium: ~"only screen and (min-width : 850px) and (max-width : 1300px)";
 @slideshow-small: ~"only screen and (max-width : 850px)";
 
 
+
+
+// ------------------------------
 // Slideshow Item
-// ----------------
-.slideshow__slide-item {
+// ------------------------------
+
+
+.responsiveslideshow__slide-item {
 	position: relative;
 }
 
-.slideshow__image {display: none;}
+// Prevents two slides from displaying at the same time
+// because of slow JS state changes
 
-.slideshow__figure {
+.slide-item.current + .slide-item {
+	display: none;
+}
+
+.responsiveslideshow__image {
+	display: none;
+}
+
+
+
+
+// ------------------------------
+// Figure
+// ------------------------------
+
+
+.responsiveslideshow__figure {
 	min-height: 100px;
 	padding-bottom: 50%;
 	background-size: cover;
@@ -31,28 +55,61 @@
 	}
 }
 
-// Slideshow Controls
-// ----------------
+
+
+
+// ------------------------------
+// Slide Navigation
+// ------------------------------
+
 
 .slide-navigation {
 	display: block;
 	position: absolute;
 	top: 0;
+	margin: 0;
+
+
+
+
+	// Button
+	// ------------------------------
+
 
 	.button {
 		position: absolute;
 		padding: 0;
 		display: block;
 		text-align: center;
+
+		&:before {
+			margin: 0;
+		}
 	}
+
+
+
+
+	// Control Text
+	// ------------------------------
+
 
 	.control-text {
 		display: none;
 	}
 }
 
-.slideshow__previous-button {
+
+
+
+// Previous Button
+// ------------------------------
+
+
+.responsiveslideshow__previous-button {
+
 	// Icon
+
 	&:before {
 		content: '\f104';
 		display: block;
@@ -60,8 +117,17 @@
 	}
 }
 
-.slideshow__next-button {
+
+
+
+// Next Button
+// ------------------------------
+
+
+.responsiveslideshow__next-button {
+
 	// Icon
+
 	&:after {
 		content: '\f105';
 		display: block;
@@ -70,18 +136,52 @@
 	}
 }
 
-.slideshow__pause-toggle {
+
+
+
+// Pause Toggle
+// ------------------------------
+
+
+.responsiveslideshow__pause-toggle {
+
+	// Icon
+
 	&:before {
 		display: block;
 		margin: 0;
 	}
+
+	// Play Icon
+
+	&.pause:before {
+		content: '\f04b';
+	}
 }
 
+
+
+
+// ------------------------------
+//  Large Layout
+// ------------------------------
+
+
 @media @slideshow-large {
+
+
+
+
+	// Slide Navigation
+	// ------------------------------
+
+
 	.slide-navigation {
 		left: 0;
 		right: 0;
 		bottom: 0;
+
+		// Button
 
 		.button {
 			width: 60px;
@@ -92,15 +192,21 @@
 		}
 	}
 
-	.slideshow__previous-button {
+	// Previous Button
+
+	.responsiveslideshow__previous-button {
 		left: 30px;
 	}
 
-	.slideshow__next-button {
+	// Next Button
+
+	.responsiveslideshow__next-button {
 		right: 30px;
 	}
 
-	.slideshow__pause-toggle {
+	// Pause Toggle
+
+	.responsiveslideshow__pause-toggle {
 		left: 91px;
 		&:before {
 			font-size: 18px;
@@ -109,13 +215,30 @@
 }
 
 
+
+
+// ------------------------------
+//  Medium Layout
+// ------------------------------
+
+
 @media @slideshow-medium {
+
+
+
+
+	// Slide Navigation
+	// ------------------------------
+
+
 	.slide-navigation {
 		left: 0;
 		right: 0;
 		bottom: auto;
 		height: 100px;
 		padding-bottom: 50%;
+
+		// Button
 
 		.button {
 			width: 40px;
@@ -127,16 +250,39 @@
 		}
 	}
 
-	.slideshow__previous-button {
+
+
+
+	// Previous Button
+	// ------------------------------
+
+
+	.responsiveslideshow__previous-button {
 		left: 0;
 	}
 
-	.slideshow__next-button {
+
+
+
+	// Next Button
+	// ------------------------------
+
+
+	.responsiveslideshow__next-button {
 		right: 0;
 	}
 
-	.slideshow__pause-toggle {
+
+
+
+	// Pause Toggle
+	// ------------------------------
+
+
+	.responsiveslideshow__pause-toggle {
 		left: 41px;
+
+		// Icon
 
 		&:before {
 			font-size: 14px;
@@ -144,7 +290,23 @@
 	}
 }
 
+
+
+
+// ------------------------------
+//  Small Layout
+// ------------------------------
+
+
 @media @slideshow-small {
+
+
+
+
+	// Slide Navigation
+	// ------------------------------
+
+
 	.slide-navigation {
 		margin-top: 1px;
 		position: relative;
@@ -177,6 +339,8 @@
 		-ms-flex-align: center;
 		align-items: center;
 
+		// Button
+
 		.button {
 			position: relative;
 			height: 40px;
@@ -191,15 +355,9 @@
 		}
 	}
 
-	.slideshow__previous-button {
-		
-	}
+	// Pause Toggle
 
-	.slideshow__next-button {
-		
-	}
-
-	.slideshow__pause-toggle {
+	.responsiveslideshow__pause-toggle {
 		margin: 0 1px;
 		width: auto;
 
@@ -209,48 +367,90 @@
 	}
 }
 
-// Slideshow Captions
-// ----------------
 
-.slideshow__caption {
+
+
+// ------------------------------
+// Slideshow Captions
+// ------------------------------
+
+
+
+
+// Caption
+// ------------------------------
+
+
+.responsiveslideshow .caption {
 	padding: 0;
 }
 
-.slideshow__image-title, .slideshow__image-description {
+
+
+
+// Image Title, Image Description
+// ------------------------------
+
+
+.responsiveslideshow__image-title, .responsiveslideshow__image-description {
 	width: auto;
 }
 
-.slideshow__image-title {
+
+
+
+// Image Title
+// ------------------------------
+
+
+.responsiveslideshow__image-title {
 	background-color: @theme-color;
 	color: contrast(@theme-color, #000, #fff);
 	padding-bottom: 0;
 }
 
-.slideshow__image-description {
+
+
+
+// Image Description
+// ------------------------------
+
+
+.responsiveslideshow__image-description {
 	background: mix(@bg-color, @theme-color, 20%);
 	color: contrast(@theme-color, #000, #fff);
 }
 
 @media @slideshow-large {
-	.slideshow__caption {
+
+	// Caption
+
+	.responsiveslideshow .caption {
 		position: absolute;
 		width: auto;
 		left: 30px;
 		bottom: 30px;
 	}
 
-	.slideshow__image-title {		
+	// Image Title
+
+	.responsiveslideshow__image-title {
 		padding: 0.8em 6%;
 		position: relative;
 	}
 
-	.slideshow__image-description {
+	// Image Description
+
+	.responsiveslideshow__image-description {
 		padding: 0.8em 6%;
 	}
 }
 
 @media @slideshow-medium {
-	.slideshow__caption {
+
+	// Caption
+
+	.responsiveslideshow .caption {
 		font-size: 0;
 		display: -webkit-box;
 		display: -moz-box;
@@ -280,23 +480,28 @@
 		-webkit-align-items: flex-start;
 		-ms-flex-align: start;
 		align-items: flex-start;
-		
 		position: absolute;
 		bottom: 0;
 
 	}
 
-	.slideshow__image-title, .slideshow__image-description {
+	// Image title, Image Description
+
+	.responsiveslideshow__image-title, .responsiveslideshow__image-description {
 		display: inline-block;
 		padding: 0.8em 1em;
 	}
 
-	.slideshow__image-title {		
+	// Image Title
+
+	.responsiveslideshow__image-title {
 		font-size: (@font-swatch5-font-size * 0.7);
 		line-height: (@font-swatch5-line-height * 0.7);
 	}
 
-	.slideshow__image-description {
+	// Image Description
+
+	.responsiveslideshow__image-description {
 		font-size: (@font-swatch5-font-size * 0.7);
 		line-height: (@font-swatch5-line-height * 0.7);
 		-webkit-box-flex: 1;
@@ -308,7 +513,10 @@
 }
 
 @media @slideshow-small {
-	.slideshow__caption {
+
+	// Caption
+
+	.responsiveslideshow .caption {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
@@ -316,7 +524,9 @@
 		padding: 0.6em 0.8em;
 	}
 
-	.slideshow__image-title, .slideshow__image-description {
+	// Image Title. Image Description
+
+	.responsiveslideshow__image-title, .responsiveslideshow__image-description {
 		color: contrast(@theme-color, #000, #fff);
 		background-color: transparent;
 		font-size: (@font-swatch5-font-size * 0.7);
@@ -325,8 +535,18 @@
 }
 
 
+
+
+// ------------------------------
 // Slideshow Pagination
-// ----------------
+// ------------------------------
+
+
+
+
+// Pagination Item
+// ------------------------------
+
 
 .slide-pagination {
 	position: relative;
@@ -334,7 +554,17 @@
 	right: auto;
 }
 
-.slideshow__pagination-item {
+
+
+
+// Pagination Item
+// ------------------------------
+
+
+.responsiveslideshow .responsiveslideshow__pagination-item {
+
+	// Button
+
 	.button {
 		cursor: pointer;
 		background-color: @button-color;
@@ -343,7 +573,13 @@
 		line-height: 1;
 		display: block;
 		border-radius: 0;
+
+		&:hover {
+			background-color: @button-hover-color;
+		}
 	}
+
+	// Selected Button
 
 	&.selected .button {
 		background-color: @theme-color;
@@ -354,11 +590,18 @@
 
 
 
-		
-	
+
 
 @media @slideshow-large {
-	.slideshow__pagination-list {
+
+
+
+
+	// Pagination List
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-list {
 		display: -webkit-box;
 		display: -moz-box;
 		display: -ms-flexbox;
@@ -388,9 +631,17 @@
 		-ms-flex-align: start;
 		align-items: flex-start;
 		margin-top: 15px;
+		min-height: 20px;
 	}
 
-	.slideshow__pagination-item {
+
+
+
+	// Pagination Item
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-item {
 		-webkit-box-flex: 1;
 		-moz-box-flex: 1;
 		-webkit-flex: 1 1 auto;
@@ -401,6 +652,8 @@
 		&:last-child {
 			margin-right: 0;
 		}
+
+		// Button
 
 		.button {
 			width: 100%;
@@ -413,6 +666,8 @@
 			padding: 0 0.3em;
 		}
 
+		// Selected Button
+
 		&.selected .button {
 			height: auto;
 			background-color: @theme-color;
@@ -422,15 +677,33 @@
 }
 
 @media @slideshow-medium {
-	.slideshow__pagination-list {
+
+
+
+
+	// Pagination List
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-list {
 		display: block;
+		margin-top: 15px;
 		text-align: center;
 	}
 
-	.slideshow__pagination-item {
+
+
+
+	// Pagination Item
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-item {
 		width: 14px;
 		height: 14px;
 		margin: 0 3px;
+
+		// Button
 
 		.button {
 			text-indent: 100%;
@@ -442,15 +715,33 @@
 }
 
 @media @slideshow-small {
-	.slideshow__pagination-list {
+
+
+
+
+	// Pagination List
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-list {
+		margin-top: 8px;
 		text-align: center;
 	}
 
-	.slideshow__pagination-item {
+
+
+
+	// Pagination Item
+	// ------------------------------
+
+
+	.responsiveslideshow__pagination-item {
 		width: 10px;
 		height: 10px;
 		margin: 0 1px;
 		overflow: hidden;
+
+		// Button
 
 		.button {
 			text-indent: 100%;

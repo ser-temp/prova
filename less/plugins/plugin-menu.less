@@ -1,0 +1,670 @@
+// -------------------------------
+// Facet Theme: CSS > Plugin: Menu
+// -------------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1.  #Widget Layout Breakpoints
+// 2.  #Menu Section
+// 3.  #Section Body
+// 4.  #Menu Item
+// 5.  #Featured Menu Item
+// 6.  #Menu Subsection
+// 7.  #Promoted Menu Subsection
+// 8.  #Menu Subsection
+
+
+
+
+// ------------------------------
+// 1.  #Widget Layout Breakpoints
+// ------------------------------
+
+
+@menu-large: ~"only screen and (min-width : 890px)";
+@menu-medium: ~"only screen and (max-width : 1000px)";
+@menu-small: ~"only screen and (max-width : 570px)";
+@menu-extra-small: ~"only screen and (max-width : 370px)";
+
+
+
+
+// ------------------------------
+// 2.  #Menu Section
+// ------------------------------
+
+
+
+
+// Menu Section
+// ------------------------------
+
+
+.menu-section {
+    margin-bottom: 3em;
+    @media @menu-medium {
+        margin-bottom: 2em;
+    }
+}
+
+
+
+
+// Section Header
+// ------------------------------
+
+
+.section-header {
+    background-color: @widget-bg-color;
+    padding: 1.4em 26px 1.2em;
+    margin-bottom: 2em;
+    @media @menu-medium {
+        margin-bottom: 1em;
+    }
+    @media @menu-extra-small {
+        padding: 0.7em 10px;
+    }
+}
+
+
+
+
+// Section Title
+// ------------------------------
+
+
+.section-title {
+    font-size: @font-swatch1-font-size;
+    padding-bottom: 0.3em;
+    @media @menu-medium {
+        font-size: bkscale(@font-swatch1-font-size, 0.82);
+        line-height: bkscale(@font-swatch1-line-height, 0.82);
+    }
+    @media @menu-extra-small {
+        font-size: bkscale(@font-swatch1-font-size, 0.62);
+        line-height: bkscale(@font-swatch1-line-height, 0.62);
+    }
+}
+
+
+
+
+// Section Description
+// ------------------------------
+
+
+.section-description {
+    font-family: @font-swatch1-font-family;
+    @media @menu-medium {
+        font-size: bkscale(@font-swatch5-font-size, 0.82);
+        line-height: bkscale(@font-swatch5-line-height, 0.82);
+    }
+    @media @menu-extra-small {
+        font-size: bkscale(@font-swatch5-font-size, 0.72);
+        line-height: bkscale(@font-swatch5-line-height, 0.72);
+    }
+}
+
+
+
+
+// ------------------------------
+// 3.  #Section Body
+// ------------------------------
+
+
+
+
+// Menu Items
+// ------------------------------
+
+
+.menu-items:not(.menu-section--subsection), .menu-list {
+    column-count: 1;
+    column-gap: 0;
+    -moz-column-count: 1;
+    -moz-column-gap: 0;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 0;
+}
+
+
+
+
+// ------------------------------
+// 4.  #Menu Item
+// ------------------------------
+
+
+.menu-item {
+    display: block;
+    background-color: @widget-bg-color;
+    margin-bottom: 2em;
+    @media @menu-medium {
+        margin-bottom: 1em;
+    }
+
+
+
+
+    // Item Article
+    // ------------------------------
+
+
+    .item-article {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+
+        @media @menu-medium {
+            display: block;
+        }
+    }
+
+
+
+    // Item Image
+    // ------------------------------
+
+
+    .item-image {
+        width: 267px;
+        height: 200px;
+        overflow: hidden;
+        margin-right: 10px;
+         -webkit-flex: 0 0 267px;
+        -ms-flex: 0 0 267px;
+        flex: 0 0 267px;
+
+        @media @menu-medium {
+            float: left;
+            margin-right: 16px;
+        }
+
+        @media @menu-small {
+            width: 140px;
+            height: 105px;
+        }
+
+        @media @menu-extra-small {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    // Image Link
+
+    .item-image .image-link,
+    &.menu-item--featured .item-image .image-link {
+        line-height: 200px;
+        height: 200px;
+        @media @menu-small {
+            line-height: 105px;
+            height: 105px;
+        }
+        @media @menu-extra-small {
+            line-height:1;
+            height: auto;
+        }
+    }
+
+
+
+
+    // Item Content
+    // ------------------------------
+
+
+    .item-content {
+        padding-left: 16px;
+        margin-top: 0;
+
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        @media @menu-medium {
+            display: block;
+            padding-left: 0;
+        }
+    }
+
+    // Item Header
+
+    .item-header {
+        padding: 1em 1em 1em 0;
+        -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+
+        @media @menu-medium {
+            background-color: @widget-bg-color;
+            padding-bottom: 0.5em;
+            padding-left: 10px;
+        }
+    }
+
+
+    // Item Title
+
+    .item-title {
+        font-size: @font-swatch2-font-size;
+        @media @menu-medium {
+            font-size: bkscale(@font-swatch2-font-size, 0.82);
+            line-height: bkscale(@font-swatch2-line-height, 0.82);
+        }
+        @media @menu-small {
+            font-size: bkscale(@font-swatch2-font-size, 0.72);
+            line-height: bkscale(@font-swatch2-line-height, 0.72);
+        }
+        @media @menu-extra-small {
+            font-size: bkscale(@font-swatch2-font-size, 0.62);
+            line-height: bkscale(@font-swatch2-line-height, 0.62);
+        }
+    }
+
+    // Item Description
+
+    .item-description {
+        font-size: @font-swatch4-font-size;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        border-left: 1px solid fade(@font-swatch5-color, 10%);
+        padding: 1em 0 1em 1em;
+        margin: 10px 0 10px 26px;
+
+        @media @menu-medium {
+            background-color: @widget-bg-color;
+            margin: 0;
+            padding-top: 0;
+            padding-left: 10px;
+            border-left: none;
+        }
+
+        @media @menu-extra-small {
+            padding: 0 10px;
+        }
+
+
+        &, p {
+            font-family: @font-swatch1-font-family;
+            @media @menu-medium {
+                font-size: bkscale(@font-swatch5-font-size, 0.82);
+                line-height: bkscale(@font-swatch5-line-height, 0.82);
+            }
+            @media @menu-small {
+                font-size: bkscale(@font-swatch5-font-size, 0.72);
+                line-height: bkscale(@font-swatch5-line-height, 0.72);
+            }
+        }
+    }
+
+    // Item Footer
+
+    .item-footer {
+        border-left: 1px solid fade(@font-swatch5-color, 10%);
+        padding: 1em 16px 1em 26px;
+        margin: 10px 0 10px 26px;
+        width: 400px;
+
+        -webkit-flex: 0 0 267px;
+        -ms-flex: 0 0 267px;
+        flex: 0 0 267px;
+
+        @media @menu-medium {
+            margin: 0;
+            border-left: none;
+            padding: 10px;
+            clear: both;
+            border-top: 1px solid fade(@font-swatch5-color, 10%);
+            width: auto;
+            line-height: 1;
+        }
+
+        &, & * {
+            @media @menu-small {
+                font-size: bkscale(@font-swatch5-font-size, 0.62) !important;
+                line-height: bkscale(@font-swatch5-line-height, 0.62) !important;
+            }
+        }
+    }
+
+    // Item Subtitle
+
+    .item-subtitle {
+        font-size: 13px;
+        color: fade(@paragraph-color, 50%);
+
+        @media @menu-medium {
+            display: inline-block;
+            &:after {
+                content: ':';
+            }
+        }
+    }
+
+    // Item Details
+
+    .item-details {
+        font-size: bkscale(@font-swatch5-font-size, 0.82);
+        line-height: bkscale(@font-swatch5-line-height, 0.82);
+        @media @menu-medium {
+            display: inline-block;
+            margin-right: 1em;
+        }
+
+
+    }
+
+    // Dietary List
+
+    .dietary-list {
+        @media @menu-medium {
+            display: inline-block;
+            margin-right: 1em;
+        }
+    }
+
+    // Dietary Item
+
+    .dietary-item {
+        font-size: bkscale(@font-swatch5-font-size, 0.82);
+        line-height: bkscale(@font-swatch5-line-height, 0.82);
+        &:before {
+            content: '';
+            width: 0.4em;
+            height: 0.4em;
+            background-color: fade(@font-swatch5-color, 20%);
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+
+
+// Section Footer
+// ------------------------------
+
+
+.menu-section .section-footer {
+
+    // Section Note
+
+    .section-note {
+        text-align: center;
+        @media @menu-medium {
+            font-size: bkscale(@font-swatch5-font-size, 0.82);
+            line-height: bkscale(@font-swatch5-line-height, 0.82);
+        }
+    }
+}
+
+
+
+
+
+// ------------------------------
+// 5.  #Featured Menu Item
+// ------------------------------
+
+
+.menu-item--featured {
+    padding: 0;
+
+    // Item Article
+
+    .item-article {
+        border-top: 12px solid contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
+        border-bottom: 12px solid contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
+        @media @menu-medium {
+            border-top-width: 7px;
+            border-bottom-width: 7px;
+        }
+        @media @menu-extra-small {
+            border-top-width: 5px;
+            border-bottom-width: 5px;
+        }
+    }
+}
+
+
+// ------------------------------
+// 6.  #Menu Subsection
+// ------------------------------
+
+
+
+
+.menu-subsection {
+    margin: 2em 5%;
+
+
+
+
+    // Section Header
+    // ------------------------------
+
+
+    .section-header {
+        margin-bottom: 1em;
+    }
+
+
+
+
+    // Menu Item
+    // ------------------------------
+
+
+    .menu-item {
+        margin-bottom: 1em;
+    }
+
+
+
+
+    // Section Title
+    // ------------------------------
+
+
+    .section-title {
+        font-size: bkscale(@font-swatch1-font-size, 0.9);
+        line-height: bkscale(@font-swatch1-line-height, 0.9);
+
+        @media @menu-medium {
+            font-size: bkscale(@font-swatch1-font-size, 0.8);
+            line-height: bkscale(@font-swatch1-line-height, 0.8);
+        }
+
+        @media @menu-extra-small {
+            font-size: bkscale(@font-swatch1-font-size, 0.6);
+            line-height: bkscale(@font-swatch1-line-height, 0.6);
+        }
+    }
+
+
+
+
+    // Section Description
+    // ------------------------------
+
+
+    .section-subtitle {
+        font-size: bkscale(@font-swatch5-font-size, 0.82);
+        line-height: bkscale(@font-swatch5-line-height, 0.82);
+        padding-bottom: 0;
+        @media @menu-medium {
+            font-size: bkscale(@font-swatch5-font-size, 0.72);
+            line-height: bkscale(@font-swatch5-line-height, 0.72);
+        }
+    }
+
+
+
+
+    // Item Title
+    // ------------------------------
+
+
+    .item-title {
+        font-size: bkscale(@font-swatch1-font-size, 0.7);
+        line-height: bkscale(@font-swatch1-line-height, 0.7);
+        @media @menu-medium {
+            font-size: bkscale(@font-swatch1-font-size, 0.62);
+            line-height: bkscale(@font-swatch1-line-height, 0.62);
+        }
+        @media @menu-extra-small {
+            font-size: bkscale(@font-swatch1-font-size, 0.52);
+            line-height: bkscale(@font-swatch1-line-height, 0.42);
+        }
+    }
+
+
+
+
+    // Item Description
+    // ------------------------------
+
+
+    .item-description p {
+        font-size: bkscale(@font-swatch5-font-size, 0.82);
+        line-height: bkscale(@font-swatch5-line-height, 0.82);
+    }
+}
+
+
+
+
+
+
+// ------------------------------
+// 7.  #Promoted Menu Subsection
+// ------------------------------
+
+
+
+
+
+.menu-section--featured {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+
+    .section-header {
+        border-top: 10px solid contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
+        border-bottom: 10px solid contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
+        @media @menu-medium {
+            border-top-width: 5px;
+            border-bottom-width: 5px;
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// 8.  #Menu Subsection
+// ------------------------------
+
+
+
+
+
+
+
+// Menusections List
+// ------------------------------
+
+
+.menusections-list {
+    margin: 0;
+    border-bottom: 3px solid fade(@paragraph-color, 6%);
+
+    @media @menu-small {
+        border-bottom: 2px solid fade(@paragraph-color, 6%);
+    }
+
+    // Menu Item Name
+
+    .menu-item-name {
+        font-family: @font-swatch1-font-family;
+        line-height: 3;
+        display: inline-block;
+        position: relative;
+        top: 3px;
+
+        @media @menu-medium {
+            font-size: bkscale(@font-swatch5-font-size, 0.82);
+        }
+
+        @media @menu-small {
+            font-size: bkscale(@font-swatch5-font-size, 0.72);
+            top: 2px;
+        }
+
+        &:hover {
+            box-shadow: inset 0px -3px 0px 0px @link-color;
+             @media @menu-small {
+                box-shadow: inset 0px -2px 0px 0px @link-color;
+            }
+        }
+    }
+}

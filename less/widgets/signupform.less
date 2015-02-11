@@ -1,25 +1,44 @@
-// -----------------------------
+// -----------------------------------------
 // Facet Theme: CSS > Widgets > Sign Up Form
-// -----------------------------
+// -----------------------------------------
 
-.widget__signup-form {
-	background-color: @bw-bg;
+
+
+
+.widget__signupform {
+	background-color: @widget-bg-color;
+
+
+	// Form Group
+	// ------------------------------
+
 
 	.signup-form__form-group:first-child {
 		@media @mobile {
 			margin-right: 3px; // LESS Framework reset
 		}
 	}
-	
+
+
+	// Legend, Form Body Paddings
+	// ------------------------------
+
+
 	.legend, .form-body {
 		padding: 42px;
+
 		@media @tablet {
 			padding: 26px;
 		}
+
 		@media @mobile {
 			padding: 6px;
 		}
 	}
+
+
+	// Legend
+	// ------------------------------
 
 
 	.legend {
@@ -37,12 +56,13 @@
 			width: auto;
 			float: none;
 			width: 100%;
-			background-color: @bw-bg;
+			background-color: @widget-bg-color;
 			border-bottom: 3px solid @bg-color;
 			font-size: (@font-swatch2-font-size * 0.92);
 			line-height: (@font-swatch2-line-height * 0.92);
 			border-right: none;
 		}
+
 		@media @mobile {
 			padding: 10px;
 			font-size: (@font-swatch2-font-size * 0.8);
@@ -51,11 +71,15 @@
 		}
 	}
 
+
+	// Form Body
+	// ------------------------------
+
+
 	.form-body {
 		width: 70%;
 		float: right;
 		border-left: 3px solid @bg-color;
-
 		display: -webkit-box;
 		display: -moz-box;
 		display: -ms-flexbox;
@@ -92,6 +116,9 @@
 	}
 
 
+	// Form Group
+	// ------------------------------
+
 
 	.form-group {
 		margin-bottom: 0;
@@ -102,13 +129,64 @@
 			-ms-flex: 1 1 auto;
 			flex: 1 1 auto;
 			margin-right: 10px;
+
 		}
 	}
 
+	// Last Form Group
+
+	.form-group:last-of-type {
+		margin: 0;
+		@media @mobile {
+
+			// Makes a pseudo button, placed below the actual button
+
+			background-color: @button-color;
+			position: relative;
+
+			&:hover {
+				background: @button-hover-color;
+			}
+
+			// Search Icon
+
+			&:before {
+				content: '\f002';
+				font-family: 'FontAwesome', sans-serif;
+				position: absolute;
+				width: 50px;
+				text-align: center;
+				line-height: 40px;
+				color: contrast(@button-color, #000, #fff);
+				font-size: 20px;
+			}
+
+			// Button
+
+			.button {
+				background-color: transparent;
+				width: 50px;
+				color: transparent;
+				padding: 0;
+				position: relative;
+			}
+		}
+	}
+
+
+	// Label
+	// ------------------------------
+
+
 	.label {
 		display: none;
-		
+
 	}
+
+
+	// Textarea
+	// ------------------------------
+
 
 	.textarea {
 		@media @mobile {

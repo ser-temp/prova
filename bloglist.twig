@@ -6,7 +6,7 @@
 
 	<div class="title-bar">
 		<div class="title-container">
-			<h1>xxxBlog{{ page.title }}</h1>
+			<h1>{{ page.title }}</h1>
 			<div class="title-widget">
 				{{widget('blogsearch', 'thisuniquewidgetname', {})|raw}}
 			</div>
@@ -18,7 +18,7 @@
 
 		<div class="container">
 			<!-- Main Widet Zone -->
-	   		{{zone('main')|raw}}	
+	   		{{zone('main')|raw}}
 		</div>
 
 	</div>

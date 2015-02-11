@@ -1,10 +1,9 @@
 {
     "name":"Facet",
-    "thumbnail":"facet.png",
-    "screenshot":"facet.png",
-    "templateType":"standard",
-    "pageTypes": ["home", "bloglist", "blogpost", "productslist"],
     "widgetVersion": 2,
+    "thumbnail":"facet.png",
+    "templateType":"standard",
+    "pageTypes": ["home", "bloglist", "blogpost", "productslist", "ecomproduct"],
     "tags": {
     "en": ["minimal", "clean", "floral", "modern", "creative", "typography", "simple", "contemporary", "flexible", "florist", "studio", "portfolio", "designer", "sans-serif"],
     "es": ["minimalista", "limpio", "decorativo", "moderno", "creativo", "tipográfico", "simple", "contemporaneo", "flexible", "florista", "estudio", "portafolio", "diseñador", "sans-serif"],
@@ -113,7 +112,7 @@
         },
         "font7": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
-            "font-size": "22px",
+            "font-size": "20px",
             "font-weight": "300",
             "line-height": "28px",
             "color": "@color-swatch1",

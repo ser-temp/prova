@@ -1,0 +1,121 @@
+// -------------------------------------------------
+// Facet Theme: CSS > Plugins > Blog > Custom Search
+// -------------------------------------------------
+
+
+// Embed Blog Search Widget in blogpost.twig
+
+
+.title-widget {
+    // Legend, Label
+    .blogsearch__legend, .blogsearch__label {
+        display: none;
+    }
+
+    // Form Body
+
+    .blogsearch__form-body {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: stretch;
+        -moz-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+
+    // Form Group
+
+    .form-group {
+        margin-bottom: 0;
+        &:first-child {
+            margin-right: 5px;
+            @media @bp-global-small {
+                -webkit-box-flex: 1;
+                -moz-box-flex: 1;
+                -webkit-flex: 1 1 auto;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+            }
+        }
+
+        // Makes a pseudo button, placed below the actual button
+        &:last-child {
+            background-color: @button-color;
+            position: relative;
+
+            &:hover {
+                @media @bp-global-small {
+                    background: @button-hover-color;
+                }
+            }
+
+            // Search Icon
+            &:before {
+                @media @bp-global-small {
+                    content: '\f002';
+                    font-family: 'FontAwesome', sans-serif;
+                    position: absolute;
+                    width: 40px;
+                    text-align: center;
+                    line-height: 38px;
+                    color: contrast(@button-color, #000, #fff);
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    // Blog Search Input
+
+    .button.blogsearch__input {
+        line-height: 50px;
+        font-size: 18px;
+        @media @bp-global-medium {
+            line-height: 40px;
+        }
+        // Transparent button, uses .form-group to give it an icon
+        @media @bp-global-small {
+            background-color: transparent;
+            width: 40px;
+            color: transparent;
+            padding: 0;
+            position: relative;
+        }
+    }
+
+    // Blog Search Input
+
+    .input--single-line.blogsearch__input {
+        height: 50px;
+        font-size: 18px;
+        @media @bp-global-medium {
+            height: 40px;
+            font-size: 16px;
+        }
+        @media @bp-global-small {
+            font-size: 14px;
+        }
+    }
+}

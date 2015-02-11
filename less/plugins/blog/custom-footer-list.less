@@ -1,0 +1,74 @@
+// ------------------------------------------------------
+// Facet Theme: CSS > Plugins > Blog > Custom Footer List
+// ------------------------------------------------------
+
+
+// Embed Blog Post List Widget in blogpost.twig
+
+@blog-footer-small: ~"only screen and (max-width : 720px)";
+
+
+
+
+// Relevant Content Footer
+// ------------------------------
+
+
+.relevant-content-footer {
+
+    // Blog Post List
+
+    .widget__blogpostlist {
+        .clearfix;
+        max-width: 1526px;
+        margin: 0 auto;
+        padding: 0 13px;
+    }
+
+    // Post Article
+
+    .post-article {
+        width: 32%;
+        float: left;
+        margin: 0 2% 2% 0;
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+        &:nth-child(4) {
+            clear: both;
+        }
+        @media @blog-footer-small {
+            width: auto;
+            float: none;
+            margin: 0 0 2em 0;
+        }
+    }
+
+    // Post Title
+
+    .post-title {
+        font-size: @font-swatch3-font-size;
+        line-height: @font-swatch3-line-height;
+        margin: 1em 0 0 0;
+        @media @blog-medium {
+            font-size: (@font-swatch3-font-size * 0.8);
+            line-height: (@font-swatch3-line-height * 0.8);
+        }
+    }
+
+    // Post Excerpt
+
+    .post-excerpt {
+        padding-bottom: 0.5em;
+        p {
+            display: none;
+        }
+    }
+
+    // Blog Timestamp
+
+    .blog-post-list__timestamp {
+        margin-top: 1em;
+        padding: 0.6em 1em;
+    }
+}

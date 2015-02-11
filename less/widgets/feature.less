@@ -1,6 +1,7 @@
-// -----------------------------
+// ------------------------------------
 // Facet Theme: CSS > Widgets > Feature
-// -----------------------------
+// ------------------------------------
+
 
 // Horizontal version, Larger type
 @feature-x-large:   ~"only screen and (min-width : 1500px)";
@@ -15,18 +16,24 @@
 @feature-small:     ~"only screen and (max-width : 500px)";
 
 
+
+
 // Background Image
-// ----------------
-.feature-widget__background-image {
+// ------------------------------
+
+
+.feature__background-image {
     background-size: cover;
 }
 
+
+
+
 // Content Wrap
-// ----------------
-.feature-widget__content-wrap {
-	padding: 3em 13px;
-	max-width: 1526px;
-	margin: 0 auto;
+// ------------------------------
+
+
+.feature__content-wrap {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -55,6 +62,9 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    padding: 3em 13px;
+    max-width: 1526px;
+    margin: 0 auto;
     min-height: 200px;
     @media @feature-medium {
         display: block;
@@ -66,9 +76,14 @@
     }
 }
 
+
+
+
 // Headline
-// ----------------
-.feature-widget__headline {
+// ------------------------------
+
+
+.feature__headline {
     border-right: 1px solid fade(@font-swatch8-color, 50%);
     margin: 0 1em 0 0;
     padding: 0 1em 0 0;
@@ -93,9 +108,14 @@
 
 }
 
+
+
+
 // Strapline
-// ----------------
-.feature-widget__strapline {
+// ------------------------------
+
+
+.feature__strapline {
 	padding: 0;
 
     @media @feature-large {
@@ -113,17 +133,22 @@
     }
 }
 
+
+
+
 // Button
-// ----------------
-.feature-widget__button {
-    background: transparent;
-    border: 1px solid fade(@font-swatch8-color, 50%);
-    font-family: @font-swatch8-font-family;
-    line-height: 1.3;
+// ------------------------------
+
+
+.feature__button {
     padding: 0.6em 3.5em 0.6em 0.8em;
     position: relative;
+    border: 1px solid fade(@font-swatch8-color, 50%);
     max-width: 20%;
+    background: transparent;
     font-size: (@font-swatch9-font-size * 0.88);
+    font-family: @font-swatch8-font-family;
+    line-height: 1.3;
 
     @media @feature-large {
         font-size: (@font-swatch9-font-size * 0.78);
@@ -142,8 +167,8 @@
         margin-top: 2em;
     }
 
-
     // Right Arrow Icon
+
     &:after {
         color: @link-color;
         font-family: 'FontAwesome', sans-serif;
@@ -158,7 +183,9 @@
         text-align: center;
 
     }
+
     // Right Arrow Background
+
     &:before {
         background-color: @font-swatch8-color;
         content: '';

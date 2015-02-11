@@ -1,0 +1,255 @@
+// ----------------------------------------------------
+// Facet Theme: CSS > Plugins > Blog > Single Blog Post
+// ----------------------------------------------------
+
+
+
+
+
+// ------------------------------
+// Single Blog Post
+// ------------------------------
+
+
+
+
+.widget__blogpost {
+
+
+
+
+    // Post Body
+    // ------------------------------
+
+
+    .post-body {
+        padding-bottom: 4em;
+        @media @blog-medium {
+            padding-bottom: 2em;
+        }
+    }
+
+
+
+
+    // Post Title
+    // ------------------------------
+
+
+    .post-title {
+        margin: 2em 0 1em 0;
+    }
+
+
+
+
+    // Post Footer
+    // ------------------------------
+
+
+    .post-footer {
+        .clearfix;
+
+        max-width: 1526px;
+        margin: 1em auto 0;
+
+    }
+
+
+
+
+    // Timestamp
+    // ------------------------------
+
+
+    .blogpost__timestamp {
+        float: left;
+        @media @blog-medium {
+            float: none;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+
+
+
+// Post Attributes
+// ------------------------------
+
+
+.post-attributes {
+    float: right;
+    margin: 0;
+    @media @blog-medium {
+        float: none;
+    }
+}
+
+
+
+
+// Post Category / Post Tags
+// ------------------------------
+
+
+.post-category, .post-tags {
+    display: inline-block;
+    vertical-align: top;
+    border-left: 1px solid fade(@color-swatch5, 20%);
+    padding: 0.2em 0 0.2em 1.3em;
+    @media @blog-medium {
+        padding: 0 0 0 13px;
+        &, * {
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+
+// Post Category
+// ------------------------------
+
+
+.post-category {
+    margin-right: 3em;
+}
+
+
+
+
+// Category Title / Tags Title
+// ------------------------------
+
+
+.blogpost__category-title,
+.blogpost__tags-title {
+    font-size: 13px;
+    line-height: 1;
+    color: fade(@color-swatch5, 80%);
+    display: block;
+    padding-bottom: 0;
+}
+
+
+
+
+// Tags List
+// ------------------------------
+
+
+.blogpost__tag-list {
+    display: block;
+}
+
+
+
+
+// Tags Item
+// ------------------------------
+
+
+.blogpost__tag-item {
+    &:after {
+        content: '/';
+        display: inline-block;
+        vertical-align: middle;
+        color: fade(@color-swatch5, 30%);
+        padding: 0 0.3em;
+        position: relative;
+        top: -0.1em;
+    }
+    &:last-child:after {
+        display: none;
+    }
+}
+
+
+
+
+
+// ------------------------------
+// Sharing Links
+// ------------------------------
+
+
+
+
+@blog-post-sharing: ~"only screen and (max-width : 950px)";
+
+
+
+
+// Sharing Links
+// ------------------------------
+
+
+.blogpost__sharing-links {
+    position: absolute;
+    left: 0;
+    top: 4em;
+
+    @media @blog-post-sharing {
+        position: relative;
+        left: 0;
+        top: 0;
+        clear: both;
+        padding-top: 1em;
+    }
+
+    // Button
+
+    .button {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        font-size: 16px;
+        line-height: 1;
+        width: 2em;
+        height: 2em;
+        overflow: hidden;
+        white-space: nowrap;
+        padding-left: 0;
+        text-indent: 2em;
+        -webkit-transition: width 0.5s ease-in-out;
+        -moz-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+
+        &:hover {
+            width: 100%;
+            @media @blog-post-sharing {
+                width: 2em;
+            }
+
+        }
+
+        // Icons
+
+        &:before {
+            text-indent: 0;
+            margin-right: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2em;
+            height: 2em;
+            line-height: 2em;
+            text-align: center;
+            display: block;
+        }
+    }
+}
+
+// Network Item
+
+.blogpost__network-item {
+    display: block;
+    margin: 0 0 1px 0;
+
+    @media @blog-post-sharing {
+        display: inline-block;
+    }
+}

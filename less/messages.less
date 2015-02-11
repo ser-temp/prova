@@ -1,0 +1,176 @@
+// ------------------------------
+// Facet Theme: CSS > Messages
+// ------------------------------
+
+@message-padding: 0.7em;
+
+
+
+
+// Message
+// ------------------------------
+
+
+.message {
+    position: relative;
+    clear: both;
+    padding: @message-padding;
+    padding-left: (@message-padding * 3.5);
+    margin: 1em auto;
+    max-width: 1000px;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+
+    // Icon
+
+    &:before {
+        font-family: 'FontAwesome', sans-serif;
+        display: block;
+        width: (@message-padding * 3.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+        padding-top: @message-padding;
+    }
+
+    // Heading 3, Paragraph
+
+    h3, p {
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+
+    // Stronmg
+
+    strong {
+        font-weight: bold;
+    }
+
+    // Consequetive Paragraps
+
+    p+p {
+        margin-top: (@message-padding * 0.5);
+    }
+}
+
+
+
+
+// Error
+// ------------------------------
+
+
+.message--error {
+  background-color: #D20000;
+
+  // Text
+
+  &, p {
+    color: #fff;
+  }
+
+    // Icon
+
+    &:before {
+        content: "\f071"; // triangle
+        color: #fff;
+    }
+}
+
+
+
+
+// Warning
+// ------------------------------
+
+
+.message--warning {
+  background-color: #FFE207;
+  color: #000;
+
+    // Icon
+
+    &:before {
+        content: "\f071"; // Triangle
+        color: #000;
+    }
+}
+
+
+
+
+// Information
+// ------------------------------
+
+
+.message--information {
+  background-color: #9BEBF5;
+  color: #000;
+
+    // Icon
+
+    &:before {
+        content: "\f05a"; // circled i
+        color: #000;
+    }
+}
+
+
+
+
+// Success
+// ------------------------------
+
+
+.message--success {
+  background-color: #BAE914;
+  color: #000;
+
+    // Icon
+
+    &:before {
+        content: "\f00c"; // check
+        color: #000;
+    }
+}
+
+
+
+
+
+// Not Found
+// ------------------------------
+
+
+.message--not-found {
+  background-color: #6E6E6E;
+
+  // Text
+
+  &, p {
+    color: #fff;
+  }
+
+    // Icon
+
+    &:before {
+        content: "\f002"; // magnifying glass
+        color: #fff;
+    }
+}
+
+
+// Message in Template's Footer
+// ------------------------------
+.theme-footer .message {
+    background-color: transparent;
+    margin: 0;
+    &:before, h3, p {
+        color: contrast(@theme-color, #000, #fff);
+    }
+}

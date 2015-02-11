@@ -1,31 +1,62 @@
-// -----------------------------
+// ------------------------------------
 // Facet Theme: CSS > Widgets > Profile
+// ------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
 // -----------------------------
 
+//  1.   #Typography
+//  2.   #Address
+//  3.   #Email
+//  4.   #Phone
+//  5.   #Latest Tweet
+//  6.   #Single Email Form
+//  7.   #Social Icons
+//  8.   #Map
 
-// Typography
-// ----------------
+
+
+
+// ------------------------------
+// 1.   #Typography
+// ------------------------------
+
+
 .widget__profile {
+
+
 	// Standard Text
-	&, p, h2, h3, .social-icons__social-name {
+	// ------------------------------
+
+
+	&, p, h2, h3, .socialicons__social-name {
 		color: contrast(@theme-color, #000, #fff);
 		font-size: 16px;
 		line-height: 1.2;
 		padding-bottom: 0;
-		
+
 		// In the Smaller Footer Bar
+
 		.footer-secondary-widgets & {
 			font-size: 14px;
 			color: contrast(@theme-color, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
 		}
 	}
 
+
 	// Headlines
+	// ------------------------------
+
+
 	.company-strapline, .company-description__description, .company-business__business {
 		font-family: @font-swatch1-font-family;
 		font-size: 18px;
 		line-height: 1.5;
+
 		// In the Smaller Footer Bar
+
 		.footer-secondary-widgets & {
 			font-family: @font-swatch5-font-family;
 		}
@@ -33,16 +64,31 @@
 }
 
 
-// Address
-// ----------------
-.company-address__vcard {
+
+
+// ------------------------------
+// 2.   #Address
+// ------------------------------
+
+
+.companyaddress__vcard {
+
+
+	// Paragraph
+	// ------------------------------
+
+
 	p {
 		margin-bottom: 1em;
 
 		// In the Smaller Footer Bar
+
 		.footer-secondary-widgets & {
 			display: inline-block;
 			margin: 0;
+
+			// Comma separators
+
 			&:after {
 				content: ", ";
 				margin-left: -0.1em;
@@ -55,10 +101,20 @@
 }
 
 
-// Email
-// ----------------
-.email-address__email {
+
+
+// ------------------------------
+// 3.   #Email
+// ------------------------------
+
+
+.emailaddress__email {
+
+
 	// Icon Envelope
+	// ------------------------------
+
+
 	&:before {
 		content: '\f003';
 		font-family: 'FontAwesome', sans-serif;
@@ -73,25 +129,29 @@
 		}
 
 		// In the Smaller Footer Bar
+
 		.footer-secondary-widgets & {
 			font-size: 1em;
 		}
 	}
 }
 
-// Headline
-// ----------------
 
-// Strapline
-// ----------------
 
-// Company Description
-// ----------------
 
-// Phone
-// ----------------
+// ------------------------------
+// 4.   #Phone
+// ------------------------------
+
+
 .widget__profile {
 	.phone-number-link {
+
+
+		// Icon
+		// ------------------------------
+
+
 		&:before {
 			content: '\f095';
 			font-family: 'FontAwesome', sans-serif;
@@ -106,6 +166,7 @@
 			}
 
 			// In the Smaller Footer Bar
+
 			.footer-secondary-widgets & {
 				font-size: 1em;
 			}
@@ -123,24 +184,31 @@
 }
 
 
-// Business
-// ----------------
 
-// Copyright
-// ----------------
 
+// ------------------------------
 // Latest Tweet
-// ----------------
+// ------------------------------
+
 
 // Modifications to suit the footer design
 // Original styles: css/widgets/twitter-feed.less
 
 .widget__profile {
+
+
+
+
+	// Tweet Content
+	// ------------------------------
+
+
 	.tweet-content {
 		padding-bottom: 15px;
 		border-bottom-color: contrast(@theme-color, darken(@theme-color, 20%), lighten(@theme-color, 20%));
 
 		// Bottom Arrow Fill
+
 	    &:after {
 			.footer-primary-widgets & {
 				border-top-color: contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
@@ -152,19 +220,26 @@
 	    }
 
 	    // Bottom Arrow Border
+
 	    &:before {
 			border-top-color: contrast(@theme-color, darken(@theme-color, 20%), lighten(@theme-color, 20%));
 		}
 	}
 
+	// Account Name
+
 	.account-name {
 		color: contrast(@theme-color, #000, #fff);
 	}
+
+	// Twitter Feed Timestamp, Metadata Links
 
 	.twitter-feed__timestamp, .via, .tweet-metadata a {
 		color: contrast(@theme-color, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
 		font-size: 12px;
 	}
+
+	// Tweet Metadata
 
 	.tweet-metadata {
 		border-left-color: contrast(@theme-color, darken(@theme-color, 20%), lighten(@theme-color, 20%));
@@ -172,35 +247,52 @@
 	}
 }
 
+
+
+
 // In the Smaller Footer Bar
+// ------------------------------
+
+
 .footer-secondary-widgets .widget__profile {
-	.twitter-feed__via, .tweet-source {
+
+
+	// Via, Source, Metadata
+
+	.twitter-feed__via, .tweet-source, .tweet-metadata {
 		display: none;
 	}
-	.tweet-metadata {
-		display: none;
-	}
+
+	// Avatar
+
 	.twitter-feed__avatar {
 		left: 1px;
-		bottom: -7px;
-	}
-	.twitter-feed__avatar {
 		bottom: 6px;
 	}
+
+	// Avatar Image
+
 	.twitter-feed__avatar-image {
 		width: 25px;
 		height: 25px;
 		min-height: 25px;
 	}
+
+	// Account Link
+
 	.twitter-feed__account-link {
 		margin-left: 35px;
 		width: auto;
 		min-height: 25px;
 	}
 
+	// Account Name
+
 	.account-name {
 		font-size: 12px;
 	}
+
+	// Tweet Content
 
 	.tweet-content {
 		padding: 0;
@@ -214,15 +306,33 @@
 
 
 
+
+// ------------------------------
 // Single Email Form
-// ----------------
+// ------------------------------
+
 
 .widget__profile {
-	.signup-form__legend {
+
+
+
+
+	// Legend
+	// ------------------------------
+
+
+	.signupform__legend {
 		margin-bottom: 1em;
 	}
 
-	.signup-form__form-body {
+
+
+
+	// Form Body
+	// ------------------------------
+
+
+	.signupform__form-body {
 		display: -webkit-box;
 		display: -moz-box;
 		display: -ms-flexbox;
@@ -256,32 +366,60 @@
 			flex: 1 1 auto;
 		}
 
+		// Button
+
 		.button {
 			font-size: 18px;
 		}
+
+		// Email Input
 
 		.input--email {
 			color: contrast(@theme-color, #000, #fff);
 		}
 	}
 
-	.signup-form__label {
+
+
+
+	// Label
+	// ------------------------------
+
+
+	.signupform__label {
 		display: none;
 	}
 }
 
+
+
+
 // In the Smaller Footer Bar
+// ------------------------------
+
+
 .footer-secondary-widgets {
-	.widget__profile .signup-form__legend {
+
+	// Legend
+
+	.widget__profile .signupform__legend {
 		margin-bottom: 0.4em;
 	}
 
-	.signup-form__form-body {
+	// Form Body
+
+	.signupform__form-body {
+
+		// Input Email
+
 		.input--email {
 			font-size: 14px;
 			height: 40px;
 			line-height: 1;
 		}
+
+		// Button
+
 		.button {
 			font-size: 14px;
 			line-height: 40px;
@@ -291,23 +429,49 @@
 
 
 
-// Social Icons
-// ----------------
+
+// ------------------------------
+// 7.   #Social Icons
+// ------------------------------
+
 
 // Modifications to suit the footer design
 // Original styles: css/widgets/social-list.less
 
 
 .widget__profile {
+
+
+
+
+	// Social Item
+	// ------------------------------
+
+
 	.social-item {
 		width: 50%;
 		float: left;
 		margin-bottom: 10px;
 	}
 
-	.social-icons__social-name {
+
+
+
+	// Social Name
+	// ------------------------------
+
+
+	.socialicons__social-name {
 		display: inline-block;
 	}
+
+
+
+
+	// Social Link
+	// ------------------------------
+
+
 	.social-link {
 		text-align: left;
 		&:before {
@@ -316,20 +480,53 @@
 			vertical-align: middle;
 			margin-right: 0.4em;
 			background: contrast(@theme-color, darken(@theme-color, 30%), lighten(@theme-color, 30%));
+			width: 45px;
+			height: 45px;
+			line-height: 45px;
 		}
 	}
 }
 
+
+
+
 // In the Smaller Footer Bar
+// ------------------------------
+
+
 .footer-secondary-widgets {
+
+
+
+
+	// Social List
+	// ------------------------------
+
+
 	.social-list {
 		text-align: left;
 	}
+
+
+
+
+	// Social Item
+	// ------------------------------
+
+
 	.social-item {
 		width: auto;
 		display: inline-block;
 		float: none;
 	}
+
+
+
+
+	// Social Link
+	// ------------------------------
+
+
 	.social-link {
 		min-width: 0;
 		&:before {
@@ -339,11 +536,25 @@
 			font-size: 16px;
 		}
 	}
+
+
+
+
+	// Social Name
+	// ------------------------------
+
+
 	.social-name {
 		display: none;
 	}
 }
 
-// Map
-// ----------------
+
+
+
+// ------------------------------
+// 8.   #Map
+// ------------------------------
+
+
 // #ToDo

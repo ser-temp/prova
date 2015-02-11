@@ -1,0 +1,381 @@
+// -------------------------------------------------------
+// Facet Theme: CSS > Plugins > Ecommerce > Basket Summary
+// -------------------------------------------------------
+
+
+// ------------------------------
+// 2.  #Basket Summary
+// ------------------------------
+
+
+
+
+@basketsummary-medium: ~"only screen and (max-width : 680px)";
+
+
+
+
+// Summary Title
+// ------------------------------
+
+
+.summary-title {
+    display: none; // Using custom page title instead
+}
+
+
+
+
+// Summary Table
+// ------------------------------
+
+
+.summary-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+    margin: 0;
+
+
+
+
+    // Table and Cells Reset
+    // ------------------------------
+
+
+    &, td, th, .cell {
+        border: none;
+        background: transparent;
+        padding: 0;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+    }
+
+
+
+
+    // Row Heading
+    // ------------------------------
+
+
+    .table-row--heading {
+        .cell {
+            padding-bottom: 1em;
+            font-family: @font-swatch1-font-family;
+            font-size: bkscale(@font-swatch5-font-size, .82);
+
+            &:nth-last-of-type(-n+2) {
+                text-align: right;
+            }
+        }
+    }
+
+
+
+
+    // Product Item Row
+    // ------------------------------
+
+
+    .table-row:not(.table-row--heading):not(.table-row--order-total) {
+        .cell  {
+            background-color: @widget-bg-color;
+        }
+    }
+
+
+
+
+    // Cell Image
+    // ------------------------------
+
+
+    .cell--image {
+        width: 96px;
+        padding-left: 6px;
+    }
+
+
+
+
+    // Cell Title
+    // ------------------------------
+
+
+    .cell--title {
+        width: auto;
+        padding-right: 10px;
+
+    }
+
+
+
+
+    // Item Title
+    // ------------------------------
+
+
+    .summary-item-title  {
+        font-family: @font-swatch1-font-family;
+        font-size: @font-swatch4-font-size;
+    }
+
+
+
+
+    // Cell Quantity
+    // ------------------------------
+
+
+    .cell--quantity {
+        padding: 0 16px 0 0;
+    }
+
+
+
+
+    // Cell Total, Cell Price
+    // ------------------------------
+
+
+    .cell--total, .cell--price {
+        text-align: right;
+        padding: 0 16px;
+        border-left: 1px solid @bg-color;
+    }
+
+
+
+
+    // Order Total
+    // ------------------------------
+
+
+    .cell--order-total {
+        text-align: right;
+    }
+
+
+
+
+    // Cell Image Item Link
+    // ------------------------------
+
+
+    .cell--image .summary-item-link {
+        width: 80px;
+        height: 80px;
+        display: block;
+        line-height: 80px;
+        background-position: -100%;
+        background-color: fade(@font-swatch5-color, 10%);
+
+        // Image
+
+        .image {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 80px;
+            max-height: 80px;
+        }
+    }
+
+
+
+
+    // Row Order Total
+    // ------------------------------
+
+
+    .table-row--order-total {
+        background-color: transparent;
+    }
+}
+
+
+
+
+// Quantity Wrap
+// ------------------------------
+
+
+.quantity-wrap {
+    width: 6.5em;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    background-color: transparent;
+
+    // Button Quantity
+
+    .button--quantity {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+}
+
+
+
+
+// Summary Item Title
+// ------------------------------
+
+
+.summary-item-title  {
+    @media @mobile {
+        font-size: bkscale(@font-swatch4-font-size, 0.9) !important;
+        line-height: bkscale(@font-swatch4-line-height, 0.8) !important;
+    }
+}
+
+
+
+
+// Summary Form
+// ------------------------------
+
+
+.summary-form {
+    text-align: right;
+    @media @basketsummary-medium, @mobile {
+        text-align: center;
+    }
+}
+
+
+
+
+// ------------------------------
+// Compact Layout
+// ------------------------------
+
+
+
+
+@media @basketsummary-medium, @mobile {
+
+
+
+
+    // Summary Table
+    // ------------------------------
+
+
+    .summary-table {
+
+        // Table elements to block elements
+
+        &, .table-row, .cell, .summary-body {
+            display: block;
+        }
+
+        // Table Row Heading
+
+        .table-row--heading {
+            display: none;
+        }
+
+        // Table Row
+
+        .table-row {
+            overflow: hidden;
+            background-color: @widget-bg-color;
+            margin-bottom: 10px;
+            clear: both;
+            border-bottom: none;
+        }
+
+        // Cell Image
+
+        .cell--image {
+            float: left;
+        }
+
+        // Item Title
+
+        .summary-item-title  {
+            font-size: bkscale(@font-swatch4-font-size, 1);
+        }
+
+        // Cell Price, Cell Total, Cell Quantity LABELS
+
+        .cell--price, .cell--total, .cell--quantity {
+            &:before {
+                content: attr(data-title);
+                display: block;
+                font-size: 13px;
+                color: fade(@paragraph-color, 50%);
+            }
+        }
+
+        // Cell Quantity
+
+        .cell.cell--quantity {
+            clear: both;
+            padding: 6px 10px;
+            text-align: right;
+            position: relative;
+            width: auto;
+
+            // Pseudo Label - LESS Framework
+
+            &:before {
+                height: 30px;
+                line-height: 30px !important;
+                display: block;
+                position: absolute;
+                right: 90px;
+                top: 6px;
+            }
+        }
+
+        // Quantity Wrap
+
+        .quantity-wrap {
+            margin: 0 -5px 0 auto;
+            width: 80px;
+            max-width: 100%;
+            .button--quantity {
+                border: 5px solid @widget-bg-color;
+                line-height: 20px;
+            }
+        }
+
+        // Cell Price
+
+        .cell--price {
+            clear: left;
+        }
+
+        // Order Total
+
+        .order-total {
+            text-align: center;
+        }
+
+        // Cell Price, Cell Total
+
+        .cell--price, .cell--total {
+            float: left;
+            width: 50%;
+            border-top: 1px solid @bg-color !important;;
+            padding: 6px 10px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

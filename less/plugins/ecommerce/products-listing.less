@@ -1,0 +1,545 @@
+// ---------------------------------------------------------
+// Facet Theme: CSS > Plugins > Ecommerce > Products Listing
+// ---------------------------------------------------------
+
+
+
+
+// ------------------------------
+// Widget Layout Breakpoints
+// ------------------------------
+
+
+
+
+@product-list-large: ~"only screen and (min-width : 890px)";
+@product-list-medium: ~"only screen and (min-width : 600px) and (max-width : 890px)";
+@product-list-small: ~"only screen and (min-width : 400px) and (max-width : 600px)";
+
+
+
+
+// Product Listing Title
+// ------------------------------
+
+
+.ecomproductslist__listing-title {
+    float: left;
+
+    // Hide on the Product List Page
+
+    .productslist-page & {
+        display: none;
+    }
+}
+
+
+
+
+// ------------------------------
+// Product Listing Filters
+// ------------------------------
+
+
+
+
+// Product Search in Widget
+// ------------------------------
+
+
+.widget__ecomproductslist .form {
+
+    // Fieldset Search
+
+    .fieldset--search {
+        float: right;
+        padding: 0.5em 0 1em 0;
+        @media @product-list-large {
+            min-width: 30%;
+        }
+        @media @product-list-small, @mobile {
+            float: none;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+// Products List Fieldset Filters
+// ------------------------------
+
+
+.ecomproductslist__fieldset--filters {
+    clear: both;
+}
+
+
+
+
+// Form Body
+// ------------------------------
+
+
+.ecomproductslist__fieldset--filters .form-body{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+
+
+
+// Product Listing Legend
+// ------------------------------
+
+
+.ecomproductslist__legend {
+    display: none;
+}
+
+
+
+
+// Product Listing Form Group
+// ------------------------------
+
+
+.ecomproductslist__fieldset--filters .form-group {
+    min-width: 15%;
+    width: auto;
+    max-width: 24%;
+     -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-right: 1.3%;
+    &:last-of-type {
+        margin-right: 0;
+    }
+    @media @product-list-medium {
+        min-width: 23%;
+    }
+
+    @media @product-list-small, @mobile {
+        min-width: 49%;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+
+
+    // Label
+
+    .label {
+        font-size: 13px;
+        line-height: 1;
+        color: fade(@paragraph-color, 80%);
+        display: block;
+        padding-bottom: 0;
+        margin-bottom: 5px;
+        @media @product-list-small {
+            font-size: 12px;
+        }
+        @media @mobile {
+            font-size: 12px;
+        }
+    }
+
+    // Select Wrap
+
+    .select-wrap {
+        @media @product-list-small {
+            .select.medium;
+        }
+        @media @mobile {
+            .select.small;
+        }
+    }
+}
+
+
+
+
+
+// Label
+// ------------------------------
+
+
+.ecomproductslist__fieldset--search .label {
+    display: none;
+}
+
+
+
+
+// ------------------------------
+// Listing Order
+// ------------------------------
+
+
+.listing-order {
+    font-size: bkscale(@font-swatch5-font-size, 0.72);
+    line-height: bkscale(@font-swatch5-line-height, 0.72);
+    color: fade(@paragraph-color, 80%);
+    padding: 10px 0 16px 0;
+}
+
+
+
+
+// ------------------------------
+// Product Listing Search
+// ------------------------------
+
+
+
+
+// in ecomproducts.twig - show search in widget only on
+// smaller breakpoint
+// ----------------------------------------------------
+
+
+.productslist-page  .widget--zone-widget .fieldset--search {
+    display: none;
+
+    @media @bp-global-medium {
+        display: block;
+    }
+}
+
+
+
+
+// Search Fieldset
+// ------------------------------
+
+
+.ecomproductslist__fieldset--search {
+
+    // Form Body
+
+    .form-body {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+
+    // First Form Group
+
+    .form-group:first-of-type {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
+    // Last Form Group
+
+    .form-group:last-of-type {
+        margin: 0;
+        @media @mobile {
+            // Makes a pseudo button, placed below the actual button
+            background-color: @button-color;
+            position: relative;
+            height: 50px;
+            &:hover {
+                background: @button-hover-color;
+            }
+
+            // Search Icon
+
+            &:before {
+                content: '\f002';
+                font-family: 'FontAwesome', sans-serif;
+                position: absolute;
+                width: 50px;
+
+                text-align: center;
+                line-height: 48px;
+                color: contrast(@button-color, #000, #fff);
+                font-size: 20px;
+            }
+
+            // Button
+
+            .button {
+                line-height: 50px;
+                background-color: transparent;
+                width: 50px;
+                height: 50px;
+                color: transparent;
+                padding: 0;
+                position: relative;
+            }
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// Product List
+// ------------------------------
+
+
+
+
+// Listing Body
+// ------------------------------
+
+
+.listing-body {
+    clear: both;
+}
+
+
+
+
+// Product List
+// ------------------------------
+
+
+.product-list {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+
+
+
+// Product Item
+// ------------------------------
+
+
+.product-item {
+    background-color: @widget-bg-color;
+
+    // Clickable item, class added via JS
+
+    &.clickable {
+        cursor: pointer;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -o-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+            background-color: @button-color;
+
+            // Title Link, Price
+
+            .title-link, .product-item-price {
+                color: @button-text-color;
+            }
+
+            // Item Image
+
+            .product-item-image {
+                background-color: @button-color;
+                -webkit-transition: all 0.1s ease-in-out;
+                -moz-transition: all 0.1s ease-in-out;
+                -o-transition: all 0.1s ease-in-out;
+                transition: all 0.1s ease-in-out;
+            }
+        }
+    }
+}
+
+
+
+
+// Listing Layout Variations
+// ------------------------------
+
+
+// 4 Columns
+
+@media @product-list-large {
+
+    // Product Item
+
+    .product-item {
+        width: 24%;
+        margin: 0 1.33% 1.33% 0;
+
+        // Last Column Item
+
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+    }
+}
+
+
+// 3 Columns
+
+@media @product-list-medium {
+
+    // Product Item
+
+    .product-item {
+        width: 32.44%;
+        margin: 0 1.33% 1.33% 0;
+
+        // Last Column Item
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+}
+
+
+// 2 Columns
+
+@media @product-list-small {
+
+    // Product Item
+
+    .product-item {
+        width: 49%;
+        margin: 0 2% 2% 0;
+
+        // Last Column Item
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+}
+
+
+// 1 Column
+
+@media @mobile {
+
+    // Product Item
+
+    .product-item {
+        width: 100%;
+        margin: 0 0 6% 0;
+    }
+}
+
+
+
+
+// Product Item Image
+// ------------------------------
+
+
+.product-item-image  {
+    background-color: @widget-bg-color;
+    margin: 16px;
+    width: auto;
+    @media @mobile {
+        line-height: 1;
+        height: auto;
+    }
+}
+
+
+// Image Link
+
+.product-item-image .image-link {
+    background-color: transparent;
+    @media @mobile {
+        line-height: 1;
+        height: auto;
+    }
+}
+
+
+
+
+
+// Product Item Details
+// ------------------------------
+
+
+.product-item-details {
+    margin: 10px 26px 20px;
+    padding-top: 16px;
+    border-top: 1px solid fade(@paragraph-color, 20%);
+    @media @mobile {
+        margin: 4px 16px 12px;
+        padding-top: 0;
+        border-top: none;
+    }
+}
+
+
+// Item Title
+
+.product-item-title {
+    font-size: @font-swatch4-font-size;
+    line-height: @font-swatch4-line-height;
+    margin-bottom: 0.8em;
+    @media @product-list-medium, @product-list-small {
+        font-size: bkscale(@font-swatch4-font-size, 0.82);
+        line-height: bkscale(@font-swatch4-line-height, 0.82);
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch4-font-size, 0.72);
+        line-height: bkscale(@font-swatch4-line-height, 0.72);
+        margin-bottom: 0;
+    }
+}
+
+
+// Item Price
+
+.product-item-price {
+    font-size: bkscale(@font-swatch5-font-size, 0.82);
+    line-height: bkscale(@font-swatch5-line-height, 0.82);
+    @media @mobile {
+        font-size: bkscale(@font-swatch5-font-size, 0.7);
+        line-height: bkscale(@font-swatch5-line-height, 0.7);
+    }
+}

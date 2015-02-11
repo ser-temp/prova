@@ -1,0 +1,246 @@
+// ---------------------------------------------
+// Facet Theme: CSS > Plugins > Blog > Blog Post
+// ---------------------------------------------
+
+
+// ------------------------------
+// Blog Post Page (blogpost.twig)
+// ------------------------------
+
+
+
+.blogpost-page {
+
+
+
+
+    // Zone Content
+    // ------------------------------
+
+
+    .zone-content {
+        // Reset Main Zone width restriciton to allow fullsreen blog image
+        padding: 0;
+        max-width: 100%;
+    }
+
+
+
+
+    // Post Content
+    // ------------------------------
+
+
+    .post-content {
+        padding: 1px 13px;
+        max-width: 1500px;
+        margin: 0 auto;
+        background-color: contrast(@bg-color, lighten(@bg-color, 16%), darken(@bg-color, 16%));
+    }
+
+
+
+
+    // Post Content
+    // ------------------------------
+
+
+    .post-article--has-image .post-content {
+        margin-top: -26px;
+    }
+}
+
+
+
+
+// ------------------------------
+// Blog Post
+// ------------------------------
+
+
+
+
+// Blog Article
+// ------------------------------
+.post-article {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+
+
+
+// Post Image
+// ------------------------------
+
+
+.post-image {
+    background-color: contrast(@bg-color, lighten(@bg-color, 2%), darken(@bg-color, 2%));
+    position: relative;
+    text-align: center;
+}
+
+
+
+
+// Image Link
+// ------------------------------
+
+
+.blog-post-list__image-link {
+    display: block;
+
+    .image {
+        width: auto;
+        display: block;
+        margin: 0 auto;
+        max-height: 470px;
+        height: auto;
+    }
+}
+
+
+
+
+// Post Content
+// ------------------------------
+
+
+.post-content {
+    background-color: contrast(@bg-color, lighten(@bg-color, 16%), darken(@bg-color, 16%));
+    margin: 0;
+    position: relative;
+    padding: 1px 0;
+}
+
+
+
+
+// Post Header, Post Excerpt, Post Body
+// ------------------------------------
+// Maximum text width and paddings
+
+
+.post-header, .post-excerpt, .post-body {
+    max-width: 850px;
+    margin: 0 auto;
+    padding-left: 18px;
+    padding-right: 18px;
+
+    @media @blog-small {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+
+
+// Post Excerpt / Post Body
+// ------------------------------
+
+
+.post-excerpt, .post-body {
+    padding-bottom: 2.5em;
+
+    @media @blog-medium {
+        padding-bottom: 0.6em;
+    }
+    @media @blog-small {
+        padding-bottom: 0;
+        p {
+            font-size: (@font-swatch5-font-size * 0.88);
+            line-height: (@font-swatch5-line-height * 0.88);
+        }
+    }
+}
+
+
+
+
+// Title Link
+// ------------------------------
+
+
+.post-header .title-link {
+    color: @font-swatch1-color;
+}
+
+
+
+
+// Post Title
+// ------------------------------
+
+
+.post-title {
+    margin: 2em 0 0.6em 0;
+    padding: 0;
+
+    @media @blog-medium {
+        margin: 0.5em 0 0.2em 0;
+        font-size: (@font-swatch2-font-size * 0.84);
+        line-height: (@font-swatch2-line-height * 0.84);
+    }
+    @media @blog-small {
+        margin: 0.5em 0 0.2em 0;
+        font-size: (@font-swatch2-font-size * 0.70);
+        line-height: (@font-swatch2-line-height * 0.70);
+    }
+}
+
+
+
+
+// Read More Link
+// ------------------------------
+
+
+.post-excerpt .read-more {
+    background: @button-color;
+    color: contrast(@button-color, #000, #fff);
+    font-size: @font-swatch5-font-size;
+    padding:  0.7em 1.4em;
+    display: inline-block;
+    margin:  1em 0 1.2em;
+
+    @media @blog-small {
+        display: block;
+        margin: 0.5em -10px 0;
+        padding:  0.5em 10px;
+        font-size: (@font-swatch5-font-size * 0.88);
+        line-height: (@font-swatch5-line-height * 0.88);
+    }
+
+    &:hover {
+        background: @button-hover-color;
+    }
+}
+
+
+
+
+// Post Footer
+// ------------------------------
+
+
+.post-footer {
+    margin-bottom: 1em;
+
+    // Timestamp
+
+    .timestamp {
+        font-size: (@font-swatch5-font-size * 0.8);
+        border-left: 1px solid fade(@color-swatch5, 20%);
+        padding: 1em 1.5em;
+        color: fade(@font-swatch5-color, 80%);
+        display: block;
+        @media @blog-medium {
+            padding: 0.8em 1em;
+            font-size: (@font-swatch5-font-size * 0.7);
+        }
+        @media @blog-small {
+            padding: 0.5em 10px;
+        }
+    }
+}

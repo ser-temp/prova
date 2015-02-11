@@ -1,0 +1,133 @@
+// ---------------------------------------------------
+// Facet Theme: CSS > Widgets > Pagination (component)
+// ---------------------------------------------------
+
+
+
+
+// Pagination List
+// ------------------------------
+
+
+.pagination-list:not(.responsiveslideshow__pagination-list) {
+    font-size: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    clear: both;
+    margin-bottom: 2em;
+    position: relative;
+    text-align: center;
+
+
+
+
+// Pagination Button
+// ------------------------------
+
+
+    .button--pagination {
+        background: transparent;
+        color: @link-color;
+        font-family: @font-swatch1-font-family;
+        font-size: @font-swatch5-font-size;
+        padding: 0;
+        line-height: 1;
+
+        @media @mobile {
+            font-size: (@font-swatch5-font-size * 0.88);
+        }
+
+
+
+
+// Pagination Icons
+// ------------------------------
+
+
+        &:before, &:after {
+            background-color: @button-color;
+            width: 1.5em;
+            height: 1.5em;
+            line-height: 1.5em;
+            display: inline-block;
+            color: @button-text-color;
+            text-align: center;
+            margin-right: 0.3em;
+            font-size: 1.5em;
+            vertical-align: middle;
+
+            @media @mobile {
+                font-size: 1em;
+            }
+
+        }
+
+
+        &:hover:before, &:hover:after {
+            background-color: @button-hover-color;
+        }
+    }
+
+
+    .icon--previous:before {
+        content: '\f104';
+    }
+
+
+    .icon--next:after {
+        content: '\f105';
+    }
+
+
+    .control-text {
+        vertical-align: middle;
+    }
+
+
+    .button--next, .button--previous {
+        position: absolute;
+        top: 0;
+    }
+
+
+    .button--next {
+        right: 0;
+    }
+
+
+    .button--previous {
+        left: 0;
+    }
+
+
+
+
+// Pagination Number Item
+// ------------------------------
+
+
+    .button--pagination:not(.icon) {
+        height: 1.5em;
+        line-height: 1.5em;
+        border-top: 1px solid fade(@font-swatch5-color, 20%);
+        padding: 0 0.5em;
+        margin: 0 -0.15em;
+        &:hover {
+            border-top: 1px solid @link-color;
+        }
+    }
+
+
+
+
+// Pagination Number Item - Current
+// ------------------------------
+
+
+    .pagination-item.current {
+        .button--pagination {
+            border-top-color: @theme-color;
+            color: @font-swatch5-color;
+        }
+    }
+}
