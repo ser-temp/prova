@@ -106,6 +106,18 @@
 	font-size: @font-swatch2-font-size;
 	line-height: @font-swatch2-line-height;
 	@media @tablet {
+		.medium.contactform__legend;
+	}
+	@media @mobile {
+		padding: 10px;
+		font-size: (@font-swatch2-font-size * 0.8);
+		line-height: (@font-swatch2-line-height * 0.8);
+		border-bottom: none;
+	}
+}
+
+
+.medium.contactform__legend {
 		width: auto;
 		float: none;
 		width: 100%;
@@ -113,11 +125,21 @@
 		border-bottom: 3px solid @bg-color;
 		font-size: (@font-swatch2-font-size * 0.92);
 		line-height: (@font-swatch2-line-height * 0.92);
-	}
-	@media @mobile {
-		padding: 10px;
-		font-size: (@font-swatch2-font-size * 0.8);
-		line-height: (@font-swatch2-line-height * 0.8);
-		border-bottom: none;
+		background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+.contactform[max-width="600px"] {
+	.contactform__legend {
+		.medium.contactform__legend;
 	}
 }
