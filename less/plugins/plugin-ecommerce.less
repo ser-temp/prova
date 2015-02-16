@@ -178,6 +178,68 @@
 }
 
 
+// Columns variations
+// ---------------------------------
+
+
+@media @bp-global-columns {
+
+
+
+
+    // All Columns
+    // ------------------------------
+
+
+    .responsivecolumns {
+
+
+
+
+    }
+
+    // 3 and 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+        .ecomcategorieslist__category-item {
+            width: 49%;
+            margin: 0 2% 2% 0;
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+            &:nth-child(3n) {
+                clear: left;
+            }
+            &:nth-child(4n) {
+                clear: none;
+            }
+        }
+    }
+
+    // 4 columns
+    // ------------------------------
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth {
+        .ecomcategorieslist__category-item {
+            width: auto;
+            float: none;
+            margin-right: 0;
+        }
+    }
+
+}
+
+
 // -----------------------------
 // Title Bar on Product List Page
 // -----------------------------

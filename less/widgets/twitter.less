@@ -335,3 +335,80 @@
 	text-align: right;
 	line-height: 1;
 }
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+
+
+@media @bp-global-columns {
+
+
+
+
+    // All Columns
+    // ------------------------------
+
+
+    .responsivecolumns {
+
+        // Tweet Item
+
+        .widget__twitter .tweet-item {
+            width: auto;
+            float: none;
+            margin-bottom: 2em;
+        }
+
+    }
+
+
+
+
+    // 3 and 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        // Tweet Content
+
+        .tweet-content {
+            font-size: @font-swatch5-font-size;
+            line-height: @font-swatch5-line-height;
+        }
+    }
+
+
+
+
+    // 3 and 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth {
+
+        // Tweet Metadata
+
+        .tweet-metadata {
+            display: none;
+        }
+    }
+}

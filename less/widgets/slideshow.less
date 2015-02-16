@@ -749,3 +749,114 @@
 		}
 	}
 }
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+@media @bp-global-columns {
+	.responsivecolumns {
+
+		// Caption
+
+		.responsiveslideshow .caption {
+			left: 0;
+			bottom: 0;
+		}
+
+		// Image Title, Image Description
+
+		.responsiveslideshow__image-title, .responsiveslideshow__image-description {
+			font-size: bkscale(@font-swatch5-font-size, 0.8);
+			padding: 0.4em 2%;
+			line-height: 1.4;
+		}
+
+		// Slide navigation
+
+		.slide-navigation {
+			top: 0px;
+		}
+
+		// Navigation button
+
+		.slide-navigation .button {
+			top: 0;
+		}
+
+		// Previous button
+
+		.responsiveslideshow__previous-button {
+			left: 0;
+		}
+
+		// Next button
+
+		.responsiveslideshow__next-button {
+			right: 0;
+		}
+
+		// Pause Toggle
+
+		.responsiveslideshow__pause-toggle {
+			left: 71px;
+		}
+
+		// Pagination list
+
+		.responsiveslideshow__pagination-list {
+			margin-top: 1px;
+		}
+
+		// Pagination List
+
+		.responsiveslideshow__pagination-list {
+			display: block;
+			text-align: center;
+		}
+
+		// Pagination Item
+
+		.responsiveslideshow__pagination-item {
+			display: inline-block;
+		}
+
+		// Pagination Button
+
+		.responsiveslideshow__pagination-item .button, .responsiveslideshow__pagination-item.selected .button {
+			width: 8px;
+			height: 8px;
+			margin: 0;
+			overflow: hidden;
+			text-indent: 10px;
+			padding: 0;
+		}
+	}
+
+
+
+
+	// 4 columns
+	// ------------------------------
+
+
+	.columns-four-first,
+	.columns-four-second,
+	.columns-four-third,
+	.columns-four-fourth {
+		.responsiveslideshow .caption {
+			display: none;
+		}
+	}
+
+}

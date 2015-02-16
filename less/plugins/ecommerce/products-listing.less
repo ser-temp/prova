@@ -547,3 +547,107 @@
         line-height: bkscale(@font-swatch5-line-height, 0.7);
     }
 }
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+
+
+@media @bp-global-columns {
+
+
+
+
+    // All Columns
+    // ------------------------------
+
+
+    .responsivecolumns {
+
+        // Item Article
+
+        .product-item-article {
+            padding: 1px 0;
+        }
+
+        // Product Item
+
+        .product-item {
+            width: 49%;
+            margin: 0 2% 2% 0;
+
+            // Last Column Item
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+
+        // Listing Title
+
+        .ecomproductslist__listing-title {
+            float: none;
+        }
+
+        // Search
+
+        .widget__ecomproductslist .form .fieldset--search {
+            float: none;
+        }
+
+
+    }
+
+    // 3 and 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        // Form Body
+
+        .ecomproductslist__fieldset--filters .form-body {
+            display: block;
+        }
+
+        // Form Group
+
+        .ecomproductslist__fieldset--filters .form-group {
+            width: 100%;
+            display: block;
+            max-width: 100%;
+        }
+
+        // Products List
+
+        .product-list {
+            display: block;
+        }
+
+        // Product Item
+
+        .product-item {
+            width: auto;
+            margin: 0 0 2% 0;
+
+            // Last Column Item
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
