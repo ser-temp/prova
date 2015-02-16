@@ -48,8 +48,18 @@
 
 .navigation-list {
 	margin: 0; // Framework Reset
+	&, * {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
 }
 
+// Menu items are always aligned to the left in tablet, mobile view
+
+.navigation-list .navigation-item {
+	@media @bp-global-medium {
+		text-align: left;
+	}
+}
 
 
 
@@ -140,9 +150,16 @@
 			top: 0px;
 			left: 13px;
 			right: 13px;
-			height: 5px;
+			height: 4px;
 			background-color: @link-color;
 		}
+	}
+}
+
+
+@media @bp-global-medium {
+	.navigation-body > .navigation-list > .navigation-item.selected > .item-name{
+		color: @link-color;
 	}
 }
 
@@ -352,6 +369,8 @@
 
 
 .custom-navigation-toggle {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
 	@media @bp-global-medium {
 		display: block;
 		width: 50px;
@@ -493,7 +512,7 @@
 	}
 
 	.navigation-body > .navigation-list > .navigation-item {
-		border-top-width: 5px;
+		border-top-width: 4px;
 		border-style: solid;
 		border-color: contrast(@theme-color, rgba(0, 0, 0, 0.12), rgba(255, 255, 255, 0.12));
 		width: 49%;

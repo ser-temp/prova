@@ -168,6 +168,9 @@ body {
 	.clearfix;
 	background: contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
 
+
+
+
     // Container
     // ------------------------------
 
@@ -181,11 +184,12 @@ body {
         // Profile Widgets
         // ------------------------------
 
-		.widget__profile {
+		.widget {
 			.clearfix;
             float: left;
 			width: 32%;
             margin: 0 2% 0 0;
+            clear: none;
 
 			&:last-child {
 				margin-right: 0;
@@ -226,6 +230,7 @@ body {
 	padding: 20px 13px;
 	max-width: 1526px;
 	margin: 0 auto;
+    overflow: hidden;
 }
 
 

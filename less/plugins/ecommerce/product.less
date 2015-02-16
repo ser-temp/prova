@@ -80,6 +80,7 @@
         height: 60px;
         top: 0;
         margin-bottom: 26px;
+        max-width: 390px;
     }
 
     @media @product-small {
@@ -205,6 +206,14 @@
 
 .product-image {
     margin: 26px 26px 26px 132px;
+
+    &.one-image {
+        margin-left: 26px;
+        @media @product-small {
+            margin-left: 16px;
+        }
+    }
+
     @media @product-medium {
         margin: 26px;
     }
@@ -284,7 +293,18 @@
 
 
 .product-body {
+
     margin-bottom: 26px;
+
+    @media @tablet {
+        font-size: bkscale(@font-swatch5-font-size, 0.9);
+        line-height: bkscale(@font-swatch5-line-height, 0.9);
+    }
+
+    @media @mobile {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        line-height: bkscale(@font-swatch5-line-height, 0.8);
+    }
 }
 
 
@@ -298,12 +318,32 @@
 .product-actions {
     margin-bottom: 2em;
 
+
+
+
+    // Add to Basket Button
+    // ------------------------------
+
+    .form .button {
+        &.added {
+            &:before {
+                content: '\f00c'
+            }
+        }
+    }
+
+
+
+
     // Legend
     // ------------------------------
 
     legend {
         display: none;
     }
+
+
+
 
     // Fieldset
     // ------------------------------
@@ -312,16 +352,24 @@
         margin-bottom: 2em;
     }
 
+
+
+
     // Form Group
     // ------------------------------
+
 
     .form-group {
         display: inline-block;
         min-width: 100px;
         margin: 0 0.6em 0 0;
 
+
+
+
         // Label
         // ------------------------------
+
 
         .label {
             font-size: 13px;

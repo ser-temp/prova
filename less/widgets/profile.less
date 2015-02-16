@@ -37,11 +37,18 @@
 		line-height: 1.2;
 		padding-bottom: 0;
 
+		@media @mobile {
+			font-size: 14px;
+		}
+
 		// In the Smaller Footer Bar
 
 		.footer-secondary-widgets & {
 			font-size: 14px;
 			color: contrast(@theme-color, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
+		}
+		@media @mobile {
+			font-size: 12px;
 		}
 	}
 
@@ -55,10 +62,17 @@
 		font-size: 18px;
 		line-height: 1.5;
 
+		@media @mobile {
+			font-size: 16px;
+		}
+
 		// In the Smaller Footer Bar
 
 		.footer-secondary-widgets & {
 			font-family: @font-swatch5-font-family;
+			@media @mobile {
+				font-size: 12px;
+			}
 		}
 	}
 }
@@ -192,7 +206,7 @@
 
 
 // Modifications to suit the footer design
-// Original styles: css/widgets/twitter-feed.less
+// Original styles: css/widgets/twitter.less
 
 .widget__profile {
 
@@ -206,6 +220,7 @@
 	.tweet-content {
 		padding-bottom: 15px;
 		border-bottom-color: contrast(@theme-color, darken(@theme-color, 20%), lighten(@theme-color, 20%));
+		line-height: 1.4;
 
 		// Bottom Arrow Fill
 
@@ -234,7 +249,7 @@
 
 	// Twitter Feed Timestamp, Metadata Links
 
-	.twitter-feed__timestamp, .via, .tweet-metadata a {
+	.twitter__timestamp, .via, .tweet-metadata a {
 		color: contrast(@theme-color, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
 		font-size: 12px;
 	}
@@ -259,20 +274,20 @@
 
 	// Via, Source, Metadata
 
-	.twitter-feed__via, .tweet-source, .tweet-metadata {
+	.twitter__via, .tweet-source, .tweet-metadata {
 		display: none;
 	}
 
 	// Avatar
 
-	.twitter-feed__avatar {
+	.twitter__avatar {
 		left: 1px;
 		bottom: 6px;
 	}
 
 	// Avatar Image
 
-	.twitter-feed__avatar-image {
+	.twitter__avatar-image {
 		width: 25px;
 		height: 25px;
 		min-height: 25px;
@@ -280,7 +295,7 @@
 
 	// Account Link
 
-	.twitter-feed__account-link {
+	.twitter__account-link {
 		margin-left: 35px;
 		width: auto;
 		min-height: 25px;

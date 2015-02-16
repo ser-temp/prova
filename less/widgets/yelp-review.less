@@ -1,0 +1,168 @@
+// ----------------------------------------
+// Facet Theme: CSS > Widgets > Yelp Review
+// ----------------------------------------
+
+
+
+
+// Yelp Title
+// ------------------------------
+
+
+.yelp-title {
+    @media @tablet {
+        font-size: bkscale(@font-swatch2-font-size, 0.8);
+        line-height: bkscale(@font-swatch2-line-height, 0.8);
+    }
+
+    @media @mobile {
+        font-size: bkscale(@font-swatch2-font-size, 0.6);
+        line-height: bkscale(@font-swatch2-line-height, 0.6);
+    }
+}
+
+
+
+
+// Review List
+// ------------------------------
+
+
+.review-list {
+    padding: 0;
+    margin: 0;
+}
+
+
+// Review Item
+// ------------------------------
+
+
+.review-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+// Review Article
+// ------------------------------
+
+
+.review-article {
+    background-color: @widget-bg-color;
+    padding: 42px;
+
+    @media @tablet {
+        padding: 26px;
+    }
+
+    @media @mobile {
+        padding: 6px;
+    }
+}
+
+
+
+
+// Review Title
+// ------------------------------
+
+
+.review-title {
+    float: left;
+    font-size: @font-swatch4-font-size;
+    line-height: @font-swatch4-line-height;
+
+
+    // Author Label
+
+    .author-label {
+        font-size: bkscale(@font-swatch5-font-size, 0.72);
+        line-height: 1.2;
+        display: block;
+
+    }
+}
+
+
+
+
+// Review Rating
+// ------------------------------
+
+
+.review-rating {
+     float: right;
+    background-color: #fff;
+    display: inline-block;
+    padding: 3px 3px 1px 4px;
+    border-radius: 3px;
+}
+
+
+
+
+// Review Excerpt
+// ------------------------------
+
+
+.review-excerpt {
+    clear: both;
+    margin-bottom: 1em;
+
+    // Review text
+    .review-text {
+        padding-bottom: 0;
+        @media @tablet {
+            font-size: bkscale(@font-swatch5-font-size, 0.9);
+            line-height: bkscale(@font-swatch5-line-height, 0.9);
+        }
+
+        @media @mobile {
+            font-size: bkscale(@font-swatch5-font-size, 0.8);
+            line-height: bkscale(@font-swatch5-line-height, 0.8);
+        }
+    }
+
+    //  Review Link
+    .review-link {
+        box-shadow: inset 0px -1px 0px 0px @link-color;
+        &:hover {
+            text-decoration: none;
+            box-shadow: inset 0px -2px 0px 0px @link-color;
+        }
+    }
+}
+
+
+
+
+// Review Footer
+// ------------------------------
+
+
+.review-footer {
+    font-size: bkscale(@font-swatch5-font-size, 0.8);
+
+    // Timestamp
+
+    .timestamp {
+        font-size: bkscale(@font-swatch5-font-size, 0.72);
+        border-left: 1px solid fade(@color-swatch5, 20%);
+        padding: 0.5em 1em;
+        color: fade(@font-swatch5-color, 80%);
+        display: block;
+
+        @media @blog-medium {
+            padding: 0.8em 1em;
+            font-size: (@font-swatch5-font-size * 0.7);
+        }
+
+        @media @blog-small {
+            padding: 0.5em 10px;
+        }
+    }
+}

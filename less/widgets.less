@@ -11,8 +11,9 @@
 // -----------------------------
 
 //  0.   #Widget Components
-//  0.1  -- #Form Elements
-//  0.2  -- #Pagination
+//  0.1  -- #Widget Wrapper
+//  0.2  -- #Form Elements
+//  0.3  -- #Pagination
 //  1.   #Logo
 //  2.   #Company Name
 //  3.   #Navigation
@@ -32,7 +33,7 @@
 // 14.   #Profile
 // 15.   #Map
 // 16.   #Content Widget
-
+// 17.   #Yelp Review
 
 
 
@@ -44,7 +45,17 @@
 
 
 
-// 0.1 Form Elements
+// 0.1 Widget Wrapper
+// ------------------------------
+
+
+.widget {
+    .clearfix;
+    clear: both;
+}
+
+
+// 0.2 Form Elements
 // ------------------------------
 
 
@@ -53,7 +64,7 @@
 
 
 
-// 0.2 Pagination
+// 0.3 Pagination
 // ------------------------------
 
 
@@ -77,7 +88,7 @@
 // -----------------------------
 
 
-@import "@{templateLocal}/less/widgets/logo.less";
+@import "@{templateLocal}/less/widgets/companyname.less";
 
 
 
@@ -236,6 +247,16 @@
 
 
 @import "@{templateLocal}/less/widgets/content.less";
+
+
+
+
+// -----------------------------
+// 17.  #Yelp Review
+// -----------------------------
+
+
+@import "@{templateLocal}/less/widgets/yelp-review.less";
 
 
 

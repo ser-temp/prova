@@ -153,6 +153,7 @@
         display: block;
         padding-bottom: 0;
         margin-bottom: 5px;
+        text-transform: capitalize;
         @media @product-list-small {
             font-size: 12px;
         }
@@ -476,11 +477,14 @@
 
 .product-item-image  {
     background-color: @widget-bg-color;
-    margin: 16px;
+    margin: 26px;
     width: auto;
     @media @mobile {
         line-height: 1;
         height: auto;
+    }
+    @media @product-list-small {
+        margin: 16px;
     }
 }
 

@@ -4,7 +4,7 @@
 
 	{% include "includes/head.twig" %}
 
-	<body class="{{ page.backgroundClass }}">
+	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
 
 		<div class="page-content">
 			<div class="block-content">
@@ -46,6 +46,12 @@
 
 		<script type="text/javascript">
 		$(document).ready(function() {
+			if($(".ecomproduct__gallery-item").length == 1)
+			{
+			   $(".ecomproduct__product-image").addClass("one-image");
+			}
+
+
 			$('.product-gallery').each(function(){
 			  var max = 4
 			  if ($(this).find("li.gallery-item").length > max) {
