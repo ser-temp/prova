@@ -21,40 +21,40 @@
             "color7":"#000000"
         },
         "Swatch 2": {
-            "color1":"#242424",
-            "color2":"#fff5f1",
-            "color3":"#7de3f9",
+            "color1":"#222222",
+            "color2":"#313131",
+            "color3":"#b9e5dd",
             "color4":"#ffffff",
-            "color5":"#c9c9c9",
-            "color6":"#ffffff",
-            "color7":"#000000"
+            "color5":"#e8e8e8",
+            "color6":"#131313",
+            "color7":"#ffffff"
         },
         "Swatch 3": {
             "color1":"#ffffff",
-            "color2":"#fef5f5",
-            "color3":"#ffd464",
-            "color4":"#9d9d9d",
+            "color2":"#f7f7f7",
+            "color3":"#2dd4d4",
+            "color4":"#aeaeae",
             "color5":"#acacac",
-            "color6":"#ff6861",
-            "color7":"#ff6861"
+            "color6":"#2dd4d4",
+            "color7":"#ffffff"
         },
         "Swatch 4": {
-            "color1":"#ffffff",
-            "color2":"#f2fafb",
-            "color3":"#f6b8d2",
-            "color4":"#9d9d9d",
-            "color5":"#acacac",
-            "color6":"#acdee1",
-            "color7":"#acdee1"
+            "color1":"#eae0c1",
+            "color2":"#ddcfac",
+            "color3":"#c73f03",
+            "color4":"#525049",
+            "color5":"#161206",
+            "color6":"#ffffff",
+            "color7":"#e5591b"
         },
         "Swatch 5": {
-            "color1":"#ffffff",
-            "color2":"#f7f3f1",
-            "color3":"#f5927e",
-            "color4":"#9d9d9d",
-            "color5":"#acacac",
-            "color6":"#b39e94",
-            "color7":"#b39e94"
+            "color1":"#34342f",
+            "color2":"#605a4f",
+            "color3":"#cf9b1e",
+            "color4":"#ffffff",
+            "color5":"#eeebdd",
+            "color6":"#ffffff",
+            "color7":"#22221f"
         }
     },
     "fontSwatch": {

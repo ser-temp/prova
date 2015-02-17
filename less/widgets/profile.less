@@ -75,6 +75,20 @@
 			}
 		}
 	}
+
+
+	// Links
+	// ------------------------------
+
+
+	a {
+		color: contrast(@theme-color, #000, #fff);
+		opacity: 0.8;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
 }
 
 
@@ -489,12 +503,15 @@
 
 	.social-link {
 		text-align: left;
+
+		// Icon
+
 		&:before {
 			display: inline-block;
 			text-align: center;
 			vertical-align: middle;
 			margin-right: 0.4em;
-			background: contrast(@theme-color, darken(@theme-color, 30%), lighten(@theme-color, 30%));
+			background: contrast(@theme-color, darken(@theme-color, 16%), lighten(@theme-color, 16%));
 			width: 45px;
 			height: 45px;
 			line-height: 45px;
