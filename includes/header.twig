@@ -1,13 +1,14 @@
 <!-- Header -->
-<header class="theme-header">
+<header class="theme-header" id="case1"
+	data-title="01) Bad: Logo and Company Name at the same time">
 
 	<div class="container">
-		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo-square.svg')})|raw}}
 
-		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+		{{widget('companyname', 'companyname', {"business": "Bugger King"})|raw}}
 
 		<div class="drop-down-nav">
-			<div class="page-title">{{ page.title }}</div>
+			<div class="page-title">This is a page title</div>
 			<button class="custom-navigation-toggle">
 				<div class='bar one'></div>
 				<div class='bar two'></div>
@@ -22,3 +23,251 @@
 
 </header>
 <!-- End Header -->
+
+
+
+<!-- Header -->
+<header class="theme-header" id="case2"
+	data-title="02) Bad: Very wide Logo and long Company Name">
+
+	<div class="container">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo-wide.png')})|raw}}
+
+		{{widget('companyname', 'companyname', {"business": "Miller Cosmetic"})|raw}}
+
+		<div class="drop-down-nav">
+			<div class="page-title">This is a page title!</div>
+			<button class="custom-navigation-toggle">
+				<div class='bar one'></div>
+				<div class='bar two'></div>
+				<div class='bar three'></div>
+			</button>
+		</div>
+
+		<div class="theme-navigation">
+			{{widget('extendednavigation', 'extendednavigation', {"align":"right"})|raw}}
+		</div>
+	</div>
+
+</header>
+<!-- End Header -->
+
+
+
+<!-- Header -->
+<header class="theme-header" id="case3"
+	data-title="03) Bad: Banner Logo and Company Name">
+
+	<div class="container">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo-banner.jpg')})|raw}}
+
+		{{widget('companyname', 'companyname', {"business": "Quest Seekers"})|raw}}
+
+		<div class="drop-down-nav">
+			<div class="page-title">This is a page title!</div>
+			<button class="custom-navigation-toggle">
+				<div class='bar one'></div>
+				<div class='bar two'></div>
+				<div class='bar three'></div>
+			</button>
+		</div>
+
+		<div class="theme-navigation">
+			{{widget('extendednavigation', 'extendednavigation', {"align":"right"})|raw}}
+		</div>
+	</div>
+
+</header>
+<!-- End Header -->
+
+
+
+
+
+
+<!-- Header -->
+<header class="theme-header" id="case4"
+	data-title="04) Good: Single Square Logo">
+
+	<div class="container">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo-square.svg')})|raw}}
+
+
+		<div class="drop-down-nav">
+			<div class="page-title">This is a page title</div>
+			<button class="custom-navigation-toggle">
+				<div class='bar one'></div>
+				<div class='bar two'></div>
+				<div class='bar three'></div>
+			</button>
+		</div>
+
+		<div class="theme-navigation">
+			{{widget('extendednavigation', 'extendednavigation', {"align":"right"})|raw}}
+		</div>
+	</div>
+
+</header>
+<!-- End Header -->
+
+
+
+<!-- Header -->
+<header class="theme-header" id="case5"
+	data-title="05) Good: Single Wide Logo">
+
+	<div class="container">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo-wide.png')})|raw}}
+
+
+		<div class="drop-down-nav">
+			<div class="page-title">This is a page title!</div>
+			<button class="custom-navigation-toggle">
+				<div class='bar one'></div>
+				<div class='bar two'></div>
+				<div class='bar three'></div>
+			</button>
+		</div>
+
+		<div class="theme-navigation">
+			{{widget('extendednavigation', 'extendednavigation', {"align":"right"})|raw}}
+		</div>
+	</div>
+
+</header>
+<!-- End Header -->
+
+
+
+<!-- Header -->
+<header class="theme-header" id="case6"
+	data-title="06) Good: Single Banner Size Logo">
+
+	<div class="container">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo-banner.jpg')})|raw}}
+
+
+		<div class="drop-down-nav">
+			<div class="page-title">This is a page title!</div>
+			<button class="custom-navigation-toggle">
+				<div class='bar one'></div>
+				<div class='bar two'></div>
+				<div class='bar three'></div>
+			</button>
+		</div>
+
+		<div class="theme-navigation">
+			{{widget('extendednavigation', 'extendednavigation', {"align":"right"})|raw}}
+		</div>
+	</div>
+
+</header>
+<!-- End Header -->
+
+
+
+<!-- Header -->
+<header class="theme-header" id="case7"
+	data-title="07) Good: Company Name Only">
+
+	<div class="container">
+		{{widget('companyname', 'companyname', {"business": "Bugger King"})|raw}}
+
+
+		<div class="drop-down-nav">
+			<div class="page-title">This is a page title!</div>
+			<button class="custom-navigation-toggle">
+				<div class='bar one'></div>
+				<div class='bar two'></div>
+				<div class='bar three'></div>
+			</button>
+		</div>
+
+		<div class="theme-navigation">
+			{{widget('extendednavigation', 'extendednavigation', {"align":"right"})|raw}}
+		</div>
+	</div>
+
+</header>
+<!-- End Header -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="switcher" class="switcher">
+	<button id="case-list-toggle">Case List</button>
+	<p id="currentTitle"></p>
+
+	<div class="case-list">
+		<hr />
+	</div>
+</div>
+
+<style>
+	.switcher {
+		position: fixed;
+		background-color: #ddd;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10000;
+		padding: 10px;
+	}
+
+	.theme-header .container {
+		max-width: 1550px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.switcher.open {
+		top: 0;
+		overflow: auto;
+	}
+
+	.case-list {
+		display: none;
+	}
+	.open .case-list {
+		display: block;
+	}
+</style>
+
+<script>
+	$('.theme-header:not(:first)').hide();
+
+	$('#case-list-toggle').click(function() {
+  		$('.switcher').toggleClass('open');
+	});
+
+	$.each($('.theme-header'), function() {
+		var title = $(this).data("title");
+		var id = $(this).attr('id');
+		$('.case-list').append("<label><input type=\"radio\" name=\"case\" value=\""+id+"\" /> "+title+"</label>");
+
+	});
+
+
+
+	$(document).on("click", ".case-list input", function() {
+		$('.theme-header').hide();
+		var openid = "#"+$(this).val();
+		$(openid).show();
+		var currentTitle = $(openid).data("title");
+		$("#currentTitle").text(currentTitle);
+
+		$('.switcher').toggleClass('open');
+ 	});
+
+
+</script

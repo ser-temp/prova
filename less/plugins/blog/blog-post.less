@@ -149,8 +149,8 @@
     @media @blog-small {
         padding-bottom: 0;
         p {
-            font-size: (@font-swatch5-font-size * 0.88);
-            line-height: (@font-swatch5-line-height * 0.88);
+            font-size: bkscale(@font-swatch5-font-size, 0.88);
+            line-height: bkscale(@font-swatch5-line-height, 0.88);
         }
     }
 }
@@ -179,13 +179,13 @@
 
     @media @blog-medium {
         margin: 0.5em 0 0.2em 0;
-        font-size: (@font-swatch2-font-size * 0.84);
-        line-height: (@font-swatch2-line-height * 0.84);
+        font-size: bkscale(@font-swatch2-font-size, 0.84);
+        line-height: bkscale(@font-swatch2-line-height, 0.84);
     }
     @media @blog-small {
         margin: 0.5em 0 0.2em 0;
-        font-size: (@font-swatch2-font-size * 0.70);
-        line-height: (@font-swatch2-line-height * 0.70);
+        font-size: bkscale(@font-swatch2-font-size, 0.70);
+        line-height: bkscale(@font-swatch2-line-height, 0.70);
     }
 }
 
@@ -208,8 +208,8 @@
         display: block;
         margin: 0.5em -10px 0;
         padding:  0.5em 10px;
-        font-size: (@font-swatch5-font-size * 0.88);
-        line-height: (@font-swatch5-line-height * 0.88);
+        font-size: bkscale(@font-swatch5-font-size, 0.88);
+        line-height: bkscale(@font-swatch5-line-height, 0.88);
     }
 
     &:hover {
@@ -230,14 +230,14 @@
     // Timestamp
 
     .timestamp {
-        font-size: (@font-swatch5-font-size * 0.8);
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
         border-left: 1px solid fade(@color-swatch5, 20%);
         padding: 1em 1.5em;
         color: fade(@font-swatch5-color, 80%);
         display: block;
         @media @blog-medium {
             padding: 0.8em 1em;
-            font-size: (@font-swatch5-font-size * 0.7);
+            font-size: bkscale(@font-swatch5-font-size, 0.7);
         }
         @media @blog-small {
             padding: 0.5em 10px;

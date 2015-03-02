@@ -89,20 +89,20 @@
     padding: 0 1em 0 0;
 
     @media @feature-large {
-        font-size: (@font-swatch8-font-size * 0.78);
-        line-height: (@font-swatch8-line-height * 0.78);
+        font-size: bkscale(@font-swatch8-font-size, 0.78);
+        line-height: bkscale(@font-swatch8-line-height, 0.78);
     }
     @media @feature-medium {
-        font-size: (@font-swatch8-font-size * 0.68);
-        line-height: (@font-swatch8-line-height * 0.68);
+        font-size: bkscale(@font-swatch8-font-size, 0.68);
+        line-height: bkscale(@font-swatch8-line-height, 0.68);
         border-bottom: 1px solid fade(@font-swatch8-color, 50%);
         padding: 0 0 1em 0;
         margin: 0 0 0.5em 0;
         border-right: none;
     }
     @media @feature-small {
-        font-size: (@font-swatch8-font-size * 0.50);
-        line-height: (@font-swatch8-line-height * 0.50);
+        font-size: bkscale(@font-swatch8-font-size, 0.50);
+        line-height: bkscale(@font-swatch8-line-height, 0.50);
         padding: 0 0 0.6em 0;
     }
 
@@ -119,17 +119,17 @@
 	padding: 0;
 
     @media @feature-large {
-        font-size: (@font-swatch9-font-size * 0.78);
-        line-height: (@font-swatch9-line-height * 0.78);
+        font-size: bkscale(@font-swatch9-font-size, 0.78);
+        line-height: bkscale(@font-swatch9-line-height, 0.78);
     }
     @media @feature-medium {
-        font-size: (@font-swatch9-font-size * 0.68);
-        line-height: (@font-swatch9-line-height * 0.68);
+        font-size: bkscale(@font-swatch9-font-size, 0.68);
+        line-height: bkscale(@font-swatch9-line-height, 0.68);
         padding: 0 0 2em 0;
     }
     @media @feature-small {
-        font-size: (@font-swatch9-font-size * 0.55);
-        line-height: (@font-swatch9-line-height * 0.55);
+        font-size: bkscale(@font-swatch9-font-size, 0.55);
+        line-height: bkscale(@font-swatch9-line-height, 0.55);
     }
 }
 
@@ -146,24 +146,24 @@
     border: 1px solid fade(@font-swatch8-color, 50%);
     max-width: 20%;
     background: transparent;
-    font-size: (@font-swatch9-font-size * 0.88);
+    font-size: bkscale(@font-swatch9-font-size, 0.88);
     font-family: @font-swatch8-font-family;
     line-height: 1.3;
     color: @font-swatch8-color;
 
     @media @feature-large {
-        font-size: (@font-swatch9-font-size * 0.78);
+        font-size: bkscale(@font-swatch9-font-size, 0.78);
     }
 
     @media @feature-medium {
-        font-size: (@font-swatch9-font-size * 0.68);
+        font-size: bkscale(@font-swatch9-font-size, 0.68);
         max-width: 100%;
         margin-bottom: 2em;
     }
 
     @media @feature-small {
-        font-size: (@font-swatch9-font-size * 0.55);
-        line-height: (@font-swatch9-line-height * 0.55);
+        font-size: bkscale(@font-swatch9-font-size, 0.55);
+        line-height: bkscale(@font-swatch9-line-height, 0.55);
         margin-bottom: 0;
         margin-top: 2em;
     }

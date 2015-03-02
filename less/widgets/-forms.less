@@ -53,7 +53,7 @@ textarea {
 
     @media @mobile {
         padding: 0 0.6em;
-        font-size: (@font-swatch5-font-size * 0.98);
+        font-size: bkscale(@font-swatch5-font-size, 0.98);
     }
 
 }
@@ -70,9 +70,9 @@ input[type="email"],
 input[type="password"],
 .input--single-line,
 .input--search {
-    height: (@font-swatch7-font-size * 2.5);
+    line-height: bkscale(@font-swatch7-font-size, 2.5);
     @media @mobile {
-        height: (@font-swatch7-font-size * 0.88 * 2.5);
+        line-height: bkscale(@font-swatch7-font-size, 2.2);
     }
 }
 
@@ -103,7 +103,7 @@ textarea {
     border: none;
     padding: 10px 1em;
     font-size:  @font-swatch7-font-size;
-    line-height: (@font-swatch7-font-size * 2.5) - 20;
+    line-height: (bkscale(@font-swatch7-font-size, 2.5));
     font-weight: @font-swatch7-font-weight;
     display: inline-block;
     color: @button-text-color;
@@ -114,8 +114,8 @@ textarea {
     transition: all 0.1s ease-in-out;
 
     @media @mobile {
-        font-size:  (@font-swatch7-font-size * 0.88);
-        line-height: (@font-swatch7-font-size * 0.88 * 2.5) - 20;
+        font-size:  bkscale(@font-swatch7-font-size, 0.88);
+        //x line-height: bkscale(@font-swatch7-font-size, 0.88) * 2.5 - 20;
     }
 
     &:focus {

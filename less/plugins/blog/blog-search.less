@@ -43,14 +43,14 @@
             width: 100%;
             background-color: @widget-bg-color;
             border-bottom: 3px solid @bg-color;
-            font-size: (@font-swatch2-font-size * 0.92);
-            line-height: (@font-swatch2-line-height * 0.92);
+            font-size: bkscale(@font-swatch2-font-size, 0.92);
+            line-height: bkscale(@font-swatch2-line-height, 0.92);
             border-right: none;
         }
         @media @mobile {
             padding: 10px;
-            font-size: (@font-swatch2-font-size * 0.8);
-            line-height: (@font-swatch2-line-height * 0.8);
+            font-size: bkscale(@font-swatch2-font-size, 0.8);
+            line-height: bkscale(@font-swatch2-line-height, 0.8);
             border-bottom: none;
         }
     }
@@ -154,8 +154,8 @@
                 line-height: 50px;
                 background-color: transparent;
                 width: 50px;
-                height: (@font-swatch7-font-size * 0.88 * 2.5) !important;
-                line-height: (@font-swatch7-font-size * 0.88 * 2.0) !important;
+                line-height: bkscale(@font-swatch7-font-size, 0.88 * 2.5) !important;
+                line-height: bkscale(@font-swatch7-font-size, 0.88 * 2.0) !important;
                 color: transparent;
                 padding: 0;
                 position: relative;

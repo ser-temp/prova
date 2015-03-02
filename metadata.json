@@ -114,7 +114,7 @@
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "20px",
             "font-weight": "300",
-            "line-height": "28px",
+            "line-height": "40px",
             "color": "@color-swatch1",
             "letter-spacing": "1px",
             "background-color": "@color-swatch3",
