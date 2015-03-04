@@ -1,8 +1,6 @@
 // ------------------------------
-// Facet Theme: CSS > Messages
+// Facet Template: CSS > Messages
 // ------------------------------
-
-@message-padding: 0.7em;
 
 
 
@@ -14,8 +12,8 @@
 .message {
     position: relative;
     clear: both;
-    padding: @message-padding;
-    padding-left: (@message-padding * 3.5);
+    padding: 0.7em;
+    padding-left: 2.45em;
     margin: 1em auto;
     max-width: 1000px;
     font-size: 16px;
@@ -27,13 +25,13 @@
     &:before {
         font-family: 'FontAwesome', sans-serif;
         display: block;
-        width: (@message-padding * 3.5);
+        width: 2.45em;
         position: absolute;
         left: 0;
         top: 0;
         bottom: 0;
         text-align: center;
-        padding-top: @message-padding;
+        padding-top: 0.7em;
     }
 
     // Heading 3, Paragraph
@@ -54,7 +52,7 @@
     // Consequetive Paragraps
 
     p+p {
-        margin-top: (@message-padding * 0.5);
+        margin-top: 0.35em;
     }
 }
 
@@ -169,10 +167,10 @@
 
 // Message in Template's Footer
 // ------------------------------
-.theme-footer .message {
+.template-footer .message {
     background-color: transparent;
     margin: 0;
     &:before, h3, p {
-        color: contrast(@theme-color, #000, #fff);
+        color: contrast(@spare-color, #000, #fff);
     }
 }

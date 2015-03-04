@@ -1,5 +1,5 @@
 // ------------------------------------
-// Facet Theme: CSS > Widgets > Gallery
+// Facet Template: CSS > Widgets > Gallery
 // ------------------------------------
 
 
@@ -102,17 +102,17 @@
 	display: block;
 	position: relative;
 	padding: 1em 2em 1em 6%;
-	color: contrast(@theme-color, #000, #fff);
-	background-color: @theme-color;
+	color: contrast(@spare-color, #000, #fff);
+	background-color: @spare-color;
 
 	@media @gallery-2col {
-		font-size: (@font-swatch5-font-size * 0.88);
-		line-height: (@font-swatch5-line-height * 0.88);
+		font-size: bkscale(@font-swatch5-font-size, 0.88);
+		line-height: bkscale(@font-swatch5-line-height, 0.88);
 	}
 
 	@media @gallery-1col {
-		font-size: (@font-swatch5-font-size * 0.77);
-		line-height: (@font-swatch5-line-height * 0.77);
+		font-size: bkscale(@font-swatch5-font-size, 0.77);
+		line-height: bkscale(@font-swatch5-line-height, 0.77);
 		padding: 0.7em 2em 0.7em 4%;
 	}
 
@@ -146,15 +146,15 @@
 	padding: 1em 4%;
 
 	@media @gallery-2col {
-		font-size: (@font-swatch5-font-size * 0.77);
-		line-height: (@font-swatch5-line-height * 0.77);
+		font-size: bkscale(@font-swatch5-font-size, 0.77);
+		line-height: bkscale(@font-swatch5-line-height, 0.77);
 	}
 
 	@media @gallery-1col {
 		padding: 0.8em 1em;
 		width: auto;
-		font-size: (@font-swatch5-font-size * 0.7);
-		line-height: (@font-swatch5-line-height * 0.7);
+		font-size: bkscale(@font-swatch5-font-size, 0.7);
+		line-height: bkscale(@font-swatch5-line-height, 0.7);
 	}
 }
 
@@ -243,8 +243,8 @@
 	}
 
 	.gallery__image-description {
-		background: mix(@bg-color, @theme-color, 20%);
-		color: contrast(@theme-color, #000, #fff);
+		background: mix(@bg-color, @spare-color, 20%);
+		color: contrast(@spare-color, #000, #fff);
 	}
 }
 

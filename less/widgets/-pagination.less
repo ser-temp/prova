@@ -1,5 +1,5 @@
 // ---------------------------------------------------
-// Facet Theme: CSS > Widgets > Pagination (component)
+// Facet Template: CSS > Widgets > Pagination (component)
 // ---------------------------------------------------
 
 
@@ -34,7 +34,7 @@
         line-height: 1;
 
         @media @mobile {
-            font-size: (@font-swatch5-font-size * 0.88);
+            font-size: bkscale(@font-swatch5-font-size, 0.88);
         }
 
 
@@ -126,7 +126,7 @@
 
     .pagination-item.current {
         .button--pagination {
-            border-top-color: @theme-color;
+            border-top-color: @spare-color;
             color: @font-swatch5-color;
         }
     }

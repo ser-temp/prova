@@ -1,5 +1,5 @@
 // ------------------------------
-// Facet Theme: CSS > Theme
+// Facet Template: CSS > Template
 // ------------------------------
 
 // 1. #Global Breakpoints
@@ -99,14 +99,14 @@ body {
 
 
 
-// Theme Header
+// Template Header
 // ------------------------------
 
 
-.theme-header {
+.template-header {
     position: relative;
     z-index: 1000;
-	background-color: @theme-color;
+	background-color: @spare-color;
 
     // Container
 
@@ -136,19 +136,19 @@ body {
 
 
 
-// Theme Navigation
+// Template Navigation
 // ------------------------------
 
 
-.theme-navigation {
+.template-navigation {
     @media @bp-global-large {
-        // Flexbox child: Stretch theme-navigation to fill the available space
+        // Flexbox child: Stretch template-navigation to fill the available space
         -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
     }
     @media @bp-global-medium {
-        width: 100%; // Makes theme-navigation wrap on separate line
+        width: 100%; // Makes template-navigation wrap on separate line
     }
 }
 
@@ -161,13 +161,13 @@ body {
 
 
 
-// Theme Footer
+// Template Footer
 // ------------------------------
 
 
-.theme-footer {
+.template-footer {
 	.clearfix;
-	background: contrast(@theme-color, darken(@theme-color, 8%), lighten(@theme-color, 8%));
+	background: contrast(@spare-color, darken(@spare-color, 8%), lighten(@spare-color, 8%));
 
 
 
@@ -214,7 +214,7 @@ body {
 .footer-secondary-widgets {
     .clearfix;
 	clear: both;
-	background-color: @theme-color;
+	background-color: @spare-color;
 }
 
 
@@ -269,7 +269,7 @@ a {
 	background-color: @color-swatch2;
 
 	@media @bp-global-small {
-		border-top: 1px solid contrast(@theme-color, rgba(255, 255, 255, 0.10) , rgba(0, 0, 0, 0.10));
+		border-top: 1px solid contrast(@spare-color, rgba(255, 255, 255, 0.10) , rgba(0, 0, 0, 0.10));
 	}
 }
 

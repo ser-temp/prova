@@ -1,5 +1,5 @@
 // ----------------------------------------
-// Facet Theme: CSS > Widgets > Yelp Review
+// Facet Template: CSS > Widgets > Yelp Review
 // ----------------------------------------
 
 
@@ -158,11 +158,16 @@
 
         @media @blog-medium {
             padding: 0.8em 1em;
-            font-size: (@font-swatch5-font-size * 0.7);
+            font-size: bkscale(@font-swatch5-font-size, 0.7);
         }
 
         @media @blog-small {
             padding: 0.5em 10px;
+        }
+
+        @media @blog-medium, @blog-small {
+            border-left: none;
+            padding-left: 0;
         }
     }
 }

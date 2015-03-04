@@ -1,5 +1,5 @@
 // --------------------------------------
-// Facet Theme: CSS > Widgets > Slideshow
+// Facet Template: CSS > Widgets > Slideshow
 // --------------------------------------
 
 
@@ -404,8 +404,8 @@
 
 
 .responsiveslideshow__image-title {
-	background-color: @theme-color;
-	color: contrast(@theme-color, #000, #fff);
+	background-color: @spare-color;
+	color: contrast(@spare-color, #000, #fff);
 	padding-bottom: 0;
 }
 
@@ -417,8 +417,8 @@
 
 
 .responsiveslideshow__image-description {
-	background: mix(@bg-color, @theme-color, 20%);
-	color: contrast(@theme-color, #000, #fff);
+	background: mix(@bg-color, @spare-color, 20%);
+	color: contrast(@spare-color, #000, #fff);
 }
 
 @media @slideshow-large {
@@ -495,15 +495,15 @@
 	// Image Title
 
 	.responsiveslideshow__image-title {
-		font-size: (@font-swatch5-font-size * 0.7);
-		line-height: (@font-swatch5-line-height * 0.7);
+		font-size: bkscale(@font-swatch5-font-size, 0.7);
+		line-height: bkscale(@font-swatch5-line-height, 0.7);
 	}
 
 	// Image Description
 
 	.responsiveslideshow__image-description {
-		font-size: (@font-swatch5-font-size * 0.7);
-		line-height: (@font-swatch5-line-height * 0.7);
+		font-size: bkscale(@font-swatch5-font-size, 0.7);
+		line-height: bkscale(@font-swatch5-line-height, 0.7);
 		-webkit-box-flex: 1;
 		-moz-box-flex: 1;
 		-webkit-flex: 1 1 auto;
@@ -520,17 +520,17 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		background: mix(@bg-color, @theme-color, 20%);
+		background: mix(@bg-color, @spare-color, 20%);
 		padding: 0.6em 0.8em;
 	}
 
 	// Image Title. Image Description
 
 	.responsiveslideshow__image-title, .responsiveslideshow__image-description {
-		color: contrast(@theme-color, #000, #fff);
+		color: contrast(@spare-color, #000, #fff);
 		background-color: transparent;
-		font-size: (@font-swatch5-font-size * 0.7);
-		line-height: (@font-swatch5-line-height * 0.7);
+		font-size: bkscale(@font-swatch5-font-size, 0.7);
+		line-height: bkscale(@font-swatch5-line-height, 0.7);
 	}
 }
 
@@ -670,7 +670,7 @@
 
 		&.selected .button {
 			height: auto;
-			background-color: @theme-color;
+			background-color: @spare-color;
 			padding: 0.3em;
 		}
 	}

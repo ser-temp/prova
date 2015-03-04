@@ -1,5 +1,5 @@
 // ------------------------------------------
-// Facet Theme: CSS > Widgets > Click to Call
+// Facet Template: CSS > Widgets > Click to Call
 // ------------------------------------------
 
 
@@ -14,14 +14,14 @@
         position: relative;
         display: inline-block;
         padding: 0 5em 0 2em;
-        height: (@font-swatch7-font-size * 2.5);
+        height: bkscale(@font-swatch7-font-size, 2.5);
         text-align: center;
-        line-height: (@font-swatch7-font-size * 2.5);
+        line-height: bkscale(@font-swatch7-font-size, 2.5);
         background-color: @widget-bg-color;
 
         @media @mobile {
-            height: (@font-swatch7-font-size * 0.88 * 2.5);
-            line-height: (@font-swatch7-font-size * 0.88 * 2.5);
+            height: bkscale(@font-swatch7-font-siz, 2.2);
+            line-height: bkscale(@font-swatch7-font-size, 2.2);
             // LESS Framework Reset
             padding: 0 4em 0 2em;
             font-size: @font-swatch5-font-size;
@@ -42,14 +42,14 @@
             top: 0;
             bottom: 0;
             margin-right: 0;
-            width: (@font-swatch7-font-size * 2.5);
+            width: bkscale(@font-swatch7-font-size, 2.5);
             background-color: @button-color;
             color: @widget-bg-color;
             text-align: center;
             color: @button-text-color;
 
             @media @mobile {
-                width: (@font-swatch7-font-size * 0.88 * 2.5);
+                width: bkscale(@font-swatch7-font-size, 2.2);
             }
         }
     }
