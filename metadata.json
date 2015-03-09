@@ -5,15 +5,16 @@
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
-    "en": ["minimal", "clean", "floral", "modern", "creative", "typography", "simple", "contemporary", "flexible", "florist", "studio", "portfolio", "designer", "sans-serif"],
-    "es": ["minimalista", "limpio", "decorativo", "moderno", "creativo", "tipográfico", "simple", "contemporaneo", "flexible", "florista", "estudio", "portafolio", "diseñador", "sans-serif"],
-    "br": ["minimalista", "limpo", "florido", "moderno", "criativo", "tipográfico", "simples", "contemporâneo", "flexível", "florista", "estúdio", "portfolio", "designer", "sans-serif"]
+    "en": ["business", "corporate", "company", "corporation", "professional"],
+    "es": ["negocios", "corporativo", "empresa", "corporativo", "profesional"],
+    "br": ["negócio", "corporativo", "companhia", "corporação", "eleição", "profissional"]
     },
      "images":[
         "images/feature-bg.jpg",
         "images/feature-bg2.jpg",
         "images/feature-bg3.jpg",
-        "images/logo.png"
+        "images/logo.png",
+        "images/body-bg.jpg"
     ],
     "colorSwatches":
     {
