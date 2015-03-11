@@ -167,10 +167,29 @@
 
 // Message in Template's Footer
 // ------------------------------
+
+
 .template-footer .message {
     background-color: transparent;
     margin: 0;
     &:before, h3, p {
         color: contrast(@spare-color, #000, #fff);
     }
+}
+
+
+
+
+// Contact Form and Signup Form Messages
+// -------------------------------------
+
+.overlay.success .message-box {
+    .message;
+    .message-success;
+}
+
+
+.overlay.fail .message-box {
+    .message;
+    .message--warning;
 }
