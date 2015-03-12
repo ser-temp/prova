@@ -5,7 +5,7 @@
 
 
 
-.content {
+.content, .post-body {
 
 	// H1
 	// ------------------------------
@@ -278,6 +278,38 @@
 	code {
 		font-size: 0.9em;
 		background-color: transparent;
+	}
+
+
+
+
+	// Table
+	// ------------------------------
+
+
+	table thead td {
+		background-color: fade(@color-swatch5, 10%);
+	}
+
+
+
+
+	// Horizontal Rule
+	// ------------------------------
+
+
+	hr {
+		height: 5px;
+		background-color: contrast(@bg-color, @widget-contrast-light, @widget-contrast-dark);
+		border: none;
+
+		@media @tablet {
+		    height: 3px;
+		}
+
+		@media @mobile {
+		    height: 1px;
+		}
 	}
 }
 
