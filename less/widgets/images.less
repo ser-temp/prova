@@ -59,6 +59,15 @@
     font-size: @font-swatch5-font-size;
     line-height: @font-swatch5-line-height;
     padding-bottom: 0.2em;
+    @media @tablet {
+        font-size: bkscale(@font-swatch5-font-size, 0.9);
+        line-height: bkscale(@font-swatch5-line-height, 0.9);
+    }
+
+    @media @mobile {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        line-height: bkscale(@font-swatch5-line-height, 0.8);
+    }
 }
 
 
@@ -72,6 +81,15 @@
     font-size: bkscale(@font-swatch5-font-size, 0.98);
     line-height: bkscale(@font-swatch5-line-height, 0.98);
     font-weight: 300;
+    @media @tablet {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        line-height: bkscale(@font-swatch5-line-height, 0.8);
+    }
+
+    @media @mobile {
+        font-size: bkscale(@font-swatch5-font-size, 0.72);
+        line-height: bkscale(@font-swatch5-line-height, 0.72);
+    }
 }
 
 
