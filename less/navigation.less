@@ -232,7 +232,7 @@
 	z-index: 10000;
 	@media @bp-global-large {
 		left: 13px;
-		background:  contrast(@spare-color, darken(@spare-color, 8%), lighten(@spare-color, 16%));
+		background:  contrast(@color-swatch7, darken(@color-swatch7, 8%), lighten(@color-swatch7, 16%));
 		text-align: left;
 		min-width: 180px;
 		max-width: 280px;
@@ -240,12 +240,12 @@
 		// Navigation Item
 
 		.navigation-item {
-			box-shadow: inset 0px -1px 0px 0px @spare-color;
+			box-shadow: inset 0px -1px 0px 0px @color-swatch7;
 			&:last-child {
 				box-shadow: none;
 			}
 			&:hover {
-				background-color: @spare-color;
+				background-color: @color-swatch7;
 			}
 		}
 
@@ -356,18 +356,18 @@
 		padding-right: 13px;
 		padding-left: 7px;
 		margin: 0 50px 0 0;
-		border-right: 1px solid contrast(@spare-color, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.25));
+		border-right: 1px solid contrast(@color-swatch7, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.25));
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		font-size: 16px;
-		color: contrast(@spare-color, #000, #fff);
+		color: contrast(@color-swatch7, #000, #fff);
 	}
 
 	@media @bp-global-small {
 		background-color: contrast(@bg-color, lighten(@bg-color, 8%), darken(@bg-color, 16%));
 		color: contrast(@bg-color, fade(#000, 70%), fade(#fff, 70%));
-		border-right: 1px solid contrast(@spare-color, rgba(255, 255, 255, 0.10) , rgba(0, 0, 0, 0.10));
+		border-right: 1px solid contrast(@color-swatch7, rgba(255, 255, 255, 0.10) , rgba(0, 0, 0, 0.10));
 		display: block;
 	}
 }
@@ -376,9 +376,9 @@
 
 .drop-down-nav.open .page-title {
 	@media @bp-global-small {
-		color: contrast(@spare-color, #000, #fff);
-		background: contrast(@spare-color, darken(@spare-color, 8%), lighten(@spare-color, 16%));
-		border-right-color: contrast(@spare-color, rgba(0, 0, 0, 0.15) ,  rgba(255, 255, 255, 0.15));
+		color: contrast(@color-swatch7, #000, #fff);
+		background: contrast(@color-swatch7, darken(@color-swatch7, 8%), lighten(@color-swatch7, 16%));
+		border-right-color: contrast(@color-swatch7, rgba(0, 0, 0, 0.15) ,  rgba(255, 255, 255, 0.15));
 	}
 }
 
@@ -470,8 +470,8 @@
 		}
 		// Toggle button background changed when navigaiton is open
 		.drop-down-nav.open &, .drop-down-nav.open &:hover {
-			color: contrast(@spare-color, #000, #fff);
-			background: contrast(@spare-color, darken(@spare-color, 8%), lighten(@spare-color, 16%));
+			color: contrast(@color-swatch7, #000, #fff);
+			background: contrast(@color-swatch7, darken(@color-swatch7, 8%), lighten(@color-swatch7, 16%));
 		}
 	}
 }
@@ -535,7 +535,7 @@
 	.navigation-body > .navigation-list > .navigation-item {
 		border-top-width: 4px;
 		border-style: solid;
-		border-color: contrast(@spare-color, rgba(0, 0, 0, 0.12), rgba(255, 255, 255, 0.12));
+		border-color: contrast(@color-swatch7, rgba(0, 0, 0, 0.12), rgba(255, 255, 255, 0.12));
 		width: 49%;
 		margin-right: 2%;
 
@@ -568,7 +568,7 @@
 		.navigation-body {
 			display: block;
 			padding: 13px;
-			background: contrast(@spare-color, darken(@spare-color, 8%), lighten(@spare-color, 16%));
+			background: contrast(@color-swatch7, darken(@color-swatch7, 8%), lighten(@color-swatch7, 16%));
 		}
 	}
 
