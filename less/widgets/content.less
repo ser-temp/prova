@@ -288,6 +288,25 @@
 	// ------------------------------
 
 
+
+	table {
+		overflow: auto;
+		width: 100%;
+
+		@media @tablet {
+			font-size: bkscale(@font-swatch5-font-size, 0.9);
+			line-height: bkscale(@font-swatch5-line-height, 0.9);
+		}
+
+		@media @mobile {
+			font-size: bkscale(@font-swatch5-font-size, 0.8);
+			line-height: bkscale(@font-swatch5-line-height, 0.8);
+		}
+	}
+
+	// Thead
+
+
 	table thead td {
 		background-color: fade(@color-swatch5, 10%);
 	}
