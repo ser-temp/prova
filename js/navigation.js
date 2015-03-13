@@ -16,5 +16,5 @@ if (
     ($("#page-zones__template-widgets__extendednavigation-extendednavigation.bk-tpl-hidden").length == 0)
 )
 {
-   $(".custom-navigation-toggle").addClass("hidden");
+   $(".drop-down-nav").addClass("nav-hidden");
 }
