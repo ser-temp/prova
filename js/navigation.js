@@ -13,7 +13,7 @@ $( ".navigation-item.folder" ).each(function() {
 if (
     ($("#page-zones__template-widgets__extendednavigation-extendednavigation").length == 0)
     ||
-    ($("#page-zones__template-widgets__extendednavigation-extendednavigation.bk-tpl-hidden").length == 0)
+    ($("#page-zones__template-widgets__extendednavigation-extendednavigation.bk-tpl-hidden").length == 1)
 )
 {
    $(".drop-down-nav").addClass("nav-hidden");
