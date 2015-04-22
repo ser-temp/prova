@@ -6,9 +6,9 @@ $( ".custom-navigation-toggle" ).click(function() {
 
 // Togglse class open to display/hide folders
 
-$( ".navigation-item.folder" ).each(function() {
+$( ".navigation-item.folder .item-name--parent" ).each(function() {
 	$( this ).click(function() {
-			$( this ).toggleClass( "open" );
+			$( ".navigation-item.folder" ).toggleClass( "open" );
 	});
 });
 
