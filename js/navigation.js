@@ -8,7 +8,7 @@ $( ".custom-navigation-toggle" ).click(function() {
 
 $( ".navigation-item.folder .item-name--parent" ).each(function() {
 	$( this ).click(function() {
-			$( ".navigation-item.folder" ).toggleClass( "open" );
+			$( this ).parent( ".navigation-item.folder" ).toggleClass( "open" );
 	});
 });
 
