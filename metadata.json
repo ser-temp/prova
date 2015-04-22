@@ -78,7 +78,7 @@
             "font-family": "\"Glegoo\", Monaco, \"Lucida Console\", monospace",
             "font-size": "26px",
             "font-weight": "inherit",
-            "line-height": "47px",
+            "line-height": "39px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
