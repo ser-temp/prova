@@ -1,7 +1,3 @@
-$(function() {
-    FastClick.attach(document.body);
-});
-
 // Makes the whole ecom product tiles clickable
 $(document).ready(function() {
 
@@ -12,12 +8,33 @@ $(document).ready(function() {
         }
     });
 
-    $('.product-item').click(function() {
-        var href = $(this).find("a").attr("href");
-        if(href) {
-            window.location = href;
+
+    metaKeyPressed = false;
+
+    $(window).keydown(function(e) {
+        if (e.ctrlKey || e.metaKey) {
+            metaKeyPressed = true;
         }
     });
+
+
+    $('.product-item').click(function() {
+
+        var href = $(this).find("a").attr("href");
+        if(href) {
+
+            if (metaKeyPressed == true) {
+                 window.open(href, '_blank');
+            } else {
+                window.location = href;
+            }
+        }
+
+    });
+
+
+
+
 
     // Adds variation class when there is only one product image
 
