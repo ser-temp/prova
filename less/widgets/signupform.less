@@ -111,6 +111,7 @@
 		-webkit-align-content: stretch;
 		-ms-flex-line-pack: stretch;
 		align-content: stretch;
+		min-width: 20px;
 
 		@media @tablet {
 			width: auto;
@@ -147,6 +148,7 @@
 
 	.form-group:last-of-type {
 		margin: 0;
+		flex-shrink: 0;
 		@media @mobile {
 
 			// Makes a pseudo button, placed below the actual button
