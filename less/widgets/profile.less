@@ -272,7 +272,11 @@
 
 	.tweet-metadata {
 		border-left-color: contrast(@color-swatch7, darken(@color-swatch7, 20%), lighten(@color-swatch7, 20%));
-
+		.via, a {
+			@media @mobile {
+				display: none;
+			}
+		}
 	}
 }
 
