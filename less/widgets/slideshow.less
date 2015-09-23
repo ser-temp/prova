@@ -422,8 +422,8 @@ responsiveslideshow__slides-list {
 
 
 .responsiveslideshow__image-title {
-	background-color: @color-swatch7;
-	color: contrast(@color-swatch7, #000, #fff);
+	background-color: @color__slideshow-caption--background;
+	color: @color__slideshow-title--text;
 	padding-bottom: 0;
 }
 
@@ -435,8 +435,8 @@ responsiveslideshow__slides-list {
 
 
 .responsiveslideshow__image-description {
-	background: mix(@bg-color, @color-swatch7, 20%);
-	color: contrast(@color-swatch7, #000, #fff);
+	background: mix(@color__body--background, @color__slideshow-caption--background, 10%);
+	color: @color__slideshow-description--text;
 }
 
 @media @slideshow-large {
@@ -538,14 +538,14 @@ responsiveslideshow__slides-list {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		background: mix(@bg-color, @color-swatch7, 20%);
+		background: @color__slideshow-caption--background;
 		padding: 0.6em 0.8em;
 	}
 
 	// Image Title. Image Description
 
 	.responsiveslideshow__image-title, .responsiveslideshow__image-description {
-		color: contrast(@color-swatch7, #000, #fff);
+		color: contrast(@color__slideshow-caption--background, #000, #fff);
 		background-color: transparent;
 		font-size: bkscale(@font-swatch5-font-size, 0.7);
 		line-height: bkscale(@font-swatch5-line-height, 0.7);
@@ -585,7 +585,7 @@ responsiveslideshow__slides-list {
 
 	.button {
 		cursor: pointer;
-		background-color: @button-color;
+		background-color: @color__slideshow-pagination-item--background;
 		color: transparent;
 		padding: 0;
 		line-height: 1;
@@ -593,15 +593,16 @@ responsiveslideshow__slides-list {
 		border-radius: 0;
 
 		&:hover {
-			background-color: @button-hover-color;
+			background-color: @color__slideshow-pagination-item--background--hover;
 		}
 	}
 
 	// Selected Button
 
 	&.selected .button {
-		background-color: @heading-color;
-		color: contrast(@heading-color, #444, #fff);
+		background-color: @color__slideshow-pagination-item--background--selected;
+		color: @color__slideshow-pagination-item--text--selected;
+
 	}
 }
 
@@ -688,8 +689,9 @@ responsiveslideshow__slides-list {
 
 		&.selected .button {
 			height: auto;
-			background-color: @color-swatch7;
+			background-color: @color__slideshow-pagination-item--text--selected;
 			padding: 0.3em;
+			color: @color__slideshow-pagination-item--text--selected;
 		}
 	}
 }

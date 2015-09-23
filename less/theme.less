@@ -94,7 +94,7 @@
 .template-header {
     position: relative;
     z-index: 1000;
-	background-color: @color-swatch7;
+	background-color: @color__header--background;
 
     // Container
 
@@ -160,7 +160,7 @@
 
 .template-footer {
 	.clearfix;
-	background: contrast(@color-swatch7, darken(@color-swatch7, 8%), lighten(@color-swatch7, 8%));
+	background: contrast(@color__footer--background, darken(@color__footer--background, 8%), lighten(@color__footer--background, 8%));
 
 
 
@@ -219,7 +219,7 @@
 .footer-secondary-widgets {
     .clearfix;
 	clear: both;
-	background-color: @color-swatch7;
+	background-color: @color__footer--background;
 }
 
 
@@ -256,7 +256,7 @@
 
 
 a {
-	color: @link-color;
+	color: @color__link--text;
     &:hover {
         text-decoration: none;
     }
@@ -277,10 +277,10 @@ a {
 
 
 .title-bar {
-	background-color: @color-swatch2;
+	background-color: @color__secondary;
 
 	@media @bp-global-small {
-		border-top: 1px solid contrast(@color-swatch7, rgba(255, 255, 255, 0.10) , rgba(0, 0, 0, 0.10));
+		border-top: 1px solid contrast(@color__secondary, rgba(255, 255, 255, 0.10) , rgba(0, 0, 0, 0.10));
 	}
 }
 
@@ -382,7 +382,7 @@ a {
 
 
 .relevant-content-footer {
-	background: contrast(@bg-color, darken(@bg-color, 2%), lighten(@bg-color, 2%));
+	background: contrast(@color__body--background, darken(@color__body--background, 2%), lighten(@color__body--background, 2%));
 	padding: 36px 0;
 	margin: 4em 0 0 0;
 }

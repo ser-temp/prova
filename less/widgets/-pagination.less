@@ -27,7 +27,7 @@
 
     .button--pagination {
         background: transparent;
-        color: @link-color;
+        color: @color__link--text;
         font-family: @font-swatch1-font-family;
         font-size: @font-swatch5-font-size;
         padding: 0;
@@ -45,12 +45,12 @@
 
 
         &:before, &:after {
-            background-color: @button-color;
+            background-color: @color__button--background;
             width: 1.5em;
             height: 1.5em;
             line-height: 1.5em;
             display: inline-block;
-            color: @button-text-color;
+            color: @color__button--text;
             text-align: center;
             margin-right: 0.3em;
             font-size: 1.5em;
@@ -64,7 +64,7 @@
 
 
         &:hover:before, &:hover:after {
-            background-color: @button-hover-color;
+            background-color: @color__button--background--hover;
         }
     }
 
@@ -113,7 +113,7 @@
         padding: 0 0.5em;
         margin: 0 -0.15em;
         &:hover {
-            border-top: 1px solid @link-color;
+            border-top: 1px solid @color__link--text;
         }
     }
 
@@ -126,7 +126,7 @@
 
     .pagination-item.current {
         .button--pagination {
-            border-top-color: @color-swatch7;
+            border-top-color: @color__primary;
             color: @font-swatch5-color;
         }
     }

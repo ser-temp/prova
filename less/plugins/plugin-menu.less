@@ -67,7 +67,8 @@
 
 
 .section-header {
-    background-color: @widget-bg-color;
+    background-color: @color__menu-section-header--background;
+
     padding: 1.4em 26px 1.2em;
     margin-bottom: 2em;
     @media @menu-medium {
@@ -150,7 +151,7 @@
 
 .menu-item {
     display: block;
-    background-color: @widget-bg-color;
+    background-color: @color__menu-item--background;
     margin-bottom: 2em;
     @media @menu-medium {
         margin-bottom: 1em;
@@ -299,7 +300,7 @@
         flex: 0 0 30%;
 
         @media @menu-medium {
-            background-color: @widget-bg-color;
+            background-color: @color__secondary;
             padding-bottom: 0.5em;
             padding-left: 10px;
         }
@@ -338,7 +339,7 @@
         margin: 10px 0 10px 26px;
 
         @media @menu-medium {
-            background-color: @widget-bg-color;
+            background-color: @color__secondary;
             margin: 0;
             padding-top: 0;
             padding-left: 10px;
@@ -397,7 +398,7 @@
 
     .item-subtitle {
         font-size: 13px;
-        color: fade(@paragraph-color, 50%);
+        color: fade(@color__p--text, 50%);
 
         @media @menu-medium {
             display: inline-block;
@@ -481,8 +482,8 @@
     // Item Article
 
     .item-article {
-        border-top: 12px solid contrast(@color-swatch7, darken(@color-swatch7, 16%), lighten(@color-swatch7, 16%));
-        border-bottom: 12px solid contrast(@color-swatch7, darken(@color-swatch7, 16%), lighten(@color-swatch7, 16%));
+        border-top: 12px solid @color__menu-section-featured--border;
+        border-bottom: 12px solid @color__menu-section-featured--border;
         @media @menu-medium {
             border-top-width: 7px;
             border-bottom-width: 7px;
@@ -618,8 +619,10 @@
     background-color: transparent;
 
     .section-header {
-        border-top: 10px solid contrast(@color-swatch7, darken(@color-swatch7, 16%), lighten(@color-swatch7, 16%));
-        border-bottom: 10px solid contrast(@color-swatch7, darken(@color-swatch7, 16%), lighten(@color-swatch7, 16%));
+        border-top: 10px solid contrast(@color__primary, darken(@color__primary, 16%), lighten(@color__primary, 16%));
+        border-bottom: 10px solid contrast(@color__primary, darken(@color__primary, 16%), lighten(@color__primary, 16%));
+        background-color: @color__menu-section-featured--background;
+
         @media @menu-medium {
             border-top-width: 5px;
             border-bottom-width: 5px;
@@ -646,10 +649,10 @@
 
 .menusections-list {
     margin: 0;
-    border-bottom: 3px solid fade(@paragraph-color, 6%);
+    border-bottom: 3px solid fade(@color__p--text, 6%);
 
     @media @menu-small {
-        border-bottom: 2px solid fade(@paragraph-color, 6%);
+        border-bottom: 2px solid fade(@color__p--text, 6%);
     }
 
     // Menu Item Name
@@ -671,9 +674,9 @@
         }
 
         &:hover {
-            box-shadow: inset 0px -3px 0px 0px @link-color;
+            box-shadow: inset 0px -3px 0px 0px @color__link--text;
              @media @menu-small {
-                box-shadow: inset 0px -2px 0px 0px @link-color;
+                box-shadow: inset 0px -2px 0px 0px @color__link--text;
             }
         }
     }

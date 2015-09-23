@@ -6,7 +6,7 @@
 
 
 .widget__signupform {
-	background-color: @widget-bg-color;
+	background-color: @color__secondary;
 
 
 
@@ -60,10 +60,11 @@
 	.legend {
 		width: 30%;
 		float: left;
+		color: @color__form-legend--text;
 		font-family: @font-swatch2-font-family;
 		font-size: @font-swatch2-font-size;
 		line-height: @font-swatch2-line-height;
-		border-right: 3px solid @bg-color;
+		border-right: 3px solid @color__body--background;
 		position: relative;
 		left: 3px;
 
@@ -72,8 +73,8 @@
 			width: auto;
 			float: none;
 			width: 100%;
-			background-color: @widget-bg-color;
-			border-bottom: 3px solid @bg-color;
+			background-color: @color__secondary;
+			border-bottom: 3px solid @color__body--background;
 			font-size: bkscale(@font-swatch2-font-size, 0.92);
 			line-height: bkscale(@font-swatch2-line-height, 0.92);
 			border-right: none;
@@ -97,7 +98,7 @@
 	.form-body {
 		width: 70%;
 		float: right;
-		border-left: 3px solid @bg-color;
+		border-left: 3px solid @color__body--background;
 		display: -webkit-box;
 		display: -moz-box;
 		display: -ms-flexbox;
@@ -163,11 +164,11 @@
 
 			// Makes a pseudo button, placed below the actual button
 
-			background-color: @button-color;
+			background-color: @color__button--background;
 			position: relative;
 
 			&:hover {
-				background: @button-hover-color;
+				background: @color__button--background--hover;
 			}
 
 			// Search Icon
@@ -179,7 +180,7 @@
 				width: 50px;
 				text-align: center;
 				line-height: 40px;
-				color: contrast(@button-color, #000, #fff);
+				color: contrast(@color__button--background, #000, #fff);
 				font-size: 20px;
 			}
 
@@ -218,7 +219,7 @@
 		@media @mobile {
 			border-top-color: transparent;
 			&:focus {
-				border-top-color: @button-color;
+				border-top-color: @color__button--background;
 			}
 		}
 	}

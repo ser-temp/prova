@@ -1,0 +1,98 @@
+
+// Widget Contrast Colors
+@widget-contrast-light : mix(@color__p--text, @color__secondary, 16%);
+@widget-contrast-dark : mix(@color__p--text, @color__secondary, 16%);
+
+
+
+
+// Colors
+@color__primary : @color-swatch7;
+@color__secondary : @color-swatch2;
+
+// Site
+@color__body--background : @color-swatch1;
+@color__link--text : @color-swatch3;
+@color__companyname--text : @color-swatch6;
+
+// Typography
+@color__p--text : @color-swatch5;
+@color__h1--text : @color-swatch4;
+@color__h2--text : @color-swatch4;
+@color__h3--text : @color-swatch4;
+@color__h4--text : @color-swatch4;
+
+// Header
+@color__header--background : @color__primary;
+
+// Navigation
+@color__navigation--text : @color-swatch6;
+@color__navigation-item--text--selected  : @color-swatch3;
+
+// Footer
+@color__footer--background : @color__primary;
+
+// Forms
+@color__form-legend--text : @color-swatch4;
+
+// Buttons
+@color__button--background : @color-swatch3;
+@color__button--text : @color__body--background;
+@color__button--background--hover : contrast(@color__button--background, darken(@color__button--background, 10%), lighten(@color__button--background, 10%));
+@color__button--text--hover : @color__button--text;
+
+// Gallery
+@color__gallery-caption--background : @color__primary;
+@color__gallery-title--text : contrast(@color__gallery-caption--background, #000, #fff);
+@color__gallery-description--text : @color__image-description--text;
+
+// Slideshow
+@color__slideshow-caption--background : mix(@color__body--background, @color__primary, 20%);
+@color__slideshow-title--text : contrast(@color__slideshow-caption--background, #000, #fff);
+@color__slideshow-description--text : contrast(@color__slideshow-caption--background, #000, #fff);
+@color__slideshow-pagination-item--background : @color__button--background;
+@color__slideshow-pagination-item--background--hover : @color__button--background--hover;
+@color__slideshow-pagination-item--text--selected : contrast(@color__slideshow-pagination-item--background--selected, #444, #fff);
+@color__slideshow-pagination-item--background--selected : @color__primary;
+
+
+// Feature
+@color__feature--background : fade(@color__primary, 30%);
+@color__feature-headline--text : @color-swatch4;
+@color__feature-headline--background : @color__secondary;
+@color__feature-strapline--text : @color-swatch4;
+@color__feature-strapline--background : @color__secondary;
+@color__feature-button--background : @color__secondary;
+@color__feature-button--background--hover : @color__button--background--hover;
+@color__feature-button--text : @color-swatch4;
+@color__feature-button--background--hover : contrast(@color__button--background, darken(@color__button--background, 10%), lighten(@color__button--background, 10%));
+
+// Menu
+@color__menu-item--background : @color__secondary;
+@color__menu-section-featured--border : contrast(@color__primary, darken(@color__primary, 16%), lighten(@color__primary, 16%));
+@color__menu-section-header--background : @color__secondary;
+@color__menu-section-featured--background : @color__secondary;
+
+
+
+// Images
+@color__image-title--text : @color-swatch4;
+@color__image-description--text : @color-swatch4;
+
+// Social Icons
+@color__socialicons--icon : @font-swatch7-color;
+@color__socialicons--icon--hover : @font-swatch7-color;
+@color__socialicons--icon--background : @color__button--background;
+@color__socialicons--text : @font-swatch5-color;
+
+// Blog
+@color__blogsearch--background : @color__secondary;
+@color__blogsearch-legend--text : @color-swatch4;
+@color__blogpost--background : @color__secondary;
+
+// Ecom
+@color__ecomproductslist-product-item--background : @color__secondary;
+@color__ecomproductslist-product-title--text : @color__link--text;
+@color__ecomproductslist-product-price--text : @color-swatch5;
+@color__ecomproduct-images--background : @color__secondary;
+@color__ecomproduct-price--text : @color-swatch4;

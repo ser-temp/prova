@@ -35,7 +35,7 @@
         padding: 1px 13px;
         max-width: 1500px;
         margin: 0 auto;
-        background-color: @widget-bg-color;
+        background-color: @color__secondary;
     }
 
 
@@ -78,7 +78,7 @@
 
 
 .post-image {
-    background-color: contrast(@bg-color, lighten(@bg-color, 2%), darken(@bg-color, 2%));
+    background-color: contrast(@color__body--background, lighten(@color__body--background, 2%), darken(@color__body--background, 2%));
     position: relative;
     text-align: center;
 }
@@ -110,7 +110,7 @@
 
 
 .post-content {
-    background-color: @widget-bg-color;
+    background-color: @color__blogpost--background;
     margin: 0;
     position: relative;
     padding: 1px 0;
@@ -200,8 +200,8 @@
 
 
 .post-excerpt .read-more {
-    background: @button-color;
-    color: contrast(@button-color, #000, #fff);
+    background: @color__button--background;
+    color: @color__button--text;
     font-size: @font-swatch5-font-size;
     padding:  0.7em 1.4em;
     display: inline-block;
@@ -216,7 +216,7 @@
     }
 
     &:hover {
-        background: @button-hover-color;
+        background: @color__button--background--hover;
     }
 }
 
@@ -234,7 +234,7 @@
 
     .timestamp {
         font-size: bkscale(@font-swatch5-font-size, 0.8);
-        border-left: 1px solid fade(@color-swatch5, 20%);
+        border-left: 1px solid fade(@color__p--text, 20%);
         padding: 1em 1.5em;
         color: fade(@font-swatch5-color, 80%);
         display: block;

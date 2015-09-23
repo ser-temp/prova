@@ -149,7 +149,7 @@
     .label {
         font-size: 13px;
         line-height: 1;
-        color: fade(@paragraph-color, 80%);
+        color: fade(@color__p--text, 80%);
         display: block;
         padding-bottom: 0;
         margin-bottom: 5px;
@@ -197,7 +197,7 @@
 .listing-order {
     font-size: bkscale(@font-swatch5-font-size, 0.72);
     line-height: bkscale(@font-swatch5-line-height, 0.72);
-    color: fade(@paragraph-color, 80%);
+    color: fade(@color__p--text, 80%);
     padding: 10px 0 16px 0;
 }
 
@@ -275,11 +275,11 @@
         margin: 0;
         @media @mobile {
             // Makes a pseudo button, placed below the actual button
-            background-color: @button-color;
+            background-color: @color__button--background;
             position: relative;
             height: 50px;
             &:hover {
-                background: @button-hover-color;
+                background: @color__button--background--hover;
             }
 
             // Search Icon
@@ -292,7 +292,7 @@
 
                 text-align: center;
                 line-height: 48px;
-                color: contrast(@button-color, #000, #fff);
+                color: contrast(@color__button--background, #000, #fff);
                 font-size: 20px;
             }
 
@@ -365,7 +365,7 @@
 
 
 .product-item {
-    background-color: @widget-bg-color;
+    background-color: @color__ecomproductslist-product-item--background;
 
     // Clickable item, class added via JS
 
@@ -376,18 +376,18 @@
         -o-transition: all 0.1s ease-in-out;
         transition: all 0.1s ease-in-out;
         &:hover {
-            background-color: @button-color;
+            background-color: @color__button--background;
 
             // Title Link, Price
 
             .title-link, .product-item-price {
-                color: @button-text-color;
+                color: @color__button--text;
             }
 
             // Item Image
 
             .product-item-image {
-                background-color: @button-color;
+                background-color: @color__button--background;
                 -webkit-transition: all 0.1s ease-in-out;
                 -moz-transition: all 0.1s ease-in-out;
                 -o-transition: all 0.1s ease-in-out;
@@ -482,7 +482,7 @@
 
 
 .product-item-image  {
-    background-color: @widget-bg-color;
+    background-color: @color__secondary;
     margin: 26px;
     width: auto;
     @media @mobile {
@@ -522,7 +522,7 @@
 .product-item-details {
     margin: 10px 26px 20px;
     padding-top: 16px;
-    border-top: 1px solid fade(@paragraph-color, 20%);
+    border-top: 1px solid fade(@color__p--text, 20%);
     @media @mobile {
         margin: 4px 16px 12px;
         padding-top: 0;
@@ -537,6 +537,7 @@
     font-size: @font-swatch4-font-size;
     line-height: @font-swatch4-line-height;
     margin-bottom: 0.8em;
+
     @media @product-list-medium, @product-list-small {
         font-size: bkscale(@font-swatch4-font-size, 0.82);
         line-height: bkscale(@font-swatch4-line-height, 0.82);
@@ -546,6 +547,9 @@
         line-height: bkscale(@font-swatch4-line-height, 0.72);
         margin-bottom: 0;
     }
+    a {
+        color: @color__ecomproductslist-product-title--text;
+    }
 }
 
 
@@ -554,6 +558,7 @@
 .product-item-price {
     font-size: bkscale(@font-swatch5-font-size, 0.82);
     line-height: bkscale(@font-swatch5-line-height, 0.82);
+    color: @color__ecomproductslist-product-price--text;
     @media @mobile {
         font-size: bkscale(@font-swatch5-font-size, 0.7);
         line-height: bkscale(@font-swatch5-line-height, 0.7);

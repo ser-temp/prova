@@ -92,7 +92,7 @@
 
 
 .caption-link {
-	background-color: fade(@contrast-color, 80%);
+	background-color: fade(@color__secondary, 80%);
 }
 
 
@@ -102,8 +102,8 @@
 	display: block;
 	position: relative;
 	padding: 1em 2em 1em 6%;
-	color: contrast(@color-swatch7, #000, #fff);
-	background-color: @color-swatch7;
+	color: @color__gallery-title--text;
+	background-color: @color__gallery-caption--background;
 
 	@media @gallery-2col {
 		font-size: bkscale(@font-swatch5-font-size, 0.88);
@@ -144,6 +144,7 @@
 	display: block;
 	width: 94%;
 	padding: 1em 4%;
+	color: @color__gallery-description--text;
 
 	@media @gallery-2col {
 		font-size: bkscale(@font-swatch5-font-size, 0.77);
@@ -243,8 +244,8 @@
 	}
 
 	.gallery__image-description {
-		background: mix(@bg-color, @color-swatch7, 20%);
-		color: contrast(@color-swatch7, #000, #fff);
+		background: mix(@color__body--background, @color__gallery-caption--background, 20%);
+		color: contrast(@color__gallery-caption--background, #000, #fff);
 	}
 }
 

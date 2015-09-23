@@ -10,7 +10,7 @@
 
 
 .contactform__fieldset {
-	background-color: @widget-bg-color;
+	background-color: @color__secondary;
 }
 
 
@@ -65,7 +65,7 @@
 		@media @mobile {
 			border-top-color: transparent;
 			&:focus {
-				border-top-color: @button-color;
+				border-top-color: @color__button--background;
 			}
 		}
 	}
@@ -81,7 +81,7 @@
 .contactform__form-body {
 	width: 70%;
 	float: right;
-	border-left: 3px solid @bg-color;
+	border-left: 3px solid @color__body--background;
 	@media @mobile {
 		padding-top: 0;
 	}
@@ -105,12 +105,14 @@
 	font-family: @font-swatch2-font-family;
 	font-size: @font-swatch2-font-size;
 	line-height: @font-swatch2-line-height;
+	color: @color__form-legend--text;
+
 	@media @tablet {
 		width: auto;
 		float: none;
 		width: 100%;
-		background-color: @widget-bg-color;
-		border-bottom: 3px solid @bg-color;
+		background-color: @color__secondary;
+		border-bottom: 3px solid @color__body--background;
 		font-size: bkscale(@font-swatch2-font-size, 0.92);
 		line-height: bkscale(@font-swatch2-line-height, 0.92);
 	}
@@ -145,7 +147,7 @@
 		.contactform__legend {
 			width: 100%;
 			float: none;
-			background-color: @widget-bg-color;
+			background-color: @color__secondary;
 			padding-bottom: 0;
 		}
 

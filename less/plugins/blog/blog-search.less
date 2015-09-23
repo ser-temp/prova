@@ -10,7 +10,7 @@
 
 
 .widget--zone-widget .widget__blogsearch {
-    background-color: @widget-bg-color;
+    background-color: @color__blogsearch--background;
 
     // Fieldset
     // ------------------------------
@@ -43,17 +43,18 @@
         font-family: @font-swatch2-font-family;
         font-size: @font-swatch2-font-size;
         line-height: @font-swatch2-line-height;
-        border-right: 3px solid @bg-color;
+        border-right: 3px solid @color__body--background;
         position: relative;
         left: 3px;
+        color: @color__blogsearch-legend--text;
 
         @media @tablet {
             left: 0;
             width: auto;
             float: none;
             width: 100%;
-            background-color: @widget-bg-color;
-            border-bottom: 3px solid @bg-color;
+            background-color: @color__blogsearch--background;
+            border-bottom: 3px solid @color__body--background;
             font-size: bkscale(@font-swatch2-font-size, 0.92);
             line-height: bkscale(@font-swatch2-line-height, 0.92);
             border-right: none;
@@ -71,7 +72,7 @@
     .form-body {
         width: 70%;
         float: right;
-        border-left: 3px solid @bg-color;
+        border-left: 3px solid @color__body--background;
 
         display: -webkit-box;
         display: -moz-box;
@@ -139,10 +140,10 @@
 
         @media @mobile {
             // Makes a pseudo button, placed below the actual button
-            background-color: @button-color;
+            background-color: @color__button--background;
             position: relative;
             &:hover {
-                background: @button-hover-color;
+                background: @color__button--background--hover;
             }
 
             // Search Icon
@@ -155,7 +156,7 @@
 
                 text-align: center;
                 line-height: 48px;
-                color: contrast(@button-color, #000, #fff);
+                color: contrast(@color__button--background, #000, #fff);
                 font-size: 20px;
             }
 

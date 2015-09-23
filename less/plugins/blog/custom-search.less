@@ -62,12 +62,12 @@
 
         // Makes a pseudo button, placed below the actual button
         &:last-child {
-            background-color: @button-color;
+            background-color: @color__button--background;
             position: relative;
 
             &:hover {
                 @media @bp-global-small {
-                    background: @button-hover-color;
+                    background: @color__button--background--hover;
                 }
             }
 
@@ -80,7 +80,7 @@
                     width: 40px;
                     text-align: center;
                     line-height: 38px;
-                    color: contrast(@button-color, #000, #fff);
+                    color: contrast(@color__button--background, #000, #fff);
                     font-size: 20px;
                 }
             }

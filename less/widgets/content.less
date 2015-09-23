@@ -3,6 +3,11 @@
 // -----------------------------
 
 
+h1, .heading--1 {color: @color__h1--text;}
+h2, .heading--2 {color: @color__h2--text;}
+h3, .heading--3 {color: @color__h3--text;}
+h4, .heading--4 {color: @color__h4--text;}
+
 
 
 .content, .post-body {
@@ -107,10 +112,10 @@
 
 
 	a {
-		box-shadow: inset 0px -1px 0px 0px @link-color;
+		box-shadow: inset 0px -1px 0px 0px @color__link--text;
 		&:hover {
 			text-decoration: none;
-			box-shadow: inset 0px -2px 0px 0px @link-color;
+			box-shadow: inset 0px -2px 0px 0px @color__link--text;
 		}
 	}
 
@@ -182,7 +187,7 @@
 				-webkit-box-sizing: border-box;
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;
-				border-right: 1px solid contrast(@widget-bg-color, @widget-contrast-light, @widget-contrast-dark);
+				border-right: 1px solid contrast(@color__secondary, @widget-contrast-light, @widget-contrast-dark);
 				font-family: @font-swatch1-font-family;
 				content: counter(ordered-counter);
 				counter-increment: ordered-counter;
@@ -206,7 +211,7 @@
 		display: block;
 		border-width: 1px 0;
 		border-style: solid;
-		border-color: contrast(@widget-bg-color, @widget-contrast-light, @widget-contrast-dark);
+		border-color: contrast(@color__secondary, @widget-contrast-light, @widget-contrast-dark);
 		font-family: @font-swatch1-font-family;
 		font-size: @font-swatch4-font-size;
 		line-height: @font-swatch4-line-height;
@@ -231,10 +236,10 @@
 
 
 		&:before {
-			background-color: @color-swatch7;
+			background-color: @color__primary;
 			content: "\f10d";
 			font-family: 'FontAwesome', sans-serif;
-			color: contrast(@color-swatch7, #000, #fff);
+			color: contrast(@color__primary, #000, #fff);
 			width: 3em;
 			height: 3em;
 			line-height: 3em;
@@ -264,8 +269,8 @@
 		padding: 1em;
 		border: none;
 		border-radius: 0;
-		background-color: fade(@color-swatch7, 80%);
-		color: contrast(@color-swatch7, #000, #fff);
+		background-color: fade(@color__primary, 80%);
+		color: contrast(@color__primary, #000, #fff);
 		overflow: auto;
 	}
 
@@ -308,7 +313,7 @@
 
 
 	table thead td {
-		background-color: fade(@color-swatch5, 10%);
+		background-color: fade(@color__p--text, 10%);
 	}
 
 
@@ -320,7 +325,7 @@
 
 	hr {
 		height: 5px;
-		background-color: contrast(@bg-color, @widget-contrast-light, @widget-contrast-dark);
+		background-color: contrast(@color__body--background, @widget-contrast-light, @widget-contrast-dark);
 		border: none;
 		margin: 2em 0;
 

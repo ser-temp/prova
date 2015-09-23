@@ -133,7 +133,7 @@
     font-family: @font-swatch1-font-family;
 	font-size: @font-swatch4-font-size;
 	line-height: @font-swatch4-line-height;
-    border-bottom: 2px solid contrast(@widget-bg-color, @widget-contrast-light, @widget-contrast-dark);
+    border-bottom: 2px solid contrast(@color__secondary, @widget-contrast-light, @widget-contrast-dark);
 
     @media @twitter-medium {
 		font-size: bkscale(@font-swatch4-font-size, 0.8);
@@ -187,7 +187,7 @@
 
     &:after {
 		border-color: rgba(255, 0, 0, 0);
-		border-top-color: @bg-color;
+		border-top-color: @color__body--background;
 		border-width: 10px;
 		margin-left: -10px;
 		@media @twitter-medium {
@@ -206,7 +206,7 @@
     &:before {
     	// 2 pixel arrow border
 		border-color: rgba(0, 0, 0, 0);
-		border-top-color: contrast(@widget-bg-color, @widget-contrast-light, @widget-contrast-dark);
+		border-top-color: contrast(@color__secondary, @widget-contrast-light, @widget-contrast-dark);
 		border-width: 13px;
 		margin-left: -13px;
 
@@ -275,7 +275,7 @@
 	min-height: 40px;
 	right: 10px;
 	bottom: 0;
-	border-left: 1px solid contrast(@widget-bg-color, @widget-contrast-light, @widget-contrast-dark);
+	border-left: 1px solid contrast(@color__secondary, @widget-contrast-light, @widget-contrast-dark);
 	padding-left: 1em;
 	font-size: 12px;
 	line-height: 1;

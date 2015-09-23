@@ -52,7 +52,7 @@
 
 
 .review-article {
-    background-color: @widget-bg-color;
+    background-color: @color__secondary;
     padding: 42px;
 
     @media @tablet {
@@ -129,10 +129,10 @@
 
     //  Review Link
     .review-link {
-        box-shadow: inset 0px -1px 0px 0px @link-color;
+        box-shadow: inset 0px -1px 0px 0px @color__link--text;
         &:hover {
             text-decoration: none;
-            box-shadow: inset 0px -2px 0px 0px @link-color;
+            box-shadow: inset 0px -2px 0px 0px @color__link--text;
         }
     }
 }
@@ -151,7 +151,7 @@
 
     .timestamp {
         font-size: bkscale(@font-swatch5-font-size, 0.72);
-        border-left: 1px solid fade(@color-swatch5, 20%);
+        border-left: 1px solid fade(@color__p--text, 20%);
         padding: 0.5em 1em;
         color: fade(@font-swatch5-color, 80%);
         display: block;

@@ -48,7 +48,7 @@
 .product-images {
     .clearfix;
     position: relative;
-    background-color: @widget-bg-color;
+    background-color: @color__ecomproduct-images--background;
     padding: 1px 0;
 
     @media @product-large {
@@ -285,6 +285,12 @@
     }
 }
 
+// Product Price
+// ------------------------------
+
+.product-price {
+    color: @color__ecomproduct-price--text;
+}
 
 
 
@@ -378,7 +384,7 @@
         .label {
             font-size: 13px;
             line-height: 1;
-            color: fade(@paragraph-color, 80%);
+            color: fade(@color__p--text, 80%);
             display: block;
             padding-bottom: 0;
         }
@@ -416,7 +422,7 @@
 
     .product-attribute-title {
         line-height: 2;
-        color: fade(@paragraph-color, 80%);
+        color: fade(@color__p--text, 80%);
         padding: 0;
         display: block;
         margin: 0 0 0.25em 0;
@@ -448,7 +454,7 @@
             content: '/';
             display: inline-block;
             vertical-align: middle;
-            color: fade(@paragraph-color, 30%);
+            color: fade(@color__p--text, 30%);
             padding: 0 0.3em;
             position: relative;
             top: -0.1em;
@@ -467,7 +473,7 @@
 
     .product-category, .product-tags {
         display: inline-block;
-        border-left: 1px solid fade(@paragraph-color, 20%);
+        border-left: 1px solid fade(@color__p--text, 20%);
         padding: 0 1em 8px;
         margin: 0 1em 0.4em 0;
         vertical-align: top;
