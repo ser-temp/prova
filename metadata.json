@@ -182,7 +182,7 @@
             "color__footer--background": "@color__primary"
         },
         "navigation": {
-            "color__navigation--text": "@color-swatch6",
+            "color__navigation--text": "@font-swatch6-color",
             "color__navigation-item--selected": "@color-swatch3"
         },
         "feature": {
@@ -193,11 +193,11 @@
             "color__feature-strapline--background" : "@color__secondary",
             "color__feature-button--background" : "@color__secondary",
             "color__feature-button--background--hover" : "@color__button--background--hover",
-            "color__feature-button--text" : "@color-swatch4",
+            "color__feature-button--text" : "@font-swatch8-color",
             "color__feature-button--background--hover" : "contrast(@color__button--background, darken(@color__button--background, 10%), lighten(@color__button--background, 10%))"
         },
         "forms": {
-            "color__form-legend--text": "@color-swatch4"
+            "color__form-legend--text": "@font-swatch5-color"
         },
         "image": {
             "color__image-title--text" :"color-swatch4",
