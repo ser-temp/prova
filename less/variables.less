@@ -1,7 +1,7 @@
 
 // Widget Contrast Colors
-@widget-contrast-light : mix(@color__p--text, @color__secondary, 16%);
-@widget-contrast-dark : mix(@color__p--text, @color__secondary, 16%);
+@widget-contrast-light : mix(@color-swatch5, @color__secondary, 16%);
+@widget-contrast-dark : mix(@color-swatch5, @color__secondary, 16%);
 
 
 
@@ -26,14 +26,14 @@
 @color__header--background : @color__primary;
 
 // Navigation
-@color__navigation--text : @color-swatch6;
+@color__navigation--text : @font-swatch6-color;
 @color__navigation-item--text--selected  : @color-swatch3;
 
 // Footer
 @color__footer--background : @color__primary;
 
 // Forms
-@color__form-legend--text : @color-swatch4;
+@color__form-legend--text : @font-swatch5-color;
 
 // Buttons
 @color__button--background : @color-swatch3;
@@ -53,7 +53,7 @@
 @color__slideshow-pagination-item--background : @color__button--background;
 @color__slideshow-pagination-item--background--hover : @color__button--background--hover;
 @color__slideshow-pagination-item--text--selected : contrast(@color__slideshow-pagination-item--background--selected, #444, #fff);
-@color__slideshow-pagination-item--background--selected : @color__primary;
+@color__slideshow-pagination-item--background--selected : @color-swatch4;
 
 
 // Feature
@@ -64,7 +64,7 @@
 @color__feature-strapline--background : @color__secondary;
 @color__feature-button--background : @color__secondary;
 @color__feature-button--background--hover : @color__button--background--hover;
-@color__feature-button--text : @color-swatch4;
+@color__feature-button--text : @font-swatch8-color;
 @color__feature-button--background--hover : contrast(@color__button--background, darken(@color__button--background, 10%), lighten(@color__button--background, 10%));
 
 // Menu
