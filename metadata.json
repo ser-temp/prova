@@ -103,7 +103,7 @@
             "font-size": "18px",
             "font-weight": "300",
             "line-height": "28px",
-            "color": "@color__p--text",
+            "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
         "font6": {
