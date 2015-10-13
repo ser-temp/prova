@@ -173,7 +173,7 @@
             "color__button--background": "@color-swatch3",
             "color__button--background--hover": "contrast(@color__button--background, darken(@color__button--background, 10%), lighten(@color__button--background, 10%));",
             "color__button--text": "@color__body--background",
-            "@color__button--text--hover": "@color__button--text"
+            "color__button--text--hover": "@color__button--text"
         },
         "header": {
             "color__header--background": "@color__primary"
