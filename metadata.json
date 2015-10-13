@@ -231,7 +231,6 @@
         "ecommerce": {
             "color__ecomproductslist-product-item--background" : "@color__secondary",
             "color__ecomproductslist-product-title--text" : "@color__link--text",
-            "color__ecomproductslist-product-price--text" : "@color-swatch5",
             "color__ecomproduct-images--background" : "@color__secondary",
             "color__ecomproduct-price--text" : "@color-swatch4"
         },
