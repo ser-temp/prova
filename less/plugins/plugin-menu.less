@@ -87,15 +87,15 @@
 
 
 .section-title {
-    font-size: @font-swatch1-font-size;
+    font-size: @font__h1--font-size;
     padding-bottom: 0.3em;
     @media @menu-medium {
-        font-size: bkscale(@font-swatch1-font-size, 0.82);
-        line-height: bkscale(@font-swatch1-line-height, 0.82);
+        font-size: bkscale(@font__h1--font-size, 0.82);
+        line-height: bkscale(@font__h1--line-height, 0.82);
     }
     @media @menu-extra-small {
-        font-size: bkscale(@font-swatch1-font-size, 0.62);
-        line-height: bkscale(@font-swatch1-line-height, 0.62);
+        font-size: bkscale(@font__h1--font-size, 0.62);
+        line-height: bkscale(@font__h1--line-height, 0.62);
     }
 }
 
@@ -107,14 +107,14 @@
 
 
 .section-description {
-    font-family: @font-swatch1-font-family;
+    font-family: @font__h1--font-family;
     @media @menu-medium {
-        font-size: bkscale(@font-swatch5-font-size, 0.82);
-        line-height: bkscale(@font-swatch5-line-height, 0.82);
+        font-size: bkscale(@font__p--font-size, 0.82);
+        line-height: bkscale(@font__p--line-height, 0.82);
     }
     @media @menu-extra-small {
-        font-size: bkscale(@font-swatch5-font-size, 0.72);
-        line-height: bkscale(@font-swatch5-line-height, 0.72);
+        font-size: bkscale(@font__p--font-size, 0.72);
+        line-height: bkscale(@font__p--line-height, 0.72);
     }
 }
 
@@ -310,31 +310,31 @@
     // Item Title
 
     .item-title {
-        font-size: @font-swatch2-font-size;
+        font-size: @font__h2--font-size;
         @media @menu-medium {
-            font-size: bkscale(@font-swatch2-font-size, 0.82);
-            line-height: bkscale(@font-swatch2-line-height, 0.82);
+            font-size: bkscale(@font__h2--font-size, 0.82);
+            line-height: bkscale(@font__h2--line-height, 0.82);
         }
         @media @menu-small {
-            font-size: bkscale(@font-swatch2-font-size, 0.72);
-            line-height: bkscale(@font-swatch2-line-height, 0.72);
+            font-size: bkscale(@font__h2--font-size, 0.72);
+            line-height: bkscale(@font__h2--line-height, 0.72);
         }
         @media @menu-extra-small {
-            font-size: bkscale(@font-swatch2-font-size, 0.62);
-            line-height: bkscale(@font-swatch2-line-height, 0.62);
+            font-size: bkscale(@font__h2--font-size, 0.62);
+            line-height: bkscale(@font__h2--line-height, 0.62);
         }
     }
 
     // Item Description
 
     .item-description {
-        font-size: @font-swatch4-font-size;
+        font-size: @font__h4--font-size;
         -webkit-box-flex: 1;
         -moz-box-flex: 1;
         -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
-        border-left: 1px solid fade(@font-swatch5-color, 10%);
+        border-left: 1px solid fade(@font__p--color, 10%);
         padding: 1em 0 1em 1em;
         margin: 10px 0 10px 26px;
 
@@ -352,14 +352,14 @@
 
 
         &, p {
-            font-family: @font-swatch1-font-family;
+            font-family: @font__h1--font-family;
             @media @menu-medium {
-                font-size: bkscale(@font-swatch5-font-size, 0.82);
-                line-height: bkscale(@font-swatch5-line-height, 0.82);
+                font-size: bkscale(@font__p--font-size, 0.82);
+                line-height: bkscale(@font__p--line-height, 0.82);
             }
             @media @menu-small {
-                font-size: bkscale(@font-swatch5-font-size, 0.72);
-                line-height: bkscale(@font-swatch5-line-height, 0.72);
+                font-size: bkscale(@font__p--font-size, 0.72);
+                line-height: bkscale(@font__p--line-height, 0.72);
             }
         }
     }
@@ -367,7 +367,7 @@
     // Item Footer
 
     .item-footer {
-        border-left: 1px solid fade(@font-swatch5-color, 10%);
+        border-left: 1px solid fade(@font__p--color, 10%);
         padding: 1em 16px 1em 26px;
         margin: 10px 0 10px 26px;
         width: 400px;
@@ -381,15 +381,15 @@
             border-left: none;
             padding: 10px;
             clear: both;
-            border-top: 1px solid fade(@font-swatch5-color, 10%);
+            border-top: 1px solid fade(@font__p--color, 10%);
             width: auto;
             line-height: 1;
         }
 
         &, & * {
             @media @menu-small {
-                font-size: bkscale(@font-swatch5-font-size, 0.62) !important;
-                line-height: bkscale(@font-swatch5-line-height, 0.62) !important;
+                font-size: bkscale(@font__p--font-size, 0.62) !important;
+                line-height: bkscale(@font__p--line-height, 0.62) !important;
             }
         }
     }
@@ -411,8 +411,8 @@
     // Item Details
 
     .item-details {
-        font-size: bkscale(@font-swatch5-font-size, 0.82);
-        line-height: bkscale(@font-swatch5-line-height, 0.82);
+        font-size: bkscale(@font__p--font-size, 0.82);
+        line-height: bkscale(@font__p--line-height, 0.82);
         @media @menu-medium {
             display: inline-block;
             margin-right: 1em;
@@ -433,13 +433,13 @@
     // Dietary Item
 
     .dietary-item {
-        font-size: bkscale(@font-swatch5-font-size, 0.82);
-        line-height: bkscale(@font-swatch5-line-height, 0.82);
+        font-size: bkscale(@font__p--font-size, 0.82);
+        line-height: bkscale(@font__p--line-height, 0.82);
         &:before {
             content: '';
             width: 0.4em;
             height: 0.4em;
-            background-color: fade(@font-swatch5-color, 20%);
+            background-color: fade(@font__p--color, 20%);
             display: inline-block;
             overflow: hidden;
             vertical-align: middle;
@@ -461,8 +461,8 @@
     .section-note {
         text-align: center;
         @media @menu-medium {
-            font-size: bkscale(@font-swatch5-font-size, 0.82);
-            line-height: bkscale(@font-swatch5-line-height, 0.82);
+            font-size: bkscale(@font__p--font-size, 0.82);
+            line-height: bkscale(@font__p--line-height, 0.82);
         }
     }
 }
@@ -536,17 +536,17 @@
 
 
     .section-title {
-        font-size: bkscale(@font-swatch1-font-size, 0.9);
-        line-height: bkscale(@font-swatch1-line-height, 0.9);
+        font-size: bkscale(@font__h1--font-size, 0.9);
+        line-height: bkscale(@font__h1--line-height, 0.9);
 
         @media @menu-medium {
-            font-size: bkscale(@font-swatch1-font-size, 0.8);
-            line-height: bkscale(@font-swatch1-line-height, 0.8);
+            font-size: bkscale(@font__h1--font-size, 0.8);
+            line-height: bkscale(@font__h1--line-height, 0.8);
         }
 
         @media @menu-extra-small {
-            font-size: bkscale(@font-swatch1-font-size, 0.6);
-            line-height: bkscale(@font-swatch1-line-height, 0.6);
+            font-size: bkscale(@font__h1--font-size, 0.6);
+            line-height: bkscale(@font__h1--line-height, 0.6);
         }
     }
 
@@ -558,12 +558,12 @@
 
 
     .section-subtitle {
-        font-size: bkscale(@font-swatch5-font-size, 0.82);
-        line-height: bkscale(@font-swatch5-line-height, 0.82);
+        font-size: bkscale(@font__p--font-size, 0.82);
+        line-height: bkscale(@font__p--line-height, 0.82);
         padding-bottom: 0;
         @media @menu-medium {
-            font-size: bkscale(@font-swatch5-font-size, 0.72);
-            line-height: bkscale(@font-swatch5-line-height, 0.72);
+            font-size: bkscale(@font__p--font-size, 0.72);
+            line-height: bkscale(@font__p--line-height, 0.72);
         }
     }
 
@@ -575,15 +575,15 @@
 
 
     .item-title {
-        font-size: bkscale(@font-swatch1-font-size, 0.7);
-        line-height: bkscale(@font-swatch1-line-height, 0.7);
+        font-size: bkscale(@font__h1--font-size, 0.7);
+        line-height: bkscale(@font__h1--line-height, 0.7);
         @media @menu-medium {
-            font-size: bkscale(@font-swatch1-font-size, 0.62);
-            line-height: bkscale(@font-swatch1-line-height, 0.62);
+            font-size: bkscale(@font__h1--font-size, 0.62);
+            line-height: bkscale(@font__h1--line-height, 0.62);
         }
         @media @menu-extra-small {
-            font-size: bkscale(@font-swatch1-font-size, 0.52);
-            line-height: bkscale(@font-swatch1-line-height, 0.42);
+            font-size: bkscale(@font__h1--font-size, 0.52);
+            line-height: bkscale(@font__h1--line-height, 0.42);
         }
     }
 
@@ -595,8 +595,8 @@
 
 
     .item-description p {
-        font-size: bkscale(@font-swatch5-font-size, 0.82);
-        line-height: bkscale(@font-swatch5-line-height, 0.82);
+        font-size: bkscale(@font__p--font-size, 0.82);
+        line-height: bkscale(@font__p--line-height, 0.82);
     }
 }
 
@@ -658,18 +658,18 @@
     // Menu Item Name
 
     .menu-item-name {
-        font-family: @font-swatch1-font-family;
+        font-family: @font__h1--font-family;
         line-height: 3;
         display: inline-block;
         position: relative;
         top: 3px;
 
         @media @menu-medium {
-            font-size: bkscale(@font-swatch5-font-size, 0.82);
+            font-size: bkscale(@font__p--font-size, 0.82);
         }
 
         @media @menu-small {
-            font-size: bkscale(@font-swatch5-font-size, 0.72);
+            font-size: bkscale(@font__p--font-size, 0.72);
             top: 2px;
         }
 

@@ -28,13 +28,13 @@
     .button--pagination {
         background: transparent;
         color: @color__link--text;
-        font-family: @font-swatch1-font-family;
-        font-size: @font-swatch5-font-size;
+        font-family: @font__h1--font-family;
+        font-size: @font__p--font-size;
         padding: 0;
         line-height: 1;
 
         @media @mobile {
-            font-size: bkscale(@font-swatch5-font-size, 0.88);
+            font-size: bkscale(@font__p--font-size, 0.88);
         }
 
 
@@ -109,7 +109,7 @@
     .button--pagination:not(.icon) {
         height: 1.5em;
         line-height: 1.5em;
-        border-top: 1px solid fade(@font-swatch5-color, 20%);
+        border-top: 1px solid fade(@font__p--color, 20%);
         padding: 0 0.5em;
         margin: 0 -0.15em;
         &:hover {
@@ -127,7 +127,7 @@
     .pagination-item.current {
         .button--pagination {
             border-top-color: @color__primary;
-            color: @font-swatch5-color;
+            color: @color__p--text;
         }
     }
 }

@@ -97,7 +97,7 @@
         margin-bottom: 16px;
         font-size: 0;
         position: relative;
-        background-color: fade(@font-swatch5-color, 10%);
+        background-color: fade(@font__p--color, 10%);
 
         @media @product-medium {
             display: block;
@@ -271,17 +271,17 @@
 
 .product-title {
     @media @product-large {
-        font-size: @font-swatch4-font-size;
-        line-height: @font-swatch4-line-height;
-        color: fade(@font-swatch5-color, 50%);
+        font-size: @font__h4--font-size;
+        line-height: @font__h4--line-height;
+        color: fade(@font__p--color, 50%);
     }
     @media @product-medium {
-        font-size: @font-swatch3-font-size;
-        line-height: @font-swatch3-line-height;
+        font-size: @font__h3--font-size;
+        line-height: @font__h3--line-height;
     }
     @media @product-small {
-        font-size: bkscale(@font-swatch3-font-size, 0.8);
-        line-height: bkscale(@font-swatch3-line-height, 0.8);
+        font-size: bkscale(@font__h3--font-size, 0.8);
+        line-height: bkscale(@font__h3--line-height, 0.8);
     }
 }
 
@@ -307,12 +307,12 @@
 
     &, p {
         @media @tablet {
-            font-size: bkscale(@font-swatch5-font-size, 0.9);
-            line-height: bkscale(@font-swatch5-line-height, 0.9);
+            font-size: bkscale(@font__p--font-size, 0.9);
+            line-height: bkscale(@font__p--line-height, 0.9);
         }
         @media @mobile {
-            font-size: bkscale(@font-swatch5-font-size, 0.8);
-            line-height: bkscale(@font-swatch5-line-height, 0.8);
+            font-size: bkscale(@font__p--font-size, 0.8);
+            line-height: bkscale(@font__p--line-height, 0.8);
         }
     }
 }
@@ -499,7 +499,7 @@
 
     .category-link, .tag-link {
         @media @product-medium {
-            font-size: bkscale(@font-swatch5-font-size, 0.82);
+            font-size: bkscale(@font__p--font-size, 0.82);
         }
     }
 }

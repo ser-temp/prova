@@ -130,14 +130,14 @@
     width: 100%;
     position: relative;
     padding-bottom: 15px;
-    font-family: @font-swatch1-font-family;
-	font-size: @font-swatch4-font-size;
-	line-height: @font-swatch4-line-height;
+    font-family: @font__h1--font-family;
+	font-size: @font__h4--font-size;
+	line-height: @font__h4--line-height;
     border-bottom: 2px solid contrast(@color__secondary, @widget-contrast-light, @widget-contrast-dark);
 
     @media @twitter-medium {
-		font-size: bkscale(@font-swatch4-font-size, 0.8);
-		line-height: bkscale(@font-swatch4-line-height, 0.8);
+		font-size: bkscale(@font__h4--font-size, 0.8);
+		line-height: bkscale(@font__h4--line-height, 0.8);
 		border-bottom-width: 1px;
 		padding-bottom: 5px;
 		margin-bottom: 16px;
@@ -145,8 +145,8 @@
 
     @media @twitter-small {
     	margin-bottom: 8px;
-		font-size: bkscale(@font-swatch4-font-size, 0.68);
-		line-height: bkscale(@font-swatch4-line-height, 0.68);
+		font-size: bkscale(@font__h4--font-size, 0.68);
+		line-height: bkscale(@font__h4--line-height, 0.68);
     }
 
     // Link
@@ -237,7 +237,7 @@
     -ms-flex-order: 1;
     order: 1;
     font-size: 16px;
-    font-family: @font-swatch1-font-family;
+    font-family: @font__h1--font-family;
     line-height: 40px;
     min-height: 40px;
     margin-left: 55px;
@@ -279,7 +279,7 @@
 	padding-left: 1em;
 	font-size: 12px;
 	line-height: 1;
-	color: fade(@font-swatch5-color, 50%);
+	color: fade(@font__p--color, 50%);
 	@media @twitter-medium {
 		min-height: 30px;
 		line-height: 30px;
@@ -292,7 +292,7 @@
 	}
 
     a {
-        color: fade(@font-swatch5-color, 50%);
+        color: fade(@color__p--text, 50%);
     }
 
 }
@@ -300,7 +300,7 @@
 // Tweet Source
 
 .tweet-source {
-	color: fade(@font-swatch5-color, 50%);
+	color: fade(@color__p--text, 50%);
 }
 
 // Timestamp
@@ -308,13 +308,13 @@
 .twitter__timestamp {
 	display: block;
 	font-size: 14px;
-	color: @font-swatch5-color;
+	color: @color__p--text;
 	padding: 0.4em 0 0.2em 0;
 
 	@media @twitter-medium {
 		font-size: inherit;
 		display: inline;
-		color: fade(@font-swatch5-color, 50%);
+		color: fade(@font__p--color, 50%);
 	}
 
 	@media @twitter-small {
@@ -392,8 +392,8 @@
         // Tweet Content
 
         .tweet-content {
-            font-size: @font-swatch5-font-size;
-            line-height: @font-swatch5-line-height;
+            font-size: @font__p--font-size;
+            line-height: @font__p--line-height;
         }
 
         // Tweet Metadata

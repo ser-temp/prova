@@ -35,10 +35,10 @@ input[type="password"],
 textarea {
     background-color: transparent;
     border: 1px solid contrast(@color__secondary, @widget-contrast-light, @widget-contrast-dark);
-    font-size:  @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
+    font-size:  @font__p--font-size;
+    font-weight: @font__p--font-weight;
     display: inline-block;
-    color: @font-swatch5-color;
+    color: @font__p--color;
     padding: 0 1em;
     line-height: 1.2;
     -webkit-transition: border-color 0.15s ease;
@@ -55,7 +55,7 @@ textarea {
 
     @media @mobile {
         padding: 0 0.6em;
-        font-size: bkscale(@font-swatch5-font-size, 0.98);
+        font-size: bkscale(@font__p--font-size, 0.98);
     }
 
 }
@@ -73,9 +73,9 @@ input[type="password"],
 .input--single-line,
 .input--search,
 .product-filters .input--search {
-    height: bkscale(@font-swatch7-font-size, 2.5);
+    height: bkscale(@font__button--font-size, 2.5);
     @media @mobile {
-        height: bkscale(@font-swatch7-font-size, 2.2);
+        height: bkscale(@font__button--font-size, 2.2);
     }
 }
 
@@ -105,9 +105,9 @@ textarea {
 .button {
     border: none;
     padding: 0 1em;
-    font-size:  @font-swatch7-font-size;
-    line-height: bkscale(@font-swatch7-font-size, 2.5);
-    font-weight: @font-swatch7-font-weight;
+    font-size:  @font__button--font-size;
+    line-height: bkscale(@font__button--font-size, 2.5);
+    font-weight: @font__button--font-weight;
     display: inline-block;
     cursor: pointer;
     -webkit-transition: all 0.1s ease-in-out;
@@ -120,8 +120,8 @@ textarea {
     color: @color__button--text;
 
     @media @mobile {
-        font-size:  bkscale(@font-swatch7-font-size, 0.88);
-        line-height: bkscale(@font-swatch7-font-size, 2.2);
+        font-size:  bkscale(@font__button--font-size, 0.88);
+        line-height: bkscale(@font__button--font-size, 2.2);
     }
 
     &:hover {
@@ -186,7 +186,7 @@ textarea {
 .select {
     border: none;
     color: @color__link--text;
-    font-size: @font-swatch5-font-size;
+    font-size: @font__p--font-size;
     border-radius: 0;
     background-color: transparent;
     -webkit-appearance: none;
@@ -215,7 +215,7 @@ textarea {
 
 .select.medium {
     .select {
-        font-size: bkscale(@font-swatch5-font-size, 0.82);
+        font-size: bkscale(@font__p--font-size, 0.82);
     }
 
     // Icon
@@ -229,7 +229,7 @@ textarea {
 
 .select.small {
     .select {
-        font-size: bkscale(@font-swatch5-font-size, 0.7);
+        font-size: bkscale(@font__p--font-size, 0.7);
     }
 
     // Icon

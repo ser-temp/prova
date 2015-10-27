@@ -62,8 +62,8 @@
     .table-row--heading {
         .cell {
             padding-bottom: 1em;
-            font-family: @font-swatch1-font-family;
-            font-size: bkscale(@font-swatch5-font-size, .82);
+            font-family: @font__h1--font-family;
+            font-size: bkscale(@font__p--font-size, .82);
 
             &:nth-last-of-type(-n+2) {
                 text-align: right;
@@ -117,8 +117,8 @@
 
 
     .summary-item-title  {
-        font-family: @font-swatch1-font-family;
-        font-size: @font-swatch4-font-size;
+        font-family: @font__h1--font-family;
+        font-size: @font__h4--font-size;
     }
 
 
@@ -169,7 +169,7 @@
         display: block;
         line-height: 80px;
         background-position: -100%;
-        background-color: fade(@font-swatch5-color, 10%);
+        background-color: fade(@font__p--color, 10%);
 
         // Image
 
@@ -226,8 +226,8 @@
 
 .summary-item-title  {
     @media @mobile {
-        font-size: bkscale(@font-swatch4-font-size, 0.9) !important;
-        line-height: bkscale(@font-swatch4-line-height, 0.8) !important;
+        font-size: bkscale(@font__h4--font-size, 0.9) !important;
+        line-height: bkscale(@font__h4--line-height, 0.8) !important;
     }
 }
 
@@ -297,7 +297,7 @@
         // Item Title
 
         .summary-item-title  {
-            font-size: bkscale(@font-swatch4-font-size, 1);
+            font-size: bkscale(@font__h4--font-size, 1);
         }
 
         // Cell Price, Cell Total, Cell Quantity LABELS

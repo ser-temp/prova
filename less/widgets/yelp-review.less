@@ -11,13 +11,13 @@
 
 .yelp-title {
     @media @tablet {
-        font-size: bkscale(@font-swatch2-font-size, 0.8);
-        line-height: bkscale(@font-swatch2-line-height, 0.8);
+        font-size: bkscale(@font__h2--font-size, 0.8);
+        line-height: bkscale(@font__h2--line-height, 0.8);
     }
 
     @media @mobile {
-        font-size: bkscale(@font-swatch2-font-size, 0.6);
-        line-height: bkscale(@font-swatch2-line-height, 0.6);
+        font-size: bkscale(@font__h2--font-size, 0.6);
+        line-height: bkscale(@font__h2--line-height, 0.6);
     }
 }
 
@@ -73,14 +73,14 @@
 
 .review-title {
     float: left;
-    font-size: @font-swatch4-font-size;
-    line-height: @font-swatch4-line-height;
+    font-size: @font__h4--font-size;
+    line-height: @font__h4--line-height;
 
 
     // Author Label
 
     .author-label {
-        font-size: bkscale(@font-swatch5-font-size, 0.72);
+        font-size: bkscale(@font__p--font-size, 0.72);
         line-height: 1.2;
         display: block;
 
@@ -117,13 +117,13 @@
     .review-text {
         padding-bottom: 0;
         @media @tablet {
-            font-size: bkscale(@font-swatch5-font-size, 0.9);
-            line-height: bkscale(@font-swatch5-line-height, 0.9);
+            font-size: bkscale(@font__p--font-size, 0.9);
+            line-height: bkscale(@font__p--line-height, 0.9);
         }
 
         @media @mobile {
-            font-size: bkscale(@font-swatch5-font-size, 0.8);
-            line-height: bkscale(@font-swatch5-line-height, 0.8);
+            font-size: bkscale(@font__p--font-size, 0.8);
+            line-height: bkscale(@font__p--line-height, 0.8);
         }
     }
 
@@ -145,20 +145,20 @@
 
 
 .review-footer {
-    font-size: bkscale(@font-swatch5-font-size, 0.8);
+    font-size: bkscale(@font__p--font-size, 0.8);
 
     // Timestamp
 
     .timestamp {
-        font-size: bkscale(@font-swatch5-font-size, 0.72);
+        font-size: bkscale(@font__p--font-size, 0.72);
         border-left: 1px solid fade(@color__p--text, 20%);
         padding: 0.5em 1em;
-        color: fade(@font-swatch5-color, 80%);
+        color: fade(@font__p--color, 80%);
         display: block;
 
         @media @blog-medium {
             padding: 0.8em 1em;
-            font-size: bkscale(@font-swatch5-font-size, 0.7);
+            font-size: bkscale(@font__p--font-size, 0.7);
         }
 
         @media @blog-small {

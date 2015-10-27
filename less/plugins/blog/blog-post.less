@@ -152,8 +152,8 @@
     @media @blog-small {
         padding-bottom: 0;
         p {
-            font-size: bkscale(@font-swatch5-font-size, 0.88);
-            line-height: bkscale(@font-swatch5-line-height, 0.88);
+            font-size: bkscale(@font__p--font-size, 0.88);
+            line-height: bkscale(@font__p--line-height, 0.88);
         }
     }
 }
@@ -166,7 +166,7 @@
 
 
 .post-header .title-link {
-    color: @font-swatch1-color;
+    color: @color__h1--text;
 }
 
 
@@ -182,13 +182,13 @@
 
     @media @blog-medium {
         margin: 0.5em 0 0.2em 0;
-        font-size: bkscale(@font-swatch2-font-size, 0.84);
-        line-height: bkscale(@font-swatch2-line-height, 0.84);
+        font-size: bkscale(@font__h2--font-size, 0.84);
+        line-height: bkscale(@font__h2--line-height, 0.84);
     }
     @media @blog-small {
         margin: 0.5em 0 0.2em 0;
-        font-size: bkscale(@font-swatch2-font-size, 0.70);
-        line-height: bkscale(@font-swatch2-line-height, 0.70);
+        font-size: bkscale(@font__h2--font-size, 0.70);
+        line-height: bkscale(@font__h2--line-height, 0.70);
     }
 }
 
@@ -202,7 +202,7 @@
 .post-excerpt .read-more {
     background: @color__button--background;
     color: @color__button--text;
-    font-size: @font-swatch5-font-size;
+    font-size: @font__p--font-size;
     padding:  0.7em 1.4em;
     display: inline-block;
     margin:  1em 0 1.2em;
@@ -211,8 +211,8 @@
         display: block;
         margin: 0.5em -10px 0;
         padding:  0.5em 10px;
-        font-size: bkscale(@font-swatch5-font-size, 0.88);
-        line-height: bkscale(@font-swatch5-line-height, 0.88);
+        font-size: bkscale(@font__p--font-size, 0.88);
+        line-height: bkscale(@font__p--line-height, 0.88);
     }
 
     &:hover {
@@ -233,14 +233,14 @@
     // Timestamp
 
     .timestamp {
-        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        font-size: bkscale(@font__p--font-size, 0.8);
         border-left: 1px solid fade(@color__p--text, 20%);
         padding: 1em 1.5em;
-        color: fade(@font-swatch5-color, 80%);
+        color: fade(@font__p--color, 80%);
         display: block;
         @media @blog-medium {
             padding: 0.8em 1em;
-            font-size: bkscale(@font-swatch5-font-size, 0.7);
+            font-size: bkscale(@font__p--font-size, 0.7);
         }
         @media @blog-small {
             padding: 0.5em 10px;
