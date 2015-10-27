@@ -218,7 +218,7 @@
         },
         "navigation": {
             "color__navigation--text": "@font-swatch6-color",
-            "color__navigation-item--selected": "@color-swatch3",
+            "color__navigation--text--selected": "@color-swatch3",
             "font__navigation--font-family" : "@font-swatch6-font-family",
             "font__navigation--font-size" : "@font-swatch6-font-size",
             "font__navigation--font-weight" : "@font-swatch6-font-weight",
