@@ -1,3 +1,5 @@
 concat
 node_modules
 gulpfile.js
+config.codekit
+css/stylesheet.css
