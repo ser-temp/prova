@@ -2,6 +2,7 @@
     "name":"Facet",
     "widgetVersion": 2,
     "thumbnail":"facet.png",
+    "screenshot":"facet-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
