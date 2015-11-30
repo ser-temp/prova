@@ -1,7 +1,7 @@
 {
     "name":"facet-v8",
     "widgetVersion": 2,
-    "thumbnail":"facet.png",
+    "screenshot":"facet-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
