@@ -21,8 +21,19 @@
 // ---------------------------------
 
 
-responsiveslideshow__slides-list {
+.responsiveslideshow__slides-list {
 	min-height: 400px;
+	height: 550px;
+	position: relative;
+	overflow: hidden;
+
+	@media @slideshow-medium {
+		height: 425px;
+	}
+
+	@media @slideshow-small {
+		height: 375px;
+	}
 }
 
 
@@ -56,12 +67,16 @@ responsiveslideshow__slides-list {
 
 .responsiveslideshow__figure {
 	min-height: 100px;
-	padding-bottom: 50%;
+	height: 550px;
 	background-size: cover;
 	background-position: center;
 
+	@media @slideshow-medium {
+		height: 425px;
+	}
+
 	@media @slideshow-small {
-		padding-bottom: 100%;
+		height: 375px;
 	}
 }
 
@@ -249,7 +264,6 @@ responsiveslideshow__slides-list {
 		right: 0;
 		bottom: auto;
 		height: 100px;
-		padding-bottom: 50%;
 
 		// Button
 
