@@ -457,6 +457,9 @@
 	// Caption
 
 	.responsiveslideshow .caption {
+		.flex-display;
+		.flex-wrap(wrap);
+		.flex-direction(column);
 		position: absolute;
 		width: auto;
 		left: 30px;
@@ -474,6 +477,7 @@
 
 	.responsiveslideshow__image-description {
 		padding: 0.8em 6%;
+		word-break: break-word;
 	}
 }
 
@@ -513,7 +517,6 @@
 		align-items: flex-start;
 		position: absolute;
 		bottom: 0;
-
 	}
 
 	// Image title, Image Description
